@@ -1,0 +1,11 @@
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\bin\Release\DAL.dll.config
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\bin\Release\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\bin\Release\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\bin\Release\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\bin\Release\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Release\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Release\StockVentas.frmMessageBox.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Release\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Release\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Release\GenerateResource.read.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Release\GenerateResource.write.1.tlog

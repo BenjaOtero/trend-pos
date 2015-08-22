@@ -1,0 +1,92 @@
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\DAL\obj\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\DAL\obj\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\DAL\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\DAL\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\DAL\bin\Debug\DAL.dll.config
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\DAL\obj\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\DAL\bin\Debug\DAL.dll.config
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\DAL\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\DAL\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware\DAL\bin\Debug\DAL.dll.config
+N:\NcSoftware\01_C_sharp\NcSoftware\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware\DAL\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\NcSoftware\DAL\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware\DAL\obj\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna\DAL\bin\Debug\DAL.dll.config
+N:\NcSoftware\01_C_sharp\Karminna\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna\DAL\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna\DAL\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna\DAL\obj\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion\DAL\bin\Debug\DAL.dll.config
+N:\NcSoftware\01_C_sharp\Karminna Administracion\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion\DAL\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion\DAL\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna Administracion\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion\DAL\obj\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\DAL\bin\Debug\DAL.dll.config
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\DAL\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\DAL\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\DAL\obj\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\bin\Debug\DAL.dll.config
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Debug\StockVentas.frmMessageBox.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna Admin\DAL\obj\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna punto\DAL\bin\Debug\DAL.dll.config
+N:\NcSoftware\01_C_sharp\Karminna punto\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna punto\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna punto\DAL\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna punto\DAL\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna punto\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna punto\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna punto\DAL\obj\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\karminna_pos\DAL\bin\Debug\DAL.dll.config
+N:\NcSoftware\01_C_sharp\karminna_pos\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\karminna_pos\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\karminna_pos\DAL\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\karminna_pos\DAL\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\karminna_pos\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\karminna_pos\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\karminna_pos\DAL\obj\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\karminna_local_pos\DAL\bin\Debug\DAL.dll.config
+N:\NcSoftware\01_C_sharp\karminna_local_pos\DAL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\karminna_local_pos\DAL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\karminna_local_pos\DAL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\karminna_local_pos\DAL\obj\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\karminna_local_pos\DAL\obj\Debug\DAL.pdb
+C:\Trend\POS\trunk\DAL\bin\Debug\DAL.dll.config
+C:\Trend\POS\trunk\DAL\bin\Debug\DAL.dll
+C:\Trend\POS\trunk\DAL\bin\Debug\DAL.pdb
+C:\Trend\POS\trunk\DAL\obj\Debug\DAL.dll
+C:\Trend\POS\trunk\DAL\obj\Debug\DAL.pdb
+C:\Trend\POS\trunk\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
