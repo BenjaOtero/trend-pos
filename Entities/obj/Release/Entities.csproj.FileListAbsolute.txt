@@ -1,0 +1,6 @@
+N:\NcSoftware\01_C_sharp\Karminna Admin\Entities\bin\Release\Entities.dll.config
+N:\NcSoftware\01_C_sharp\Karminna Admin\Entities\bin\Release\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\Entities\bin\Release\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\Entities\obj\Release\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna Admin\Entities\obj\Release\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\Entities\obj\Release\Entities.pdb

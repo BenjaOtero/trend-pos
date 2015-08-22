@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="karminnaModelStoreContainer" CdmEntityContainer="ncsoftwa_karminnaEntities">
+    <EntitySetMapping Name="Articulos">
+      <EntityTypeMapping TypeName="karminnaModel.Articulos">
+        <MappingFragment StoreEntitySet="Articulos">
+          <ScalarProperty Name="IdArticuloART" ColumnName="IdArticuloART" />
+          <ScalarProperty Name="TalleART" ColumnName="TalleART" />
+          <ScalarProperty Name="DescripcionART" ColumnName="DescripcionART" />
+          <ScalarProperty Name="DescripcionWebART" ColumnName="DescripcionWebART" />
+          <ScalarProperty Name="PrecioCostoART" ColumnName="PrecioCostoART" />
+          <ScalarProperty Name="PrecioPublicoART" ColumnName="PrecioPublicoART" />
+          <ScalarProperty Name="PrecioMayorART" ColumnName="PrecioMayorART" />
+          <ScalarProperty Name="FechaART" ColumnName="FechaART" />
+          <ScalarProperty Name="ImagenART" ColumnName="ImagenART" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticulosItems">
+      <EntityTypeMapping TypeName="karminnaModel.ArticulosItems">
+        <MappingFragment StoreEntitySet="ArticulosItems">
+          <ScalarProperty Name="IdItemITE" ColumnName="IdItemITE" />
+          <ScalarProperty Name="DescripcionITE" ColumnName="DescripcionITE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="karminnaModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="IdClienteCLI" ColumnName="IdClienteCLI" />
+          <ScalarProperty Name="RazonSocialCLI" ColumnName="RazonSocialCLI" />
+          <ScalarProperty Name="CUIT" ColumnName="CUIT" />
+          <ScalarProperty Name="DireccionCLI" ColumnName="DireccionCLI" />
+          <ScalarProperty Name="LocalidadCLI" ColumnName="LocalidadCLI" />
+          <ScalarProperty Name="ProvinciaCLI" ColumnName="ProvinciaCLI" />
+          <ScalarProperty Name="TransporteCLI" ColumnName="TransporteCLI" />
+          <ScalarProperty Name="ContactoCLI" ColumnName="ContactoCLI" />
+          <ScalarProperty Name="TelefonoCLI" ColumnName="TelefonoCLI" />
+          <ScalarProperty Name="MovilCLI" ColumnName="MovilCLI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colores">
+      <EntityTypeMapping TypeName="karminnaModel.Colores">
+        <MappingFragment StoreEntitySet="Colores">
+          <ScalarProperty Name="IdColorCOL" ColumnName="IdColorCOL" />
+          <ScalarProperty Name="DescripcionCOL" ColumnName="DescripcionCOL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FondoCajaPunto">
+      <EntityTypeMapping TypeName="karminnaModel.FondoCajaPunto">
+        <MappingFragment StoreEntitySet="FondoCajaPunto">
+          <ScalarProperty Name="FechaFONP" ColumnName="FechaFONP" />
+          <ScalarProperty Name="IdLocalFONP" ColumnName="IdLocalFONP" />
+          <ScalarProperty Name="ImporteFONP" ColumnName="ImporteFONP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormasPago">
+      <EntityTypeMapping TypeName="karminnaModel.FormasPago">
+        <MappingFragment StoreEntitySet="FormasPago">
+          <ScalarProperty Name="IdFormaPagoFOR" ColumnName="IdFormaPagoFOR" />
+          <ScalarProperty Name="DescripcionFOR" ColumnName="DescripcionFOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locales">
+      <EntityTypeMapping TypeName="karminnaModel.Locales">
+        <MappingFragment StoreEntitySet="Locales">
+          <ScalarProperty Name="IdLocalLOC" ColumnName="IdLocalLOC" />
+          <ScalarProperty Name="NombreLOC" ColumnName="NombreLOC" />
+          <ScalarProperty Name="DireccionLOC" ColumnName="DireccionLOC" />
+          <ScalarProperty Name="TelefonoLOC" ColumnName="TelefonoLOC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pc">
+      <EntityTypeMapping TypeName="karminnaModel.Pc">
+        <MappingFragment StoreEntitySet="Pc">
+          <ScalarProperty Name="IdPC" ColumnName="IdPC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedores">
+      <EntityTypeMapping TypeName="karminnaModel.Proveedores">
+        <MappingFragment StoreEntitySet="Proveedores">
+          <ScalarProperty Name="IdProveedorPRO" ColumnName="IdProveedorPRO" />
+          <ScalarProperty Name="RazonSocialPRO" ColumnName="RazonSocialPRO" />
+          <ScalarProperty Name="DireccionPRO" ColumnName="DireccionPRO" />
+          <ScalarProperty Name="CodigoPostalPRO" ColumnName="CodigoPostalPRO" />
+          <ScalarProperty Name="TelefonoPRO" ColumnName="TelefonoPRO" />
+          <ScalarProperty Name="ContactoPRO" ColumnName="ContactoPRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stock">
+      <EntityTypeMapping TypeName="karminnaModel.Stock">
+        <MappingFragment StoreEntitySet="Stock">
+          <ScalarProperty Name="IdArticuloSTK" ColumnName="IdArticuloSTK" />
+          <ScalarProperty Name="IdLocalSTK" ColumnName="IdLocalSTK" />
+          <ScalarProperty Name="CantidadSTK" ColumnName="CantidadSTK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockComp">
+      <EntityTypeMapping TypeName="karminnaModel.StockComp">
+        <MappingFragment StoreEntitySet="StockComp">
+          <ScalarProperty Name="IdCompCOM" ColumnName="IdCompCOM" />
+          <ScalarProperty Name="FechaCOM" ColumnName="FechaCOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockCompDetalle">
+      <EntityTypeMapping TypeName="karminnaModel.StockCompDetalle">
+        <MappingFragment StoreEntitySet="StockCompDetalle">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DescripcionCOMD" ColumnName="DescripcionCOMD" />
+          <ScalarProperty Name="CantidadCOMD" ColumnName="CantidadCOMD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockMov">
+      <EntityTypeMapping TypeName="karminnaModel.StockMov">
+        <MappingFragment StoreEntitySet="StockMov">
+          <ScalarProperty Name="IdMovMSTK" ColumnName="IdMovMSTK" />
+          <ScalarProperty Name="FechaMSTK" ColumnName="FechaMSTK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockMovDetalle">
+      <EntityTypeMapping TypeName="karminnaModel.StockMovDetalle">
+        <MappingFragment StoreEntitySet="StockMovDetalle">
+          <ScalarProperty Name="IdMSTKD" ColumnName="IdMSTKD" />
+          <ScalarProperty Name="CantidadMSTKD" ColumnName="CantidadMSTKD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ventas">
+      <EntityTypeMapping TypeName="karminnaModel.Ventas">
+        <MappingFragment StoreEntitySet="Ventas">
+          <ScalarProperty Name="IdVentaVEN" ColumnName="IdVentaVEN" />
+          <ScalarProperty Name="IdPCVEN" ColumnName="IdPCVEN" />
+          <ScalarProperty Name="FechaVEN" ColumnName="FechaVEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentasDetalle">
+      <EntityTypeMapping TypeName="karminnaModel.VentasDetalle">
+        <MappingFragment StoreEntitySet="VentasDetalle">
+          <ScalarProperty Name="IdDVEN" ColumnName="IdDVEN" />
+          <ScalarProperty Name="DescripcionDVEN" ColumnName="DescripcionDVEN" />
+          <ScalarProperty Name="CantidadDVEN" ColumnName="CantidadDVEN" />
+          <ScalarProperty Name="PrecioPublicoDVEN" ColumnName="PrecioPublicoDVEN" />
+          <ScalarProperty Name="PrecioCostoDVEN" ColumnName="PrecioCostoDVEN" />
+          <ScalarProperty Name="PrecioMayorDVEN" ColumnName="PrecioMayorDVEN" />
+          <ScalarProperty Name="NroCuponDVEN" ColumnName="NroCuponDVEN" />
+          <ScalarProperty Name="NroFactraDVEN" ColumnName="NroFactraDVEN" />
+          <ScalarProperty Name="IdEmpleadoDVEN" ColumnName="IdEmpleadoDVEN" />
+          <ScalarProperty Name="LiquidadoDVEN" ColumnName="LiquidadoDVEN" />
+          <ScalarProperty Name="EsperaDVEN" ColumnName="EsperaDVEN" />
+          <ScalarProperty Name="DevolucionDVEN" ColumnName="DevolucionDVEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_Color" TypeName="karminnaModel.FK_Color" StoreEntitySet="Articulos">
+      <EndProperty Name="Colores">
+        <ScalarProperty Name="IdColorCOL" ColumnName="IdColorART" />
+      </EndProperty>
+      <EndProperty Name="Articulos">
+        <ScalarProperty Name="IdArticuloART" ColumnName="IdArticuloART" />
+      </EndProperty>
+      <Condition ColumnName="IdColorART" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Item" TypeName="karminnaModel.FK_Item" StoreEntitySet="Articulos">
+      <EndProperty Name="ArticulosItems">
+        <ScalarProperty Name="IdItemITE" ColumnName="IdItemART" />
+      </EndProperty>
+      <EndProperty Name="Articulos">
+        <ScalarProperty Name="IdArticuloART" ColumnName="IdArticuloART" />
+      </EndProperty>
+      <Condition ColumnName="IdItemART" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Proveedor" TypeName="karminnaModel.FK_Proveedor" StoreEntitySet="Articulos">
+      <EndProperty Name="Proveedores">
+        <ScalarProperty Name="IdProveedorPRO" ColumnName="IdProveedorART" />
+      </EndProperty>
+      <EndProperty Name="Articulos">
+        <ScalarProperty Name="IdArticuloART" ColumnName="IdArticuloART" />
+      </EndProperty>
+      <Condition ColumnName="IdProveedorART" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Stock_Articulos" TypeName="karminnaModel.FK_Stock_Articulos" StoreEntitySet="Stock">
+      <EndProperty Name="Articulos">
+        <ScalarProperty Name="IdArticuloART" ColumnName="IdArticuloSTK" />
+      </EndProperty>
+      <EndProperty Name="Stock">
+        <ScalarProperty Name="IdArticuloSTK" ColumnName="IdArticuloSTK" />
+        <ScalarProperty Name="IdLocalSTK" ColumnName="IdLocalSTK" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_StockCompDetalle_Articulos" TypeName="karminnaModel.FK_StockCompDetalle_Articulos" StoreEntitySet="StockCompDetalle">
+      <EndProperty Name="Articulos">
+        <ScalarProperty Name="IdArticuloART" ColumnName="IdArticuloCOMD" />
+      </EndProperty>
+      <EndProperty Name="StockCompDetalle">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="IdArticuloCOMD" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_StockMovDetalle_Articulos" TypeName="karminnaModel.FK_StockMovDetalle_Articulos" StoreEntitySet="StockMovDetalle">
+      <EndProperty Name="Articulos">
+        <ScalarProperty Name="IdArticuloART" ColumnName="IdArticuloMSTKD" />
+      </EndProperty>
+      <EndProperty Name="StockMovDetalle">
+        <ScalarProperty Name="IdMSTKD" ColumnName="IdMSTKD" />
+      </EndProperty>
+      <Condition ColumnName="IdArticuloMSTKD" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasDetalle_Articulos" TypeName="karminnaModel.FK_VentasDetalle_Articulos" StoreEntitySet="VentasDetalle">
+      <EndProperty Name="Articulos">
+        <ScalarProperty Name="IdArticuloART" ColumnName="IdArticuloDVEN" />
+      </EndProperty>
+      <EndProperty Name="VentasDetalle">
+        <ScalarProperty Name="IdDVEN" ColumnName="IdDVEN" />
+      </EndProperty>
+      <Condition ColumnName="IdArticuloDVEN" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Ventas" TypeName="karminnaModel.FK_Ventas" StoreEntitySet="Ventas">
+      <EndProperty Name="Clientes">
+        <ScalarProperty Name="IdClienteCLI" ColumnName="IdClienteVEN" />
+      </EndProperty>
+      <EndProperty Name="Ventas">
+        <ScalarProperty Name="IdVentaVEN" ColumnName="IdVentaVEN" />
+        <ScalarProperty Name="IdPCVEN" ColumnName="IdPCVEN" />
+      </EndProperty>
+      <Condition ColumnName="IdClienteVEN" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasDetalle_Forma" TypeName="karminnaModel.FK_VentasDetalle_Forma" StoreEntitySet="VentasDetalle">
+      <EndProperty Name="FormasPago">
+        <ScalarProperty Name="IdFormaPagoFOR" ColumnName="IdFormaPagoDVEN" />
+      </EndProperty>
+      <EndProperty Name="VentasDetalle">
+        <ScalarProperty Name="IdDVEN" ColumnName="IdDVEN" />
+      </EndProperty>
+      <Condition ColumnName="IdFormaPagoDVEN" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Pc" TypeName="karminnaModel.FK_Pc" StoreEntitySet="Pc">
+      <EndProperty Name="Locales">
+        <ScalarProperty Name="IdLocalLOC" ColumnName="IdLocalPC" />
+      </EndProperty>
+      <EndProperty Name="Pc">
+        <ScalarProperty Name="IdPC" ColumnName="IdPC" />
+      </EndProperty>
+      <Condition ColumnName="IdLocalPC" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Stock_Local" TypeName="karminnaModel.FK_Stock_Local" StoreEntitySet="Stock">
+      <EndProperty Name="Locales">
+        <ScalarProperty Name="IdLocalLOC" ColumnName="IdLocalSTK" />
+      </EndProperty>
+      <EndProperty Name="Stock">
+        <ScalarProperty Name="IdArticuloSTK" ColumnName="IdArticuloSTK" />
+        <ScalarProperty Name="IdLocalSTK" ColumnName="IdLocalSTK" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_StockComp" TypeName="karminnaModel.FK_StockComp" StoreEntitySet="StockComp">
+      <EndProperty Name="Locales">
+        <ScalarProperty Name="IdLocalLOC" ColumnName="IdLocalCOM" />
+      </EndProperty>
+      <EndProperty Name="StockComp">
+        <ScalarProperty Name="IdCompCOM" ColumnName="IdCompCOM" />
+      </EndProperty>
+      <Condition ColumnName="IdLocalCOM" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_StockMov_Destino" TypeName="karminnaModel.FK_StockMov_Destino" StoreEntitySet="StockMov">
+      <EndProperty Name="Locales">
+        <ScalarProperty Name="IdLocalLOC" ColumnName="DestinoMSTK" />
+      </EndProperty>
+      <EndProperty Name="StockMov">
+        <ScalarProperty Name="IdMovMSTK" ColumnName="IdMovMSTK" />
+      </EndProperty>
+      <Condition ColumnName="DestinoMSTK" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_StockMov_Origen" TypeName="karminnaModel.FK_StockMov_Origen" StoreEntitySet="StockMov">
+      <EndProperty Name="Locales">
+        <ScalarProperty Name="IdLocalLOC" ColumnName="OrigenMSTK" />
+      </EndProperty>
+      <EndProperty Name="StockMov">
+        <ScalarProperty Name="IdMovMSTK" ColumnName="IdMovMSTK" />
+      </EndProperty>
+      <Condition ColumnName="OrigenMSTK" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Ventas_Pc" TypeName="karminnaModel.FK_Ventas_Pc" StoreEntitySet="Ventas">
+      <EndProperty Name="Pc">
+        <ScalarProperty Name="IdPC" ColumnName="IdPCVEN" />
+      </EndProperty>
+      <EndProperty Name="Ventas">
+        <ScalarProperty Name="IdVentaVEN" ColumnName="IdVentaVEN" />
+        <ScalarProperty Name="IdPCVEN" ColumnName="IdPCVEN" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_StockCompDetalle" TypeName="karminnaModel.FK_StockCompDetalle" StoreEntitySet="StockCompDetalle">
+      <EndProperty Name="StockComp">
+        <ScalarProperty Name="IdCompCOM" ColumnName="IdCompCOMD" />
+      </EndProperty>
+      <EndProperty Name="StockCompDetalle">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_StockMovDetalle" TypeName="karminnaModel.FK_StockMovDetalle" StoreEntitySet="StockMovDetalle">
+      <EndProperty Name="StockMov">
+        <ScalarProperty Name="IdMovMSTK" ColumnName="IdMovMSTKD" />
+      </EndProperty>
+      <EndProperty Name="StockMovDetalle">
+        <ScalarProperty Name="IdMSTKD" ColumnName="IdMSTKD" />
+      </EndProperty>
+      <Condition ColumnName="IdMovMSTKD" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasDetalle" TypeName="karminnaModel.FK_VentasDetalle" StoreEntitySet="VentasDetalle">
+      <EndProperty Name="Ventas">
+        <ScalarProperty Name="IdVentaVEN" ColumnName="IdVentaDVEN" />
+        <ScalarProperty Name="IdPCVEN" ColumnName="IdPCDVEN" />
+      </EndProperty>
+      <EndProperty Name="VentasDetalle">
+        <ScalarProperty Name="IdDVEN" ColumnName="IdDVEN" />
+      </EndProperty>
+      <Condition ColumnName="IdVentaDVEN" IsNull="false" />
+      <Condition ColumnName="IdPCDVEN" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

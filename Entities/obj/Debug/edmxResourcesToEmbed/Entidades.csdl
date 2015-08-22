@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="karminnaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="ncsoftwa_karminnaEntities">
+    <EntitySet Name="Articulos" EntityType="karminnaModel.Articulos" />
+    <EntitySet Name="ArticulosItems" EntityType="karminnaModel.ArticulosItems" />
+    <EntitySet Name="Clientes" EntityType="karminnaModel.Clientes" />
+    <EntitySet Name="Colores" EntityType="karminnaModel.Colores" />
+    <EntitySet Name="FondoCajaPunto" EntityType="karminnaModel.FondoCajaPunto" />
+    <EntitySet Name="FormasPago" EntityType="karminnaModel.FormasPago" />
+    <EntitySet Name="Locales" EntityType="karminnaModel.Locales" />
+    <EntitySet Name="Pc" EntityType="karminnaModel.Pc" />
+    <EntitySet Name="Proveedores" EntityType="karminnaModel.Proveedores" />
+    <EntitySet Name="Stock" EntityType="karminnaModel.Stock" />
+    <EntitySet Name="StockComp" EntityType="karminnaModel.StockComp" />
+    <EntitySet Name="StockCompDetalle" EntityType="karminnaModel.StockCompDetalle" />
+    <EntitySet Name="StockMov" EntityType="karminnaModel.StockMov" />
+    <EntitySet Name="StockMovDetalle" EntityType="karminnaModel.StockMovDetalle" />
+    <EntitySet Name="Ventas" EntityType="karminnaModel.Ventas" />
+    <EntitySet Name="VentasDetalle" EntityType="karminnaModel.VentasDetalle" />
+    <AssociationSet Name="FK_Color" Association="karminnaModel.FK_Color">
+      <End Role="Colores" EntitySet="Colores" />
+      <End Role="Articulos" EntitySet="Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Item" Association="karminnaModel.FK_Item">
+      <End Role="ArticulosItems" EntitySet="ArticulosItems" />
+      <End Role="Articulos" EntitySet="Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor" Association="karminnaModel.FK_Proveedor">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="Articulos" EntitySet="Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stock_Articulos" Association="karminnaModel.FK_Stock_Articulos">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockCompDetalle_Articulos" Association="karminnaModel.FK_StockCompDetalle_Articulos">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="StockCompDetalle" EntitySet="StockCompDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMovDetalle_Articulos" Association="karminnaModel.FK_StockMovDetalle_Articulos">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="StockMovDetalle" EntitySet="StockMovDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasDetalle_Articulos" Association="karminnaModel.FK_VentasDetalle_Articulos">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="VentasDetalle" EntitySet="VentasDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ventas" Association="karminnaModel.FK_Ventas">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasDetalle_Forma" Association="karminnaModel.FK_VentasDetalle_Forma">
+      <End Role="FormasPago" EntitySet="FormasPago" />
+      <End Role="VentasDetalle" EntitySet="VentasDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pc" Association="karminnaModel.FK_Pc">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Pc" EntitySet="Pc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stock_Local" Association="karminnaModel.FK_Stock_Local">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockComp" Association="karminnaModel.FK_StockComp">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="StockComp" EntitySet="StockComp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMov_Destino" Association="karminnaModel.FK_StockMov_Destino">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="StockMov" EntitySet="StockMov" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMov_Origen" Association="karminnaModel.FK_StockMov_Origen">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="StockMov" EntitySet="StockMov" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ventas_Pc" Association="karminnaModel.FK_Ventas_Pc">
+      <End Role="Pc" EntitySet="Pc" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockCompDetalle" Association="karminnaModel.FK_StockCompDetalle">
+      <End Role="StockComp" EntitySet="StockComp" />
+      <End Role="StockCompDetalle" EntitySet="StockCompDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMovDetalle" Association="karminnaModel.FK_StockMovDetalle">
+      <End Role="StockMov" EntitySet="StockMov" />
+      <End Role="StockMovDetalle" EntitySet="StockMovDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasDetalle" Association="karminnaModel.FK_VentasDetalle">
+      <End Role="Ventas" EntitySet="Ventas" />
+      <End Role="VentasDetalle" EntitySet="VentasDetalle" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Articulos">
+    <Key>
+      <PropertyRef Name="IdArticuloART" />
+    </Key>
+    <Property Name="IdArticuloART" Type="String" Nullable="false" />
+    <Property Name="TalleART" Type="String" />
+    <Property Name="DescripcionART" Type="String" />
+    <Property Name="DescripcionWebART" Type="String" />
+    <Property Name="PrecioCostoART" Type="Decimal" />
+    <Property Name="PrecioPublicoART" Type="Decimal" />
+    <Property Name="PrecioMayorART" Type="Decimal" />
+    <Property Name="FechaART" Type="DateTime" />
+    <Property Name="ImagenART" Type="String" />
+    <NavigationProperty Name="Colores" Relationship="karminnaModel.FK_Color" FromRole="Articulos" ToRole="Colores" />
+    <NavigationProperty Name="ArticulosItems" Relationship="karminnaModel.FK_Item" FromRole="Articulos" ToRole="ArticulosItems" />
+    <NavigationProperty Name="Proveedores" Relationship="karminnaModel.FK_Proveedor" FromRole="Articulos" ToRole="Proveedores" />
+    <NavigationProperty Name="Stock" Relationship="karminnaModel.FK_Stock_Articulos" FromRole="Articulos" ToRole="Stock" />
+    <NavigationProperty Name="StockCompDetalle" Relationship="karminnaModel.FK_StockCompDetalle_Articulos" FromRole="Articulos" ToRole="StockCompDetalle" />
+    <NavigationProperty Name="StockMovDetalle" Relationship="karminnaModel.FK_StockMovDetalle_Articulos" FromRole="Articulos" ToRole="StockMovDetalle" />
+    <NavigationProperty Name="VentasDetalle" Relationship="karminnaModel.FK_VentasDetalle_Articulos" FromRole="Articulos" ToRole="VentasDetalle" />
+  </EntityType>
+  <EntityType Name="ArticulosItems">
+    <Key>
+      <PropertyRef Name="IdItemITE" />
+    </Key>
+    <Property Name="IdItemITE" Type="Int32" Nullable="false" />
+    <Property Name="DescripcionITE" Type="String" />
+    <NavigationProperty Name="Articulos" Relationship="karminnaModel.FK_Item" FromRole="ArticulosItems" ToRole="Articulos" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IdClienteCLI" />
+    </Key>
+    <Property Name="IdClienteCLI" Type="Int32" Nullable="false" />
+    <Property Name="RazonSocialCLI" Type="String" />
+    <Property Name="CUIT" Type="String" />
+    <Property Name="DireccionCLI" Type="String" />
+    <Property Name="LocalidadCLI" Type="String" />
+    <Property Name="ProvinciaCLI" Type="String" />
+    <Property Name="TransporteCLI" Type="String" />
+    <Property Name="ContactoCLI" Type="String" />
+    <Property Name="TelefonoCLI" Type="String" />
+    <Property Name="MovilCLI" Type="String" />
+    <NavigationProperty Name="Ventas" Relationship="karminnaModel.FK_Ventas" FromRole="Clientes" ToRole="Ventas" />
+  </EntityType>
+  <EntityType Name="Colores">
+    <Key>
+      <PropertyRef Name="IdColorCOL" />
+    </Key>
+    <Property Name="IdColorCOL" Type="Int32" Nullable="false" />
+    <Property Name="DescripcionCOL" Type="String" />
+    <NavigationProperty Name="Articulos" Relationship="karminnaModel.FK_Color" FromRole="Colores" ToRole="Articulos" />
+  </EntityType>
+  <EntityType Name="FondoCajaPunto">
+    <Key>
+      <PropertyRef Name="FechaFONP" />
+      <PropertyRef Name="IdLocalFONP" />
+    </Key>
+    <Property Name="FechaFONP" Type="DateTime" Nullable="false" />
+    <Property Name="IdLocalFONP" Type="Int32" Nullable="false" />
+    <Property Name="ImporteFONP" Type="Decimal" />
+  </EntityType>
+  <EntityType Name="FormasPago">
+    <Key>
+      <PropertyRef Name="IdFormaPagoFOR" />
+    </Key>
+    <Property Name="IdFormaPagoFOR" Type="Int32" Nullable="false" />
+    <Property Name="DescripcionFOR" Type="String" />
+    <NavigationProperty Name="VentasDetalle" Relationship="karminnaModel.FK_VentasDetalle_Forma" FromRole="FormasPago" ToRole="VentasDetalle" />
+  </EntityType>
+  <EntityType Name="Locales">
+    <Key>
+      <PropertyRef Name="IdLocalLOC" />
+    </Key>
+    <Property Name="IdLocalLOC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreLOC" Type="String" />
+    <Property Name="DireccionLOC" Type="String" />
+    <Property Name="TelefonoLOC" Type="String" />
+    <NavigationProperty Name="Pc" Relationship="karminnaModel.FK_Pc" FromRole="Locales" ToRole="Pc" />
+    <NavigationProperty Name="Stock" Relationship="karminnaModel.FK_Stock_Local" FromRole="Locales" ToRole="Stock" />
+    <NavigationProperty Name="StockComp" Relationship="karminnaModel.FK_StockComp" FromRole="Locales" ToRole="StockComp" />
+    <NavigationProperty Name="StockMov" Relationship="karminnaModel.FK_StockMov_Destino" FromRole="Locales" ToRole="StockMov" />
+    <NavigationProperty Name="StockMov1" Relationship="karminnaModel.FK_StockMov_Origen" FromRole="Locales" ToRole="StockMov" />
+  </EntityType>
+  <EntityType Name="Pc">
+    <Key>
+      <PropertyRef Name="IdPC" />
+    </Key>
+    <Property Name="IdPC" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Locales" Relationship="karminnaModel.FK_Pc" FromRole="Pc" ToRole="Locales" />
+    <NavigationProperty Name="Ventas" Relationship="karminnaModel.FK_Ventas_Pc" FromRole="Pc" ToRole="Ventas" />
+  </EntityType>
+  <EntityType Name="Proveedores">
+    <Key>
+      <PropertyRef Name="IdProveedorPRO" />
+    </Key>
+    <Property Name="IdProveedorPRO" Type="Int32" Nullable="false" />
+    <Property Name="RazonSocialPRO" Type="String" />
+    <Property Name="DireccionPRO" Type="String" />
+    <Property Name="CodigoPostalPRO" Type="String" />
+    <Property Name="TelefonoPRO" Type="String" />
+    <Property Name="ContactoPRO" Type="String" />
+    <NavigationProperty Name="Articulos" Relationship="karminnaModel.FK_Proveedor" FromRole="Proveedores" ToRole="Articulos" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="IdArticuloSTK" />
+      <PropertyRef Name="IdLocalSTK" />
+    </Key>
+    <Property Name="IdArticuloSTK" Type="String" Nullable="false" />
+    <Property Name="IdLocalSTK" Type="Int32" Nullable="false" />
+    <Property Name="CantidadSTK" Type="Int32" />
+    <NavigationProperty Name="Articulos" Relationship="karminnaModel.FK_Stock_Articulos" FromRole="Stock" ToRole="Articulos" />
+    <NavigationProperty Name="Locales" Relationship="karminnaModel.FK_Stock_Local" FromRole="Stock" ToRole="Locales" />
+  </EntityType>
+  <EntityType Name="StockComp">
+    <Key>
+      <PropertyRef Name="IdCompCOM" />
+    </Key>
+    <Property Name="IdCompCOM" Type="Int32" Nullable="false" />
+    <Property Name="FechaCOM" Type="DateTime" />
+    <NavigationProperty Name="Locales" Relationship="karminnaModel.FK_StockComp" FromRole="StockComp" ToRole="Locales" />
+    <NavigationProperty Name="StockCompDetalle" Relationship="karminnaModel.FK_StockCompDetalle" FromRole="StockComp" ToRole="StockCompDetalle" />
+  </EntityType>
+  <EntityType Name="StockCompDetalle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DescripcionCOMD" Type="String" />
+    <Property Name="CantidadCOMD" Type="Int32" />
+    <NavigationProperty Name="Articulos" Relationship="karminnaModel.FK_StockCompDetalle_Articulos" FromRole="StockCompDetalle" ToRole="Articulos" />
+    <NavigationProperty Name="StockComp" Relationship="karminnaModel.FK_StockCompDetalle" FromRole="StockCompDetalle" ToRole="StockComp" />
+  </EntityType>
+  <EntityType Name="StockMov">
+    <Key>
+      <PropertyRef Name="IdMovMSTK" />
+    </Key>
+    <Property Name="IdMovMSTK" Type="Int32" Nullable="false" />
+    <Property Name="FechaMSTK" Type="DateTime" />
+    <NavigationProperty Name="Locales" Relationship="karminnaModel.FK_StockMov_Destino" FromRole="StockMov" ToRole="Locales" />
+    <NavigationProperty Name="Locales1" Relationship="karminnaModel.FK_StockMov_Origen" FromRole="StockMov" ToRole="Locales" />
+    <NavigationProperty Name="StockMovDetalle" Relationship="karminnaModel.FK_StockMovDetalle" FromRole="StockMov" ToRole="StockMovDetalle" />
+  </EntityType>
+  <EntityType Name="StockMovDetalle">
+    <Key>
+      <PropertyRef Name="IdMSTKD" />
+    </Key>
+    <Property Name="IdMSTKD" Type="Int32" Nullable="false" />
+    <Property Name="CantidadMSTKD" Type="Int32" />
+    <NavigationProperty Name="Articulos" Relationship="karminnaModel.FK_StockMovDetalle_Articulos" FromRole="StockMovDetalle" ToRole="Articulos" />
+    <NavigationProperty Name="StockMov" Relationship="karminnaModel.FK_StockMovDetalle" FromRole="StockMovDetalle" ToRole="StockMov" />
+  </EntityType>
+  <EntityType Name="Ventas">
+    <Key>
+      <PropertyRef Name="IdVentaVEN" />
+      <PropertyRef Name="IdPCVEN" />
+    </Key>
+    <Property Name="IdVentaVEN" Type="Int32" Nullable="false" />
+    <Property Name="IdPCVEN" Type="Int32" Nullable="false" />
+    <Property Name="FechaVEN" Type="DateTime" />
+    <NavigationProperty Name="Clientes" Relationship="karminnaModel.FK_Ventas" FromRole="Ventas" ToRole="Clientes" />
+    <NavigationProperty Name="Pc" Relationship="karminnaModel.FK_Ventas_Pc" FromRole="Ventas" ToRole="Pc" />
+    <NavigationProperty Name="VentasDetalle" Relationship="karminnaModel.FK_VentasDetalle" FromRole="Ventas" ToRole="VentasDetalle" />
+  </EntityType>
+  <EntityType Name="VentasDetalle">
+    <Key>
+      <PropertyRef Name="IdDVEN" />
+    </Key>
+    <Property Name="IdDVEN" Type="Int32" Nullable="false" />
+    <Property Name="DescripcionDVEN" Type="String" />
+    <Property Name="CantidadDVEN" Type="Int32" />
+    <Property Name="PrecioPublicoDVEN" Type="Double" />
+    <Property Name="PrecioCostoDVEN" Type="Double" />
+    <Property Name="PrecioMayorDVEN" Type="Double" />
+    <Property Name="NroCuponDVEN" Type="Int32" />
+    <Property Name="NroFactraDVEN" Type="Int32" />
+    <Property Name="IdEmpleadoDVEN" Type="Int32" />
+    <Property Name="LiquidadoDVEN" Type="Boolean" />
+    <Property Name="EsperaDVEN" Type="Boolean" />
+    <Property Name="DevolucionDVEN" Type="Boolean" />
+    <NavigationProperty Name="Articulos" Relationship="karminnaModel.FK_VentasDetalle_Articulos" FromRole="VentasDetalle" ToRole="Articulos" />
+    <NavigationProperty Name="FormasPago" Relationship="karminnaModel.FK_VentasDetalle_Forma" FromRole="VentasDetalle" ToRole="FormasPago" />
+    <NavigationProperty Name="Ventas" Relationship="karminnaModel.FK_VentasDetalle" FromRole="VentasDetalle" ToRole="Ventas" />
+  </EntityType>
+  <Association Name="FK_Color">
+    <End Role="Colores" Type="karminnaModel.Colores" Multiplicity="0..1" />
+    <End Role="Articulos" Type="karminnaModel.Articulos" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Item">
+    <End Role="ArticulosItems" Type="karminnaModel.ArticulosItems" Multiplicity="0..1" />
+    <End Role="Articulos" Type="karminnaModel.Articulos" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Proveedor">
+    <End Role="Proveedores" Type="karminnaModel.Proveedores" Multiplicity="0..1" />
+    <End Role="Articulos" Type="karminnaModel.Articulos" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Stock_Articulos">
+    <End Role="Articulos" Type="karminnaModel.Articulos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Stock" Type="karminnaModel.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="IdArticuloART" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="IdArticuloSTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockCompDetalle_Articulos">
+    <End Role="Articulos" Type="karminnaModel.Articulos" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockCompDetalle" Type="karminnaModel.StockCompDetalle" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_StockMovDetalle_Articulos">
+    <End Role="Articulos" Type="karminnaModel.Articulos" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockMovDetalle" Type="karminnaModel.StockMovDetalle" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_VentasDetalle_Articulos">
+    <End Role="Articulos" Type="karminnaModel.Articulos" Multiplicity="0..1" />
+    <End Role="VentasDetalle" Type="karminnaModel.VentasDetalle" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Ventas">
+    <End Role="Clientes" Type="karminnaModel.Clientes" Multiplicity="0..1" />
+    <End Role="Ventas" Type="karminnaModel.Ventas" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_VentasDetalle_Forma">
+    <End Role="FormasPago" Type="karminnaModel.FormasPago" Multiplicity="0..1" />
+    <End Role="VentasDetalle" Type="karminnaModel.VentasDetalle" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Pc">
+    <End Role="Locales" Type="karminnaModel.Locales" Multiplicity="0..1" />
+    <End Role="Pc" Type="karminnaModel.Pc" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Stock_Local">
+    <End Role="Locales" Type="karminnaModel.Locales" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Stock" Type="karminnaModel.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="IdLocalLOC" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="IdLocalSTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockComp">
+    <End Role="Locales" Type="karminnaModel.Locales" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockComp" Type="karminnaModel.StockComp" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_StockMov_Destino">
+    <End Role="Locales" Type="karminnaModel.Locales" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockMov" Type="karminnaModel.StockMov" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_StockMov_Origen">
+    <End Role="Locales" Type="karminnaModel.Locales" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockMov" Type="karminnaModel.StockMov" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Ventas_Pc">
+    <End Role="Pc" Type="karminnaModel.Pc" Multiplicity="1" />
+    <End Role="Ventas" Type="karminnaModel.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pc">
+        <PropertyRef Name="IdPC" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="IdPCVEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockCompDetalle">
+    <End Role="StockComp" Type="karminnaModel.StockComp" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockCompDetalle" Type="karminnaModel.StockCompDetalle" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_StockMovDetalle">
+    <End Role="StockMov" Type="karminnaModel.StockMov" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockMovDetalle" Type="karminnaModel.StockMovDetalle" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_VentasDetalle">
+    <End Role="Ventas" Type="karminnaModel.Ventas" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VentasDetalle" Type="karminnaModel.VentasDetalle" Multiplicity="*" />
+  </Association>
+</Schema>

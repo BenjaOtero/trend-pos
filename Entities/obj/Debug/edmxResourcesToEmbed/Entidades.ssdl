@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="karminnaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="karminnaModelStoreContainer">
+    <EntitySet Name="Articulos" EntityType="karminnaModel.Store.Articulos" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="ArticulosItems" EntityType="karminnaModel.Store.ArticulosItems" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="Clientes" EntityType="karminnaModel.Store.Clientes" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="Colores" EntityType="karminnaModel.Store.Colores" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="FondoCajaPunto" EntityType="karminnaModel.Store.FondoCajaPunto" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="FormasPago" EntityType="karminnaModel.Store.FormasPago" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="Locales" EntityType="karminnaModel.Store.Locales" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="Pc" EntityType="karminnaModel.Store.Pc" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="Proveedores" EntityType="karminnaModel.Store.Proveedores" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="Stock" EntityType="karminnaModel.Store.Stock" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="StockComp" EntityType="karminnaModel.Store.StockComp" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="StockCompDetalle" EntityType="karminnaModel.Store.StockCompDetalle" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="StockMov" EntityType="karminnaModel.Store.StockMov" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="StockMovDetalle" EntityType="karminnaModel.Store.StockMovDetalle" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="Ventas" EntityType="karminnaModel.Store.Ventas" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <EntitySet Name="VentasDetalle" EntityType="karminnaModel.Store.VentasDetalle" store:Type="Tables" Schema="ncsoftwa_karminna" />
+    <AssociationSet Name="FK_Color" Association="karminnaModel.Store.FK_Color">
+      <End Role="Colores" EntitySet="Colores" />
+      <End Role="Articulos" EntitySet="Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Item" Association="karminnaModel.Store.FK_Item">
+      <End Role="ArticulosItems" EntitySet="ArticulosItems" />
+      <End Role="Articulos" EntitySet="Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pc" Association="karminnaModel.Store.FK_Pc">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Pc" EntitySet="Pc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor" Association="karminnaModel.Store.FK_Proveedor">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="Articulos" EntitySet="Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stock_Articulos" Association="karminnaModel.Store.FK_Stock_Articulos">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stock_Local" Association="karminnaModel.Store.FK_Stock_Local">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockComp" Association="karminnaModel.Store.FK_StockComp">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="StockComp" EntitySet="StockComp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockCompDetalle" Association="karminnaModel.Store.FK_StockCompDetalle">
+      <End Role="StockComp" EntitySet="StockComp" />
+      <End Role="StockCompDetalle" EntitySet="StockCompDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockCompDetalle_Articulos" Association="karminnaModel.Store.FK_StockCompDetalle_Articulos">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="StockCompDetalle" EntitySet="StockCompDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMov_Destino" Association="karminnaModel.Store.FK_StockMov_Destino">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="StockMov" EntitySet="StockMov" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMov_Origen" Association="karminnaModel.Store.FK_StockMov_Origen">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="StockMov" EntitySet="StockMov" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMovDetalle" Association="karminnaModel.Store.FK_StockMovDetalle">
+      <End Role="StockMov" EntitySet="StockMov" />
+      <End Role="StockMovDetalle" EntitySet="StockMovDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMovDetalle_Articulos" Association="karminnaModel.Store.FK_StockMovDetalle_Articulos">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="StockMovDetalle" EntitySet="StockMovDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ventas" Association="karminnaModel.Store.FK_Ventas">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ventas_Pc" Association="karminnaModel.Store.FK_Ventas_Pc">
+      <End Role="Pc" EntitySet="Pc" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasDetalle" Association="karminnaModel.Store.FK_VentasDetalle">
+      <End Role="Ventas" EntitySet="Ventas" />
+      <End Role="VentasDetalle" EntitySet="VentasDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasDetalle_Articulos" Association="karminnaModel.Store.FK_VentasDetalle_Articulos">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="VentasDetalle" EntitySet="VentasDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasDetalle_Forma" Association="karminnaModel.Store.FK_VentasDetalle_Forma">
+      <End Role="FormasPago" EntitySet="FormasPago" />
+      <End Role="VentasDetalle" EntitySet="VentasDetalle" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Articulos">
+    <Key>
+      <PropertyRef Name="IdArticuloART" />
+    </Key>
+    <Property Name="IdArticuloART" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdItemART" Type="int" />
+    <Property Name="IdColorART" Type="int" />
+    <Property Name="TalleART" Type="varchar" MaxLength="2" />
+    <Property Name="IdProveedorART" Type="int" />
+    <Property Name="DescripcionART" Type="varchar" MaxLength="55" />
+    <Property Name="DescripcionWebART" Type="varchar" MaxLength="50" />
+    <Property Name="PrecioCostoART" Type="decimal" Precision="19" />
+    <Property Name="PrecioPublicoART" Type="decimal" Precision="19" />
+    <Property Name="PrecioMayorART" Type="decimal" Precision="19" />
+    <Property Name="FechaART" Type="datetime" />
+    <Property Name="ImagenART" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ArticulosItems">
+    <Key>
+      <PropertyRef Name="IdItemITE" />
+    </Key>
+    <Property Name="IdItemITE" Type="int" Nullable="false" />
+    <Property Name="DescripcionITE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IdClienteCLI" />
+    </Key>
+    <Property Name="IdClienteCLI" Type="int" Nullable="false" />
+    <Property Name="RazonSocialCLI" Type="varchar" MaxLength="50" />
+    <Property Name="CUIT" Type="varchar" MaxLength="50" />
+    <Property Name="DireccionCLI" Type="varchar" MaxLength="50" />
+    <Property Name="LocalidadCLI" Type="varchar" MaxLength="50" />
+    <Property Name="ProvinciaCLI" Type="varchar" MaxLength="50" />
+    <Property Name="TransporteCLI" Type="varchar" MaxLength="50" />
+    <Property Name="ContactoCLI" Type="varchar" MaxLength="50" />
+    <Property Name="TelefonoCLI" Type="varchar" MaxLength="50" />
+    <Property Name="MovilCLI" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Colores">
+    <Key>
+      <PropertyRef Name="IdColorCOL" />
+    </Key>
+    <Property Name="IdColorCOL" Type="int" Nullable="false" />
+    <Property Name="DescripcionCOL" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FondoCajaPunto">
+    <Key>
+      <PropertyRef Name="FechaFONP" />
+      <PropertyRef Name="IdLocalFONP" />
+    </Key>
+    <Property Name="FechaFONP" Type="datetime" Nullable="false" />
+    <Property Name="IdLocalFONP" Type="int" Nullable="false" />
+    <Property Name="ImporteFONP" Type="decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="FormasPago">
+    <Key>
+      <PropertyRef Name="IdFormaPagoFOR" />
+    </Key>
+    <Property Name="IdFormaPagoFOR" Type="int" Nullable="false" />
+    <Property Name="DescripcionFOR" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Locales">
+    <Key>
+      <PropertyRef Name="IdLocalLOC" />
+    </Key>
+    <Property Name="IdLocalLOC" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreLOC" Type="varchar" MaxLength="50" />
+    <Property Name="DireccionLOC" Type="varchar" MaxLength="50" />
+    <Property Name="TelefonoLOC" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Pc">
+    <Key>
+      <PropertyRef Name="IdPC" />
+    </Key>
+    <Property Name="IdPC" Type="int" Nullable="false" />
+    <Property Name="IdLocalPC" Type="int" />
+  </EntityType>
+  <EntityType Name="Proveedores">
+    <Key>
+      <PropertyRef Name="IdProveedorPRO" />
+    </Key>
+    <Property Name="IdProveedorPRO" Type="int" Nullable="false" />
+    <Property Name="RazonSocialPRO" Type="varchar" MaxLength="50" />
+    <Property Name="DireccionPRO" Type="varchar" MaxLength="50" />
+    <Property Name="CodigoPostalPRO" Type="varchar" MaxLength="50" />
+    <Property Name="TelefonoPRO" Type="varchar" MaxLength="50" />
+    <Property Name="ContactoPRO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="IdArticuloSTK" />
+      <PropertyRef Name="IdLocalSTK" />
+    </Key>
+    <Property Name="IdArticuloSTK" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdLocalSTK" Type="int" Nullable="false" />
+    <Property Name="CantidadSTK" Type="int" />
+  </EntityType>
+  <EntityType Name="StockComp">
+    <Key>
+      <PropertyRef Name="IdCompCOM" />
+    </Key>
+    <Property Name="IdCompCOM" Type="int" Nullable="false" />
+    <Property Name="FechaCOM" Type="datetime" />
+    <Property Name="IdLocalCOM" Type="int" />
+  </EntityType>
+  <EntityType Name="StockCompDetalle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="IdCompCOMD" Type="int" Nullable="false" />
+    <Property Name="IdArticuloCOMD" Type="varchar" MaxLength="50" />
+    <Property Name="DescripcionCOMD" Type="varchar" MaxLength="255" />
+    <Property Name="CantidadCOMD" Type="int" />
+  </EntityType>
+  <EntityType Name="StockMov">
+    <Key>
+      <PropertyRef Name="IdMovMSTK" />
+    </Key>
+    <Property Name="IdMovMSTK" Type="int" Nullable="false" />
+    <Property Name="FechaMSTK" Type="datetime" />
+    <Property Name="OrigenMSTK" Type="int" />
+    <Property Name="DestinoMSTK" Type="int" />
+  </EntityType>
+  <EntityType Name="StockMovDetalle">
+    <Key>
+      <PropertyRef Name="IdMSTKD" />
+    </Key>
+    <Property Name="IdMSTKD" Type="int" Nullable="false" />
+    <Property Name="IdMovMSTKD" Type="int" />
+    <Property Name="IdArticuloMSTKD" Type="varchar" MaxLength="50" />
+    <Property Name="CantidadMSTKD" Type="int" />
+  </EntityType>
+  <EntityType Name="Ventas">
+    <Key>
+      <PropertyRef Name="IdVentaVEN" />
+      <PropertyRef Name="IdPCVEN" />
+    </Key>
+    <Property Name="IdVentaVEN" Type="int" Nullable="false" />
+    <Property Name="IdPCVEN" Type="int" Nullable="false" />
+    <Property Name="FechaVEN" Type="datetime" />
+    <Property Name="IdClienteVEN" Type="int" />
+  </EntityType>
+  <EntityType Name="VentasDetalle">
+    <Key>
+      <PropertyRef Name="IdDVEN" />
+    </Key>
+    <Property Name="IdDVEN" Type="int" Nullable="false" />
+    <Property Name="IdVentaDVEN" Type="int" />
+    <Property Name="IdPCDVEN" Type="int" />
+    <Property Name="IdArticuloDVEN" Type="varchar" MaxLength="50" />
+    <Property Name="DescripcionDVEN" Type="varchar" MaxLength="50" />
+    <Property Name="CantidadDVEN" Type="int" />
+    <Property Name="PrecioPublicoDVEN" Type="double" />
+    <Property Name="PrecioCostoDVEN" Type="double" />
+    <Property Name="PrecioMayorDVEN" Type="double" />
+    <Property Name="IdFormaPagoDVEN" Type="int" />
+    <Property Name="NroCuponDVEN" Type="int" />
+    <Property Name="NroFactraDVEN" Type="int" />
+    <Property Name="IdEmpleadoDVEN" Type="int" />
+    <Property Name="LiquidadoDVEN" Type="bit" />
+    <Property Name="EsperaDVEN" Type="bit" />
+    <Property Name="DevolucionDVEN" Type="bit" />
+  </EntityType>
+  <Association Name="FK_Color">
+    <End Role="Colores" Type="karminnaModel.Store.Colores" Multiplicity="0..1" />
+    <End Role="Articulos" Type="karminnaModel.Store.Articulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colores">
+        <PropertyRef Name="IdColorCOL" />
+      </Principal>
+      <Dependent Role="Articulos">
+        <PropertyRef Name="IdColorART" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Item">
+    <End Role="ArticulosItems" Type="karminnaModel.Store.ArticulosItems" Multiplicity="0..1" />
+    <End Role="Articulos" Type="karminnaModel.Store.Articulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ArticulosItems">
+        <PropertyRef Name="IdItemITE" />
+      </Principal>
+      <Dependent Role="Articulos">
+        <PropertyRef Name="IdItemART" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pc">
+    <End Role="Locales" Type="karminnaModel.Store.Locales" Multiplicity="0..1" />
+    <End Role="Pc" Type="karminnaModel.Store.Pc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="IdLocalLOC" />
+      </Principal>
+      <Dependent Role="Pc">
+        <PropertyRef Name="IdLocalPC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor">
+    <End Role="Proveedores" Type="karminnaModel.Store.Proveedores" Multiplicity="0..1" />
+    <End Role="Articulos" Type="karminnaModel.Store.Articulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="IdProveedorPRO" />
+      </Principal>
+      <Dependent Role="Articulos">
+        <PropertyRef Name="IdProveedorART" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stock_Articulos">
+    <End Role="Articulos" Type="karminnaModel.Store.Articulos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Stock" Type="karminnaModel.Store.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="IdArticuloART" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="IdArticuloSTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stock_Local">
+    <End Role="Locales" Type="karminnaModel.Store.Locales" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Stock" Type="karminnaModel.Store.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="IdLocalLOC" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="IdLocalSTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockComp">
+    <End Role="Locales" Type="karminnaModel.Store.Locales" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockComp" Type="karminnaModel.Store.StockComp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="IdLocalLOC" />
+      </Principal>
+      <Dependent Role="StockComp">
+        <PropertyRef Name="IdLocalCOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockCompDetalle">
+    <End Role="StockComp" Type="karminnaModel.Store.StockComp" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockCompDetalle" Type="karminnaModel.Store.StockCompDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockComp">
+        <PropertyRef Name="IdCompCOM" />
+      </Principal>
+      <Dependent Role="StockCompDetalle">
+        <PropertyRef Name="IdCompCOMD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockCompDetalle_Articulos">
+    <End Role="Articulos" Type="karminnaModel.Store.Articulos" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockCompDetalle" Type="karminnaModel.Store.StockCompDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="IdArticuloART" />
+      </Principal>
+      <Dependent Role="StockCompDetalle">
+        <PropertyRef Name="IdArticuloCOMD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockMov_Destino">
+    <End Role="Locales" Type="karminnaModel.Store.Locales" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockMov" Type="karminnaModel.Store.StockMov" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="IdLocalLOC" />
+      </Principal>
+      <Dependent Role="StockMov">
+        <PropertyRef Name="DestinoMSTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockMov_Origen">
+    <End Role="Locales" Type="karminnaModel.Store.Locales" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockMov" Type="karminnaModel.Store.StockMov" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="IdLocalLOC" />
+      </Principal>
+      <Dependent Role="StockMov">
+        <PropertyRef Name="OrigenMSTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockMovDetalle">
+    <End Role="StockMov" Type="karminnaModel.Store.StockMov" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockMovDetalle" Type="karminnaModel.Store.StockMovDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockMov">
+        <PropertyRef Name="IdMovMSTK" />
+      </Principal>
+      <Dependent Role="StockMovDetalle">
+        <PropertyRef Name="IdMovMSTKD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockMovDetalle_Articulos">
+    <End Role="Articulos" Type="karminnaModel.Store.Articulos" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StockMovDetalle" Type="karminnaModel.Store.StockMovDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="IdArticuloART" />
+      </Principal>
+      <Dependent Role="StockMovDetalle">
+        <PropertyRef Name="IdArticuloMSTKD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ventas">
+    <End Role="Clientes" Type="karminnaModel.Store.Clientes" Multiplicity="0..1" />
+    <End Role="Ventas" Type="karminnaModel.Store.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="IdClienteCLI" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="IdClienteVEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ventas_Pc">
+    <End Role="Pc" Type="karminnaModel.Store.Pc" Multiplicity="1" />
+    <End Role="Ventas" Type="karminnaModel.Store.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pc">
+        <PropertyRef Name="IdPC" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="IdPCVEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasDetalle">
+    <End Role="Ventas" Type="karminnaModel.Store.Ventas" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VentasDetalle" Type="karminnaModel.Store.VentasDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ventas">
+        <PropertyRef Name="IdVentaVEN" />
+        <PropertyRef Name="IdPCVEN" />
+      </Principal>
+      <Dependent Role="VentasDetalle">
+        <PropertyRef Name="IdVentaDVEN" />
+        <PropertyRef Name="IdPCDVEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasDetalle_Articulos">
+    <End Role="Articulos" Type="karminnaModel.Store.Articulos" Multiplicity="0..1" />
+    <End Role="VentasDetalle" Type="karminnaModel.Store.VentasDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="IdArticuloART" />
+      </Principal>
+      <Dependent Role="VentasDetalle">
+        <PropertyRef Name="IdArticuloDVEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasDetalle_Forma">
+    <End Role="FormasPago" Type="karminnaModel.Store.FormasPago" Multiplicity="0..1" />
+    <End Role="VentasDetalle" Type="karminnaModel.Store.VentasDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormasPago">
+        <PropertyRef Name="IdFormaPagoFOR" />
+      </Principal>
+      <Dependent Role="VentasDetalle">
+        <PropertyRef Name="IdFormaPagoDVEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6037: La restricción de clave externa 'FK_VentasDetalle_Pc' se ha omitido en el modelo de almacenamiento. La columna 'IdPCDVEN' de la tabla 'karminnaModel.Store.VentasDetalle' es una clave externa que participa en varias relaciones. No se validará un modelo de entidad de uno a uno, ya que puede existir incoherencia en los datos.
+      
+      <Association Name="FK_VentasDetalle_Pc">
+        <End Role="Pc" Type="karminnaModel.Store.Pc" Multiplicity="0..1" />
+        <End Role="VentasDetalle" Type="karminnaModel.Store.VentasDetalle" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Pc">
+            <PropertyRef Name="IdPC" />
+          </Principal>
+          <Dependent Role="VentasDetalle">
+            <PropertyRef Name="IdPCDVEN" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>-->
+</Schema>
