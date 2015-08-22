@@ -1,0 +1,15 @@
+N:\NcSoftware\01_C_sharp\karminna_local_pos\CustomActions\bin\Debug\CustomActions.dll
+N:\NcSoftware\01_C_sharp\karminna_local_pos\CustomActions\bin\Debug\CustomActions.pdb
+N:\NcSoftware\01_C_sharp\karminna_local_pos\CustomActions\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\karminna_local_pos\CustomActions\obj\Debug\CustomActions.dll
+N:\NcSoftware\01_C_sharp\karminna_local_pos\CustomActions\obj\Debug\CustomActions.pdb
+N:\NcSoftware\01_C_sharp\karminna_local_pos\CustomActions\obj\Debug\CustomActions.Installer1.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\CustomActions\obj\Debug\GenerateResource.read.1.tlog
+N:\NcSoftware\01_C_sharp\karminna_local_pos\CustomActions\obj\Debug\GenerateResource.write.1.tlog
+C:\Trend\POS\trunk\CustomActions\bin\Debug\CustomActions.dll
+C:\Trend\POS\trunk\CustomActions\bin\Debug\CustomActions.pdb
+C:\Trend\POS\trunk\CustomActions\obj\Debug\CustomActions.csprojResolveAssemblyReference.cache
+C:\Trend\POS\trunk\CustomActions\obj\Debug\CustomActions.Installer1.resources
+C:\Trend\POS\trunk\CustomActions\obj\Debug\CustomActions.csproj.GenerateResource.Cache
+C:\Trend\POS\trunk\CustomActions\obj\Debug\CustomActions.dll
+C:\Trend\POS\trunk\CustomActions\obj\Debug\CustomActions.pdb
