@@ -1,0 +1,16 @@
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\BL\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\BL\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\BL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\BL\obj\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\BL\obj\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\BL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\BL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\BL\obj\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\BL\obj\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\BL\obj\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\BL\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\BL\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\BL\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\BL\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\BL\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\BL\bin\Debug\Entities.pdb

@@ -1,0 +1,9 @@
+N:\NcSoftware\01_C_sharp\Karminna Admin\BL\bin\Release\BL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\BL\bin\Release\BL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\BL\bin\Release\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\BL\bin\Release\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\BL\bin\Release\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\BL\bin\Release\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\BL\obj\Release\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna Admin\BL\obj\Release\BL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\BL\obj\Release\BL.pdb
