@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Table.FindRow</Title>
+    <Author>autor</Author>
+    <Shortcut>snptTableFindRow</Shortcut>
+    <Description>Busca una fila en un datatable por la clave principal</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[
+        DataRow foundRow = dt.Tables["ArticulosItems"].Rows.Find(clave);
+            ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

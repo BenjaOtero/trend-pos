@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Table.NewRow</Title>
+    <Author>autor</Author>
+    <Shortcut>snptTableNewRow</Shortcut>
+    <Description>Agrega una fila a un datatable atraves del metodo NewRow</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[DataRowCollection cfilas = tabla.Rows;
+            DataRow nuevaFila;
+            nuevaFila = tabla.NewRow();
+            nuevaFila[0] = 1;
+            nuevaFila[1] = "Pepe";
+            cfilas.Add(nuevaFila);
+            ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

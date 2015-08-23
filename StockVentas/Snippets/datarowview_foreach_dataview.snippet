@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>DataRowView.ForEachDataview</Title>
+    <Author>autor</Author>
+    <Shortcut>snptDataRowViewForEachDataview</Shortcut>
+    <Description>Recorre todas las DataRowView en un Dataview</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[
+                foreach (DataRowView filaLocal in viewLocales)
+                {
+                    int numero = Convert.ToInt32(filaLocal[0].ToString());
+                    // o sino
+                    filaLocal[0] = 1;
+                }
+            ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

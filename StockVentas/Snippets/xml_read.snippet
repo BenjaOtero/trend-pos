@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Table.ReadXml</Title>
+    <Author>autor</Author>
+    <Shortcut>snptTableReadXml</Shortcut>
+    <Description>Lee un archivo xml y vuelca en un datatable</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[            string strFilePath = Application.StartupPath + "\\Datasets_xml\\";
+            if (File.Exists(strFilePath + "Articulos.xml"))
+            {
+                DataTable tblArticulos = new DataTable();
+                tblArticulos.ReadXml(strFilePath + "Articulos.xml");
+                DataSet dt = new DataSet();
+                dt.Tables.Add(tblArticulos);
+                dt.AcceptChanges();
+            }]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

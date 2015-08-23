@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+  </configSections>
+  <connectionStrings>
+    <add name="DBMain" 
+         connectionString="server=dns26.cyberneticos.com;User Id=ncsoftwa_re;Persist Security Info=True;
+            database=ncsoftwa_pruebas;Pwd=8953#AFjn; default command timeout=30;"/>
+    <add name="DBMainLocal" connectionString="server=localhost;User Id=root;database=pos"/>
+    <add name="karminnaEntities" connectionString="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;server=dns26.cyberneticos.com;User Id=ncsoftwa_re;password=8953#AFjn;Persist Security Info=True;database=ncsoftwa_karminna&quot;" providerName="System.Data.EntityClient"/>
+    <add name="StockVentas.Properties.Settings.ncsoftwa_karminnaConnectionString" connectionString="server=dns26.cyberneticos.com;User Id=ncsoftwa_re;password=8953#AFjn;Persist Security Info=True;database=ncsoftwa_karminna" providerName="MySql.Data.MySqlClient"/>
+    <add name="DBMain2" connectionString="Data Source=.\sqlexpress;Initial Catalog=NORTHWND;Integrated Security=True" providerName="System.Data.SqlClient"/>
+    <add name="DBAccess" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=N:\NcSoftware\Datos\Karminna.mdb"/>
+  </connectionStrings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0,Profile=Client"/></startup></configuration>

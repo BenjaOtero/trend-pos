@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Table.DeleteRow</Title>
+    <Author>autor</Author>
+    <Shortcut>snptTableDeleteRow</Shortcut>
+    <Description>Borra una fila en un datatable</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[DataRow[] foundRows;
+                    foundRows = dt.Tables["Articulos"].Select("IdArticuloART = '1200010000'");
+                    foundRows[0].Delete();
+            ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

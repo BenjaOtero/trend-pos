@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>DataGridView.ComboBoxColumn</Title>
+    <Author>autor</Author>
+    <Shortcut>snptDataGridViewComboBoxColumn</Shortcut>
+    <Description>Agrega un ComboBoxColumn a un DataGridView</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[
+            DataGridViewComboBoxColumn comboboxColumn = new DataGridViewComboBoxColumn();
+            comboboxColumn.HeaderText = "Artículo";
+            comboboxColumn.DataSource = tblArticulos;
+            comboboxColumn.ValueMember = "IdArticuloART";
+            comboboxColumn.DisplayMember = "IdArticuloART";
+            comboboxColumn.DataPropertyName = "IdArticuloMSTKD";
+            dgvDatos.Columns.Insert(2, comboboxColumn);
+            ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

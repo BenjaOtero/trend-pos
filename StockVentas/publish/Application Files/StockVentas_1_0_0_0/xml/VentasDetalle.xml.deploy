@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Table" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IdDVEN" type="xs:int" minOccurs="0" />
+                <xs:element name="IdVentaDVEN" type="xs:int" minOccurs="0" />
+                <xs:element name="IdArticuloDVEN" type="xs:string" minOccurs="0" />
+                <xs:element name="DescripcionDVEN" type="xs:string" minOccurs="0" />
+                <xs:element name="CantidadDVEN" type="xs:int" minOccurs="0" />
+                <xs:element name="PrecioPublicoDVEN" type="xs:double" minOccurs="0" />
+                <xs:element name="PrecioCostoDVEN" type="xs:double" minOccurs="0" />
+                <xs:element name="PrecioMayorDVEN" type="xs:double" minOccurs="0" />
+                <xs:element name="IdFormaPagoDVEN" type="xs:int" minOccurs="0" />
+                <xs:element name="NroCuponDVEN" type="xs:int" minOccurs="0" />
+                <xs:element name="NroFacturaDVEN" type="xs:int" minOccurs="0" />
+                <xs:element name="IdEmpleadoDVEN" type="xs:int" minOccurs="0" />
+                <xs:element name="LiquidadoDVEN" type="xs:unsignedLong" minOccurs="0" />
+                <xs:element name="EsperaDVEN" type="xs:unsignedLong" minOccurs="0" />
+                <xs:element name="DevolucionDVEN" type="xs:unsignedLong" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <IdDVEN>671609822</IdDVEN>
+    <IdVentaDVEN>1500513732</IdVentaDVEN>
+    <IdArticuloDVEN>010010000</IdArticuloDVEN>
+    <CantidadDVEN>20</CantidadDVEN>
+    <PrecioPublicoDVEN>70</PrecioPublicoDVEN>
+    <PrecioCostoDVEN>45</PrecioCostoDVEN>
+    <PrecioMayorDVEN>0</PrecioMayorDVEN>
+    <IdFormaPagoDVEN>1</IdFormaPagoDVEN>
+    <DevolucionDVEN>0</DevolucionDVEN>
+  </Table>
+</NewDataSet>

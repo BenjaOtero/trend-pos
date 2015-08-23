@@ -1,0 +1,470 @@
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\StockVentas\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\StockVentas\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\StockVentas\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\StockVentas\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\StockVentas\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\StockVentas\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\StockVentas\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\StockVentas\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\StockVentas\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\NcSoftware 3 Capas\NcSoftware\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmFormasPago.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmColores.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmProveedores.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulosDetalle.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarInter.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerar.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmArticulosDetalle.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerar.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarInter.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmColores.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmFormasPago.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmProveedores.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarApartir.resources
+N:\NcSoftware\01_C_sharp\NcSoftware N Capas\StockVentas\obj\x86\Debug\StockVentas.frmStockMov.resources
+N:\NcSoftware\01_C_sharp\NcSoftware Datagridview\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\NcSoftware Datagridview\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware Datagridview\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulosDetalle.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerar.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarApartir.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarInter.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmColores.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmFormasPago.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmProveedores.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.frmStockMov.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\NcSoftware\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmArticulosDetalle.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerar.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarApartir.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarInter.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmColores.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmFormasPago.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmProveedores.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmStockMov.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmArticulosDetalle.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerar.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarApartir.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarInter.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmColores.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmFormasPago.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmProveedores.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.frmStockMov.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna - copia (3)\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmStockInter.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmStockInforme.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInter.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInforme.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmClientes.resources
+N:\NcSoftware\01_C_sharp\Karminna\StockVentas\obj\x86\Debug\StockVentas.frmVentas.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmArticulosDetalle.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerar.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarApartir.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmClientes.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmColores.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmFormasPago.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmProveedores.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmStockInforme.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmStockMov.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmStockInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInforme.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmVentas.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmArqueoCaja.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmArqueoInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion\StockVentas\obj\x86\Debug\StockVentas.frmTesoreriaMov.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmArqueoInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmArticulosDetalle.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerar.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarApartir.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmClientes.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmColores.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmFormasPago.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmProveedores.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmStockInforme.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmStockMov.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmStockInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInforme.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmTesoreriaMov.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmVentas.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmFondoCajaPunto.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmFondoCajaAdmin.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmArqueoCajaAdmin.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmArqueoCajaPto.resources
+N:\NcSoftware\01_C_sharp\Karminna Administracion punto\StockVentas\obj\x86\Debug\StockVentas.frmTesoreriaMovPto.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmFondoCajaPunto.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmArqueoCajaAdmin.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmArqueoInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmArticulosDetalle.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerar.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarApartir.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmClientes.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmColores.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmFormasPago.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmProveedores.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmStockInforme.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmStockMov.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmStockInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInforme.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmTesoreriaMov.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmVentas.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmActualizarServer.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmActualizarArticulos.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmActualizarProveedores.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmActualizarColores.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmActualizarStock.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmActualizarFondoCaja.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmFondoCaja.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmActualizarVentas.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmActualizarVentasDetalle.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmActualizarTesoreria.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmActualizarTesoreria.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmActualizarVentasDetalle.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmActualizarVentas.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmActualizarFondoCaja.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmActualizarStock.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmActualizarColores.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmActualizarProveedores.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmActualizarArticulos.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmActualizarServer.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmFondoCajaPunto.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmArqueoCajaAdmin.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmArqueoInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmArticulosDetalle.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerar.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarApartir.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmArticulosGenerarInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmArticulosItems.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmClientes.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmColores.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmFondoCaja.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmFormasPago.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmProveedores.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmStockInforme.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmStockMov.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmStockInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInforme.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInter.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmTesoreriaMov.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.frmVentas.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna Admin - copia (12)\StockVentas\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmMessageBox.resources
+N:\NcSoftware\01_C_sharp\Karminna Admin\StockVentas\obj\x86\Debug\StockVentas.frmFondoCajaCons.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmActualizarTesoreria.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmActualizarFondoCaja.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmFondoCajaPunto.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmArqueoCajaAdmin.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmArqueoInter.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmClientes.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmTesoreriaMov.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.frmVentas.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\GenerateResource.read.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\GenerateResource.write.1.tlog
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\Karminna punto\StockVentas\bin\Debug\Entities.pdb
+C:\Users\Benja\Desktop\01_C_sharp\Karminna punto\StockVentas\bin\Debug\StockVentas.exe.config
+C:\Users\Benja\Desktop\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.exe
+C:\Users\Benja\Desktop\01_C_sharp\Karminna punto\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\bin\Debug\Entities.dll
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\bin\Debug\Entities.pdb
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmArqueoCajaAdmin.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmArqueoInter.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmClientes.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmFondoCajaPunto.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmTesoreriaMov.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmVentas.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\GenerateResource.read.1.tlog
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\GenerateResource.write.1.tlog
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmStockInter.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmStockInforme.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmVentasPesosCons.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmVentasPesosInter.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInforme.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmStockMovInter.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmStockComp.resources
+N:\NcSoftware\01_C_sharp\karminna_pos\StockVentas\obj\x86\Debug\StockVentas.frmStockCompInter.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\bin\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\bin\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\bin\Debug\BL.dll
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\bin\Debug\DAL.dll
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\bin\Debug\BL.pdb
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\bin\Debug\DAL.pdb
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmFondoCajaPunto.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmStockInforme.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmTesoreriaMov.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmVentas.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmVentasPesosCons.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmVentasPesosInter.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\GenerateResource.read.1.tlog
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\GenerateResource.write.1.tlog
+N:\NcSoftware\01_C_sharp\karminna_local_pos_copia\StockVentas\bin\Debug\StockVentas.exe.config
+N:\NcSoftware\01_C_sharp\karminna_local_pos_copia\StockVentas\obj\x86\Debug\StockVentas.exe
+N:\NcSoftware\01_C_sharp\karminna_local_pos_copia\StockVentas\obj\x86\Debug\StockVentas.pdb
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmInicio.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmStockInter.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmProgress_2.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmVentasLotesTarjetas.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmArqueoCaja.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmArqueoInter.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.reloj.resources
+N:\NcSoftware\01_C_sharp\karminna_local_pos\StockVentas\obj\x86\Debug\StockVentas.frmClientes.resources
+C:\Trend\POS\trunk\StockVentas\bin\Debug\StockVentas.exe.config
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.exe
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.pdb
+C:\Trend\POS\trunk\StockVentas\bin\Debug\StockVentas.exe
+C:\Trend\POS\trunk\StockVentas\bin\Debug\StockVentas.pdb
+C:\Trend\POS\trunk\StockVentas\bin\Debug\BL.dll
+C:\Trend\POS\trunk\StockVentas\bin\Debug\DAL.dll
+C:\Trend\POS\trunk\StockVentas\bin\Debug\BL.pdb
+C:\Trend\POS\trunk\StockVentas\bin\Debug\DAL.pdb
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.csprojResolveAssemblyReference.cache
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmArqueoCaja.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmClientes.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmFondoCajaPunto.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmInicio.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmArqueoInter.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmPrincipal.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmProgress.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmProgress_2.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmStockInforme.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmStockInter.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmTesoreriaMov.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmVentas.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmVentasLotesTarjetas.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmVentasPesosCons.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmVentasPesosInter.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.reloj.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.csproj.GenerateResource.Cache
+C:\Trend\POS\trunk\StockVentas\bin\Debug\WSAFIPFE.dll
+C:\Trend\POS\trunk\StockVentas\bin\Debug\Google.GData.Spreadsheets.dll
+C:\Trend\POS\trunk\StockVentas\bin\Debug\Google.GData.Client.dll
+C:\Trend\POS\trunk\StockVentas\bin\Debug\Google.GData.Extensions.dll
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.rptFactura.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\RdlCompile.cache
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\RdlCompile.compiled

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Table.Select</Title>
+    <Author>autor</Author>
+    <Shortcut>snptTableSelect</Shortcut>
+    <Description>Fitrar filas de un datatable atraves del metodo select</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[DataRow[] foundRow = dsStock.Tables["Stock"].Select("IdArticuloSTK = '1200010000'");
+                foundRow[0]["CantidadSTK"] = 1;]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

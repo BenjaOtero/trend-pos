@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>DataRowView.ForEachListbox</Title>
+    <Author>autor</Author>
+    <Shortcut>snptDataRowViewForEachListbox</Shortcut>
+    <Description>Recorre todas las DataRowView en un ListBox</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[
+                        foreach(DataRowView filaColor in lstColores.SelectedItems)
+                        {
+                            DataRow selectedDataRow = ((DataRowView)cmbItem.SelectedItem).Row;
+                            int idItem = Convert.ToInt32(selectedDataRow["IdItemITE"]);
+                            string strItem = selectedDataRow["DescripcionITE"].ToString();                 
+                        }
+            ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>DataGridView.Sort</Title>
+    <Author>autor</Author>
+    <Shortcut>snptDataGridViewSort</Shortcut>
+    <Description>Ordena un DataGridView</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[
+            gvwDatos.Sort(gvwDatos.Columns[1], ListSortDirection.Ascending);
+            ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

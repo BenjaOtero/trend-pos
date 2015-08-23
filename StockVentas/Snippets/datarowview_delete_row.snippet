@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>DataRowView.DeleteRow</Title>
+    <Author>autor</Author>
+    <Shortcut>snptDataRowViewDeleteRow</Shortcut>
+    <Description>Borra una fila en un DataRowView</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[DataRowView vistaFilaActual = (DataRowView)gvwDatos.CurrentRow.DataBoundItem;
+                vistaFilaActual.Row.Delete();
+            ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

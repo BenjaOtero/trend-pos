@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Table.EditRow</Title>
+    <Author>autor</Author>
+    <Shortcut>snptTableEditRow</Shortcut>
+    <Description>Edita una fila en un datatable</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[DataRow[] foundRow = dsStock.Tables["Stock"].Select("IdArticuloSTK = '" + articulo + "' AND IdLocalSTK = '" + destino + "'");
+                foundRow[0]["CantidadSTK"] = 1;
+            ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

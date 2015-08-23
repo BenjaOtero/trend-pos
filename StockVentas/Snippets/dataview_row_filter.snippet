@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>DataView.RowFilter</Title>
+    <Author>autor</Author>
+    <Shortcut>snptDataViewRowFilter</Shortcut>
+    <Description>Filtra un Dataview</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nombre</ID>
+        <Default>valor</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[
+            viewLocales = new DataView(tblLocales);
+            viewLocales.RowFilter = "IdLocalLOC <>'2' AND IdLocalLOC <>'1'";
+            ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>
