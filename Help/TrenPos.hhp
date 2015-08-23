@@ -1,0 +1,25 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=TrenPos.chm
+Contents file=Table of Contents.hhc
+Default Window=Main
+Display compile progress=No
+Flat=Yes
+Language=0x2c0a Español (Argentina)
+Title=Ayuda punto de venta
+
+[WINDOWS]
+Main="Ayuda Trend Punto de Venta","Table of Contents.hhc",,,,,,,,0x2120,,0x3006,,,,,,,,0
+
+
+[FILES]
+htm\Index.html
+htm\FondoCaja.html
+htm\TesoreriaAdd.html
+htm\TesoreriaDel.html
+htm\TesoreriaEdit.html
+htm\Ventas.html
+htm\VentasDel.html
+
+[INFOTYPES]
+

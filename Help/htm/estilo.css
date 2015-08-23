@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-family: Arial;
+}
+#wrap{
+ background-color: #000000;
+}
+
+.container h4{
+  margin: 10px 0px 40px;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #43609A;
+  color: #ffffff;
+}
+.container img{
+ width: 800px;
+ height: 600px;
+}
+.centrar_imagen {
+    text-align: center;
+}
+.subtitulos {
+  margin-left: 50px;
+  margin-bottom: 15px;
+  font-family: Arial;
+  font-size: 15;
+  text-decoration: underline;
+}
+.ul_instruc {
+  margin-left: 50px;
+}
+.li_instruc {
+  margin-left: 50px;
+  list-style-type: circle;
+  font-size: 13;
+}
+.nota {
+  margin-left: 50px;
+  margin-bottom: 15px;
+  font-family: Arial;
+  font-size: 15;
+  color:#CC0000;
+}
+.centrar_imagen {
+    text-align: center;
+}
