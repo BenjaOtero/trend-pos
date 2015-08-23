@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8" collation="utf8_general_ci">pos</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="ventasdetalle" view="colnames">
+<left>232</left>
+<top>11</top>
+<width>146</width>
+<height>296</height>
+<sql_create_table>CREATE TABLE `ventasdetalle` (
+  `IdDVEN` int(11) NOT NULL,
+  `IdVentaDVEN` int(11) DEFAULT NULL,
+  `IdLocalDVEN` int(3) DEFAULT NULL,
+  `IdArticuloDVEN` varchar(50) DEFAULT NULL,
+  `DescripcionDVEN` varchar(50) DEFAULT NULL,
+  `CantidadDVEN` int(11) DEFAULT NULL,
+  `PrecioPublicoDVEN` double DEFAULT NULL,
+  `PrecioCostoDVEN` double DEFAULT NULL,
+  `PrecioMayorDVEN` double DEFAULT NULL,
+  `IdFormaPagoDVEN` int(11) DEFAULT NULL,
+  `NroCuponDVEN` int(11) DEFAULT NULL,
+  `NroFacturaDVEN` int(11) DEFAULT NULL,
+  `IdEmpleadoDVEN` int(11) DEFAULT NULL,
+  `LiquidadoDVEN` bit(1) DEFAULT NULL,
+  `EsperaDVEN` bit(1) DEFAULT NULL,
+  `DevolucionDVEN` smallint(1) DEFAULT NULL,
+  PRIMARY KEY (`IdDVEN`),
+  KEY `FK_VentasDetalle_Forma` (`IdFormaPagoDVEN`),
+  KEY `FK_VentasDetalle` (`IdVentaDVEN`),
+  KEY `FK_VentasDetalle_Articulos` (`IdArticuloDVEN`),
+  CONSTRAINT `FK_ventasdetalle_articulos` FOREIGN KEY (`IdArticuloDVEN`) REFERENCES `articulos` (`IdArticuloART`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT `FK_VentasDetalle` FOREIGN KEY (`IdVentaDVEN`) REFERENCES `ventas` (`IdVentaVEN`) ON DELETE CASCADE,
+  CONSTRAINT `FK_VentasDetalle_Forma` FOREIGN KEY (`IdFormaPagoDVEN`) REFERENCES `formaspago` (`IdFormaPagoFOR`) ON DELETE NO ACTION ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="formaspago" view="colnames">
+<left>24</left>
+<top>9</top>
+<width>137</width>
+<height>288</height>
+<sql_create_table>CREATE TABLE `formaspago` (
+  `IdFormaPagoFOR` int(11) NOT NULL,
+  `DescripcionFOR` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`IdFormaPagoFOR`),
+  KEY `IdFormaPagoFOR` (`IdFormaPagoFOR`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="articulos" view="colnames">
+<left>452</left>
+<top>300</top>
+<width>152</width>
+<height>296</height>
+<sql_create_table>CREATE TABLE `articulos` (
+  `IdArticuloART` varchar(50) NOT NULL,
+  `IdItemART` int(11) DEFAULT NULL,
+  `IdColorART` int(11) DEFAULT NULL,
+  `TalleART` varchar(2) DEFAULT NULL,
+  `IdProveedorART` int(11) DEFAULT NULL,
+  `DescripcionART` varchar(55) DEFAULT NULL,
+  `DescripcionWebART` varchar(50) DEFAULT NULL,
+  `PrecioCostoART` decimal(19,0) DEFAULT NULL,
+  `PrecioPublicoART` decimal(19,0) DEFAULT NULL,
+  `PrecioMayorART` decimal(19,0) DEFAULT NULL,
+  `FechaART` datetime DEFAULT NULL,
+  `ImagenART` varchar(20) DEFAULT NULL,
+  `ImagenBackART` varchar(20) DEFAULT NULL,
+  `ImagenColorART` varchar(20) DEFAULT NULL,
+  `ActivoWebART` int(1) DEFAULT NULL,
+  `NuevoART` int(1) DEFAULT NULL,
+  PRIMARY KEY (`IdArticuloART`),
+  KEY `FK_Color` (`IdColorART`),
+  KEY `FK_Proveedor` (`IdProveedorART`),
+  KEY `FK_Item` (`IdItemART`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="clientes" view="colnames">
+<left>638</left>
+<top>0</top>
+<width>127</width>
+<height>267</height>
+<sql_create_table>CREATE TABLE `clientes` (
+  `IdClienteCLI` int(11) NOT NULL,
+  `RazonSocialCLI` varchar(50) DEFAULT NULL,
+  `CUIT` varchar(50) DEFAULT NULL,
+  `DireccionCLI` varchar(50) DEFAULT NULL,
+  `LocalidadCLI` varchar(50) DEFAULT NULL,
+  `ProvinciaCLI` varchar(50) DEFAULT NULL,
+  `TransporteCLI` varchar(50) DEFAULT NULL,
+  `ContactoCLI` varchar(50) DEFAULT NULL,
+  `TelefonoCLI` varchar(50) DEFAULT NULL,
+  `MovilCLI` varchar(50) DEFAULT NULL,
+  `CorreoCLI` varchar(60) DEFAULT NULL,
+  `FechaNacCLI` datetime DEFAULT NULL,
+  PRIMARY KEY (`IdClienteCLI`),
+  KEY `IdClienteCLI` (`IdClienteCLI`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="ventas" view="colnames">
+<left>447</left>
+<top>22</top>
+<width>113</width>
+<height>131</height>
+<sql_create_table>CREATE TABLE `ventas` (
+  `IdVentaVEN` int(11) NOT NULL,
+  `IdPCVEN` int(11) DEFAULT NULL,
+  `FechaVEN` datetime DEFAULT NULL,
+  `IdClienteVEN` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IdVentaVEN`),
+  KEY `FK_Ventas` (`IdClienteVEN`),
+  KEY `FK_Ventas_Pc` (`IdPCVEN`),
+  CONSTRAINT `FK_ventas_clientes` FOREIGN KEY (`IdClienteVEN`) REFERENCES `clientes` (`IdClienteCLI`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT `FK_Ventas_Pc` FOREIGN KEY (`IdPCVEN`) REFERENCES `pc` (`IdPC`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

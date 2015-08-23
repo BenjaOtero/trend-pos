@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8" collation="utf8_general_ci">ncsoftwa_karminna</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="Articulos" view="colnames">
+<left>186</left>
+<top>55</top>
+<width>152</width>
+<height>247</height>
+<sql_create_table>CREATE TABLE `Articulos` (
+  `IdArticuloART` varchar(50) NOT NULL,
+  `IdItemART` int(11) DEFAULT NULL,
+  `IdColorART` int(11) DEFAULT NULL,
+  `TalleART` varchar(2) DEFAULT NULL,
+  `IdProveedorART` int(11) DEFAULT NULL,
+  `DescripcionART` varchar(55) DEFAULT NULL,
+  `DescripcionWebART` varchar(50) DEFAULT NULL,
+  `PrecioCostoART` decimal(19,0) DEFAULT NULL,
+  `PrecioPublicoART` decimal(19,0) DEFAULT NULL,
+  `PrecioMayorART` decimal(19,0) DEFAULT NULL,
+  `FechaART` datetime DEFAULT NULL,
+  `ImagenART` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`IdArticuloART`),
+  KEY `FK_Color` (`IdColorART`),
+  KEY `FK_Proveedor` (`IdProveedorART`),
+  KEY `FK_Item` (`IdItemART`),
+  CONSTRAINT `FK_Color` FOREIGN KEY (`IdColorART`) REFERENCES `Colores` (`IdColorCOL`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `FK_Item` FOREIGN KEY (`IdItemART`) REFERENCES `ArticulosItems` (`IdItemITE`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `FK_Proveedor` FOREIGN KEY (`IdProveedorART`) REFERENCES `Proveedores` (`IdProveedorPRO`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="ArticulosItems" view="colnames">
+<left>11</left>
+<top>8</top>
+<width>123</width>
+<height>97</height>
+<sql_create_table>CREATE TABLE `ArticulosItems` (
+  `IdItemITE` int(11) NOT NULL,
+  `DescripcionITE` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`IdItemITE`),
+  KEY `IdItemITE` (`IdItemITE`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="Colores" view="colnames">
+<left>9</left>
+<top>116</top>
+<width>122</width>
+<height>83</height>
+<sql_create_table>CREATE TABLE `Colores` (
+  `IdColorCOL` int(11) NOT NULL,
+  `DescripcionCOL` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`IdColorCOL`),
+  KEY `IdColorCOL` (`IdColorCOL`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="Proveedores" view="colnames">
+<left>2</left>
+<top>206</top>
+<width>136</width>
+<height>152</height>
+<sql_create_table>CREATE TABLE `Proveedores` (
+  `IdProveedorPRO` int(11) NOT NULL,
+  `RazonSocialPRO` varchar(50) DEFAULT NULL,
+  `DireccionPRO` varchar(50) DEFAULT NULL,
+  `CodigoPostalPRO` varchar(50) DEFAULT NULL,
+  `TelefonoPRO` varchar(50) DEFAULT NULL,
+  `ContactoPRO` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`IdProveedorPRO`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="Clientes" view="colnames">
+<left>768</left>
+<top>363</top>
+<width>127</width>
+<height>217</height>
+<sql_create_table>CREATE TABLE `Clientes` (
+  `IdClienteCLI` int(11) NOT NULL,
+  `RazonSocialCLI` varchar(50) DEFAULT NULL,
+  `CUIT` varchar(50) DEFAULT NULL,
+  `DireccionCLI` varchar(50) DEFAULT NULL,
+  `LocalidadCLI` varchar(50) DEFAULT NULL,
+  `ProvinciaCLI` varchar(50) DEFAULT NULL,
+  `TransporteCLI` varchar(50) DEFAULT NULL,
+  `ContactoCLI` varchar(50) DEFAULT NULL,
+  `TelefonoCLI` varchar(50) DEFAULT NULL,
+  `MovilCLI` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`IdClienteCLI`),
+  KEY `IdClienteCLI` (`IdClienteCLI`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="FormasPago" view="colnames">
+<left>976</left>
+<top>52</top>
+<width>137</width>
+<height>97</height>
+<sql_create_table>CREATE TABLE `FormasPago` (
+  `IdFormaPagoFOR` int(11) NOT NULL,
+  `DescripcionFOR` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`IdFormaPagoFOR`),
+  KEY `IdFormaPagoFOR` (`IdFormaPagoFOR`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="Locales" view="colnames">
+<left>598</left>
+<top>172</top>
+<width>115</width>
+<height>131</height>
+<sql_create_table>CREATE TABLE `Locales` (
+  `IdLocalLOC` int(11) NOT NULL AUTO_INCREMENT,
+  `NombreLOC` varchar(50) DEFAULT NULL,
+  `DireccionLOC` varchar(50) DEFAULT NULL,
+  `TelefonoLOC` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`IdLocalLOC`),
+  UNIQUE KEY `NombreLOC` (`NombreLOC`),
+  KEY `IdLocalLOC` (`IdLocalLOC`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="Pc" view="colnames">
+<left>447</left>
+<top>0</top>
+<width>95</width>
+<height>97</height>
+<sql_create_table>CREATE TABLE `Pc` (
+  `IdPC` int(11) NOT NULL,
+  `IdLocalPC` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IdPC`),
+  KEY `IdLocalPC` (`IdLocalPC`),
+  KEY `IdPC` (`IdPC`),
+  CONSTRAINT `FK_Pc` FOREIGN KEY (`IdLocalPC`) REFERENCES `Locales` (`IdLocalLOC`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="Ventas" view="colnames">
+<left>602</left>
+<top>23</top>
+<width>106</width>
+<height>117</height>
+<sql_create_table>CREATE TABLE `Ventas` (
+  `IdVentaVEN` int(11) NOT NULL,
+  `IdPCVEN` int(11) NOT NULL,
+  `FechaVEN` datetime DEFAULT NULL,
+  `IdClienteVEN` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IdVentaVEN`,`IdPCVEN`),
+  KEY `FK_Ventas` (`IdClienteVEN`),
+  KEY `FK_Ventas_Pc` (`IdPCVEN`),
+  CONSTRAINT `FK_Ventas_Pc` FOREIGN KEY (`IdPCVEN`) REFERENCES `Pc` (`IdPC`),
+  CONSTRAINT `FK_Ventas` FOREIGN KEY (`IdClienteVEN`) REFERENCES `Clientes` (`IdClienteCLI`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="VentasDetalle" view="colnames">
+<left>749</left>
+<top>33</top>
+<width>178</width>
+<height>297</height>
+<sql_create_table>CREATE TABLE `VentasDetalle` (
+  `IdDVEN` int(11) NOT NULL,
+  `IdVentaDVEN` int(11) DEFAULT NULL,
+  `IdPCDVEN` int(11) DEFAULT NULL,
+  `IdArticuloDVEN` varchar(50) DEFAULT NULL,
+  `DescripcionDVEN` varchar(50) DEFAULT NULL,
+  `CantidadDVEN` int(11) DEFAULT NULL,
+  `PrecioPublicoDVEN` double DEFAULT NULL,
+  `PrecioCostoDVEN` double DEFAULT NULL,
+  `PrecioMayorDVEN` double DEFAULT NULL,
+  `IdFormaPagoDVEN` int(11) DEFAULT NULL,
+  `NroCuponDVEN` int(11) DEFAULT NULL,
+  `NroFactraDVEN` int(11) DEFAULT NULL,
+  `IdEmpleadoDVEN` int(11) DEFAULT NULL,
+  `LiquidadoDVEN` bit(1) DEFAULT NULL,
+  `EsperaDVEN` bit(1) DEFAULT NULL,
+  `DevolucionDVEN` bit(1) DEFAULT NULL,
+  PRIMARY KEY (`IdDVEN`),
+  KEY `FK_VentasDetalle` (`IdVentaDVEN`,`IdPCDVEN`),
+  KEY `FK_VentasDetalle_Forma` (`IdFormaPagoDVEN`),
+  KEY `FK_VentasDetalle_Articulos` (`IdArticuloDVEN`),
+  KEY `FK_VentasDetalle_Pc` (`IdPCDVEN`),
+  CONSTRAINT `FK_VentasDetalle_Pc` FOREIGN KEY (`IdPCDVEN`) REFERENCES `Pc` (`IdPC`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `FK_VentasDetalle` FOREIGN KEY (`IdVentaDVEN`, `IdPCDVEN`) REFERENCES `Ventas` (`IdVentaVEN`, `IdPCVEN`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_VentasDetalle_Articulos` FOREIGN KEY (`IdArticuloDVEN`) REFERENCES `Articulos` (`IdArticuloART`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `FK_VentasDetalle_Forma` FOREIGN KEY (`IdFormaPagoDVEN`) REFERENCES `FormasPago` (`IdFormaPagoFOR`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="Stock" view="colnames">
+<left>405</left>
+<top>366</top>
+<width>116</width>
+<height>114</height>
+<sql_create_table>CREATE TABLE `Stock` (
+  `IdArticuloSTK` varchar(50) NOT NULL,
+  `IdLocalSTK` int(11) NOT NULL,
+  `CantidadSTK` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IdArticuloSTK`,`IdLocalSTK`),
+  KEY `FK_Stock_Local` (`IdLocalSTK`),
+  CONSTRAINT `FK_Stock_Local` FOREIGN KEY (`IdLocalSTK`) REFERENCES `Locales` (`IdLocalLOC`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_Stock_Articulos` FOREIGN KEY (`IdArticuloSTK`) REFERENCES `Articulos` (`IdArticuloART`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="StockComp" view="colnames">
+<left>422</left>
+<top>152</top>
+<width>120</width>
+<height>148</height>
+<sql_create_table>CREATE TABLE `StockComp` (
+  `IdCompCOM` int(11) NOT NULL,
+  `FechaCOM` datetime DEFAULT NULL,
+  `IdLocalCOM` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IdCompCOM`),
+  KEY `IdLocalCOM` (`IdLocalCOM`),
+  CONSTRAINT `FK_StockComp` FOREIGN KEY (`IdLocalCOM`) REFERENCES `Locales` (`IdLocalLOC`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="StockCompDetalle" view="colnames">
+<left>581</left>
+<top>335</top>
+<width>140</width>
+<height>148</height>
+<sql_create_table>CREATE TABLE `StockCompDetalle` (
+  `Id` int(11) NOT NULL,
+  `IdCompCOMD` int(11) NOT NULL,
+  `IdArticuloCOMD` varchar(50) DEFAULT NULL,
+  `DescripcionCOMD` varchar(255) DEFAULT NULL,
+  `CantidadCOMD` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `FK_StockCompDetalle` (`IdCompCOMD`),
+  KEY `FK_StockCompDetalle_Articulos` (`IdArticuloCOMD`),
+  CONSTRAINT `FK_StockCompDetalle_Articulos` FOREIGN KEY (`IdArticuloCOMD`) REFERENCES `Articulos` (`IdArticuloART`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_StockCompDetalle` FOREIGN KEY (`IdCompCOMD`) REFERENCES `StockComp` (`IdCompCOM`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="StockMov" view="colnames">
+<left>224</left>
+<top>340</top>
+<width>113</width>
+<height>131</height>
+<sql_create_table>CREATE TABLE `StockMov` (
+  `IdMovMSTK` int(11) NOT NULL,
+  `FechaMSTK` datetime DEFAULT NULL,
+  `OrigenMSTK` int(11) DEFAULT NULL,
+  `DestinoMSTK` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IdMovMSTK`),
+  KEY `FK_StockMov_Origen` (`OrigenMSTK`),
+  KEY `FK_StockMov_Destino` (`DestinoMSTK`),
+  CONSTRAINT `FK_StockMov_Destino` FOREIGN KEY (`DestinoMSTK`) REFERENCES `Locales` (`IdLocalLOC`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_StockMov_Origen` FOREIGN KEY (`OrigenMSTK`) REFERENCES `Locales` (`IdLocalLOC`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="StockMovDetalle" view="colnames">
+<left>11</left>
+<top>389</top>
+<width>134</width>
+<height>131</height>
+<sql_create_table>CREATE TABLE `StockMovDetalle` (
+  `IdMSTKD` int(11) NOT NULL,
+  `IdMovMSTKD` int(11) DEFAULT NULL,
+  `IdArticuloMSTKD` varchar(50) DEFAULT NULL,
+  `CantidadMSTKD` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IdMSTKD`),
+  KEY `FK_StockMovDetalle` (`IdMovMSTKD`),
+  KEY `FK_StockMovDetalle_Articulos` (`IdArticuloMSTKD`),
+  CONSTRAINT `FK_StockMovDetalle_Articulos` FOREIGN KEY (`IdArticuloMSTKD`) REFERENCES `Articulos` (`IdArticuloART`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_StockMovDetalle` FOREIGN KEY (`IdMovMSTKD`) REFERENCES `StockMov` (`IdMovMSTK`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>
