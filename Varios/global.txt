@@ -1,0 +1,13 @@
+-El cliente hace click en descargar Admin
+-Se le solicita correo y password y se graba en la tabla clientes de Trend
+-cuando el cliente inicia la instalación se le pide correo y pass
+-se consulta la bd de Trend Sistemas
+-si el cliente existe y el campo existe_base_datos = no creo la base de datos en el servidor remoto
+-tener en cuenta en el instalador que si existe_base_datos = si, es una reinstalación del sistema
+-si no existe el cliente notificar error correo o pass
+-al crear base de datos, crear local 'Central' y su pc correspondiente con ubicacion 'Administracion'
+
+
+
+
+-El cliente hace click en descargar POS

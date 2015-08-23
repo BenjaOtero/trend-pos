@@ -1,0 +1,16 @@
+-ayuda
+-Mente al desinstalar POS si desinstalo Mysqlserver y borro archivos de bd
+-Mente instalacion (crear pc?) modificar el codigo donde hace referencia al nro de pc.
+-arreglar mirror db
+-en frmVentas poner precioPublicoART en vez de PrecioMayorART
+-borrar ventas desde frmArqueo borra cualquier venta
+
+
+
+
+
+
+
+
+
+

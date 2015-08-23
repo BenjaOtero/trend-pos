@@ -1,0 +1,41 @@
+http://stackoverflow.com/questions/20118746/how-to-install-mysql-from-batch-file
+
+-CREAR USUARIO NCSOFTWA_RE EN MYSQL
+	C:\wamp\bin\mysql\mysql5.1.36\bin\mysql.exe -u root -e "GRANT ALL ON *.* TO 'ncsoftwa_re'@'%' WITH GRANT OPTION; FLUSH PRIVILEGES;"
+
+
+-BACKUP BASE DATOS SIN DATOS
+	mysqldump --add-drop-database --databases --routines ncsoftwa_re --no-data -u root ncsoftwa_re > c:\prueba_dump.sql
+
+
+-RESTAURAR BASE DE DATOS
+	C:\wamp\bin\mysql\mysql5.1.36\bin\mysql.exe -u root < c:\pos.sql
+
+-Respetar Mayusculas / minusculas en nombres tablas(escribir my.ini)
+	
+	[mysqld]
+	lower_case_table_names = 0
+
+
+
+cd C:\Program Files\MySQL\MySQL Server 5.5\bin
+
+
+-Crear acciones personalizadas en el proyecto de instalacion
+	-Crear un proyecto del tipo 'Biblioteca de clases'
+	-Agregar nuevo elemento 'clase del instalador'
+	-En la clase del instalador crear los métodos que queremos se ejecuten en el proyecto de instalación
+	-Agregar nuevo proyecto (otros tipos de proyectos-> instalacion e implementacion-> instalador de visual studio-> proyecto de instalación
+	-clck derecho en nombre de proyecto de instalacion en el explorador de proyectos-> propiedades-> requisitos previos
+	-con el proyecto de instalacion seleccionado en el explorador de proyectos-> f4
+	-en propiedades cambiar Author y Manufacturer
+	-para agregar la accion personalizada seguir instrucciones de: http://msdn.microsoft.com/es-es/library/aa302127%28v=vs.71%29.aspx
+	-para agregar requisitos previos que no figuran en la lista:
+		-crear carpeta con el nombre del nuevo requisito en C:\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages
+		-copiar a la carpeta creada el instalador del requisito previo
+		-copiar a la carpeta creada desde otro requisito previo ya existente el archivo product.xml y adaptarlo
+
+
+
+
+
