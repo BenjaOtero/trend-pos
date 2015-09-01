@@ -126,9 +126,7 @@ namespace StockVentas
             txtCosto.Visible = false;
             btnEditar.CausesValidation = false;
             btnBorrar.CausesValidation = false;
-            btnArticulos.CausesValidation = false;
-            btnImprimir.CausesValidation = false;
-            btnImprimir.Enabled = false;   
+            btnArticulos.CausesValidation = false; 
             lblNro.ForeColor = System.Drawing.Color.DarkRed;
             dsVentas = new DataSet();
             dsVentas.DataSetName = "dsVentas";
@@ -223,7 +221,6 @@ namespace StockVentas
                 // viewDetalleOriginal  se usa para registrar en tabla fallidas errores de guardado remoto por falta de internet
                 viewDetalleOriginal = new DataView(tblDetalleOriginal);
                 viewDetalleOriginal.RowFilter = "IdVentaDVEN = '" + PK + "'";
-                btnImprimir.Enabled = true;
             }
             dateTimePicker1.DataBindings.Add("Text", rowView, "FechaVEN", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbLocal.DataBindings.Add("SelectedValue", rowView, "IdPCVEN", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -391,7 +388,6 @@ namespace StockVentas
                 chkDev.Checked = false;
                 txtArticulo.Focus();
                 lblTotal.Text = "$" + CalcularTotal().ToString();
-                btnImprimir.Enabled = true;
             }
             else
             {
@@ -457,7 +453,6 @@ namespace StockVentas
                 DataRow foundRow = tblVentasDetalle.Rows.Find(idDVEN);
                 foundRow.Delete();
                 lblTotal.Text = "$" + CalcularTotal().ToString();
-                if (dgvDatos.RowCount == 0) btnImprimir.Enabled = false;
             }
             catch (NullReferenceException)
             {
@@ -472,23 +467,6 @@ namespace StockVentas
             articulos.Show(this);
             articulos.FormClosed += frmArticulos_FormClosed;
             Cursor.Current = Cursors.Arrow;
-        }
-
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            string path = Application.StartupPath;
-            if (!File.Exists(path + @"\licencia.lcn"))
-            {
-                ImprimirFactura();
-            }
-            else
-            { 
-                //mensaje con link para solicitar el servicio
-            }
-            if (dgvDatos.RowCount > 0)
-            {
-                int x = dgvDatos.RowCount;
-            }
         }
 
         private void frmVentas_FormClosing(object sender, FormClosingEventArgs e)
@@ -703,188 +681,6 @@ namespace StockVentas
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void ImprimirFactura()
-        {
-            DataTable tblIVA = new DataTable();
-            tblIVA.Columns.Add("Articulo", typeof(string));
-            tblIVA.Columns.Add("Descripcion", typeof(string));
-            tblIVA.Columns.Add("Cantidad", typeof(int));
-            tblIVA.Columns.Add("IdAlicuota", typeof(int));
-            tblIVA.Columns.Add("PorcentajeIva", typeof(decimal));
-            tblIVA.Columns.Add("Precio", typeof(decimal));
-            tblIVA.Columns.Add("SubtotalSinIva", typeof(decimal));
-            tblIVA.Columns.Add("SubtotalIva", typeof(decimal));
-            foreach(DataGridViewRow rowGrid in dgvDatos.Rows)
-            {
-                string articulo = rowGrid.Cells["IdArticuloDVEN"].Value.ToString();
-                DataRow[] foundRow = tblArticulos.Select("IdArticuloART = '" + articulo + "'");
-                string descripcion = foundRow[0]["DescripcionART"].ToString();
-                int cantidad = Convert.ToInt32(rowGrid.Cells["CantidadDVEN"].Value.ToString());
-                int idAlicuota = Convert.ToInt16(foundRow[0]["IdAliculotaIvaART"].ToString());
-                decimal porcentajeIva = Convert.ToDecimal(foundRow[0]["PorcentajeALI"].ToString()) / 100 + 1;
-                decimal precio = decimal.Round(Convert.ToDecimal(foundRow[0]["PrecioPublicoART"].ToString()) / porcentajeIva, 2);
-                decimal ivaImporte = decimal.Round(Convert.ToDecimal(foundRow[0]["PrecioPublicoART"].ToString()) - precio, 2);
-                DataRow fila = tblIVA.NewRow();
-                fila["Articulo"] = articulo;
-                fila["Descripcion"] = descripcion;
-                fila["Cantidad"] = cantidad;
-                fila["IdAlicuota"] = idAlicuota;
-                fila["PorcentajeIva"] = porcentajeIva;
-                fila["Precio"] = precio;
-                fila["SubtotalSinIva"] = cantidad * precio;
-                fila["SubtotalIva"] = cantidad * ivaImporte;
-                tblIVA.Rows.Add(fila);
-                
-            }
-
-            string idCliente = cmbCliente.SelectedValue.ToString();
-            DataRow[] foundCliente = tblClientes.Select("IdClienteCLI = '" + idCliente + "'");
-            string condicionIva = foundCliente[0]["CondicionIvaCLI"].ToString();
-            int cabeceraCbteTipo;
-            int detalleDocTipo;
-            string detalleDocNro;
-            if (condicionIva == "RESPONSABLE INSCRIPTO")
-            {
-                cabeceraCbteTipo = 1;
-                detalleDocTipo = 80;
-                detalleDocNro = foundCliente[0]["CUIT"].ToString();
-            }
-            else
-            {
-                cabeceraCbteTipo = 6;
-                detalleDocTipo = 99;
-                detalleDocNro = "0";
-            }         
-
-            // Ver WSFEv1 Fallos conexión en Camuzzo
-            WSAFIPFE.Factura fe = new WSAFIPFE.Factura();
-            Boolean bResultado = false;
-            bResultado = fe.iniciar(WSAFIPFE.Factura.modoFiscal.Test, "27220379588", @"C:\Trend\Factura-electronica\Carolina Navarro\pedido.pfx", @" ");
-            if (bResultado)
-            {
-                fe.ArchivoCertificadoPassword = "";
-                bResultado = fe.f1ObtenerTicketAcceso();
-                if (bResultado)
-                {
-                    fe.F1CabeceraCantReg = 1;
-                    fe.F1CabeceraPtoVta = 1;
-
-                    /*Según el manual del desarrollador (pagina 15), el error 10007 se da por que no informas alguno de los 
-                     * tipos validos son 01 02 03 04 05 34 39 60 63 para comprobantes A y 06 07 08 09 10 35 40 64 y 61 para los B.*/
-                    fe.F1CabeceraCbteTipo = cabeceraCbteTipo;
-                    int nroComp = fe.F1CompUltimoAutorizado(1, cabeceraCbteTipo) + 1;
-                    fe.f1Indice = 0;
-                    fe.F1DetalleConcepto = 1;  //Concepto del comprobante.  01-Productos, 02-Servicios, 03-Productos y Servicios
-                    fe.F1DetalleDocTipo = detalleDocTipo;    // 96: DNI, 80: CUIT, 99: Consumidor Final
-                    fe.F1DetalleDocNro = detalleDocNro;
-                 //   fe.F1DetalleDocNro = "30570135585";
-                    fe.F1DetalleCbteDesde = nroComp;
-                    fe.F1DetalleCbteHasta = nroComp; // Número de comprobante hasta. En caso de ser un solo comprobante, este dato coincide con el anterior.
-
-                    /* F1DetalleCbteFch: Fecha del comprobante, cuyo formato es "aaaammdd". Para un concepto de factura igual a 1, 
-                        la fecha de emisión puede ser hasta 5 días posteriores a la de generación.  
-                        Si el concepto es 2 o 3, puede ser hasta 10 días anteriores o posteriores a la fecha de generación. 
-                        Al ser un dato opcional, si no se asigna fecha, por defecto se asignará la fecha del proceso.*/
-                    string fecha = DateTime.Now.ToString("yyyyMMdd");
-                    fe.F1DetalleCbteFch = fecha;
-
-                  /*  fe.F1DetalleTributoItemCantidad = 1;  //preguntar Ariel Cantidad de Tributos relacionados al comprobante
-                    fe.f1IndiceItem = 0;
-                    fe.F1DetalleTributoId = 3;
-                    fe.F1DetalleTributoDesc = "Impuesto Municipal Matanza";
-                    fe.F1DetalleTributoBaseImp = 0;
-                    fe.F1DetalleTributoAlic = 5.2;
-                    fe.F1DetalleTributoImporte = 0;*/
-                    var groupedData = from b in tblIVA.AsEnumerable()
-                                      group b by b.Field<int>("IdAlicuota") into g
-                                      select new
-                                      {
-                                          DetalleIvaId = g.Key,
-                                          Count = g.Count(),
-                                          DetalleIvaBaseImp = g.Sum(x => x.Field<decimal>("SubtotalSinIva")),
-                                          DetalleIvaImporte = g.Sum(x => x.Field<decimal>("SubtotalIva"))
-                                      };
-                    int DetalleIvaItemCantidad = groupedData.Count();
-                    fe.F1DetalleIvaItemCantidad = DetalleIvaItemCantidad;
-                    int indiceItem = 0;
-                    foreach (var registro in groupedData)
-                    {
-                        fe.f1IndiceItem = indiceItem;
-                        //En F1DetalleIvaId va el código de la alícuota o tasa (obtenido de una lista de AFIP: 5 para 21% 4 para 10.50%, etc).
-                        fe.F1DetalleIvaId = registro.DetalleIvaId;
-                        fe.F1DetalleIvaBaseImp = Convert.ToDouble(registro.DetalleIvaBaseImp);  //El precio del producto
-                        fe.F1DetalleIvaImporte = Convert.ToDouble(registro.DetalleIvaImporte);  //El importe del impuesto.
-                        indiceItem++;
-                    }
-
-                    
-               /*     fe.f1IndiceItem = 0;
-                    fe.F1DetalleIvaId = 5;  //El código de la alícuota o tasa (obtenido de una lista de AFIP: 5 para 21% 4 para 10.50%, etc).
-                    fe.F1DetalleIvaBaseImp = 100;  //El precio del producto
-                    fe.F1DetalleIvaImporte = 21;  //El importe del impuesto.
-
-                    fe.f1IndiceItem = 1;
-                    fe.F1DetalleIvaId = 4;
-                    fe.F1DetalleIvaBaseImp = 50;
-                    fe.F1DetalleIvaImporte = 5.25;*/
-
-
-                    var detalleImpNeto = tblIVA.AsEnumerable().Sum(x => x.Field<decimal>("SubtotalSinIva"));
-                    var detalleImpIva = tblIVA.AsEnumerable().Sum(x => x.Field<decimal>("SubtotalIva"));
-                    double detalleImpTotal = Convert.ToDouble(detalleImpNeto + detalleImpIva);
-
-                    fe.F1DetalleImpTotal = detalleImpTotal; // total factura
-                    fe.F1DetalleImpTotalConc = 0; // preguntar Ariel  Importe Neto No Grabado, debe ser mayor a cero y menor o igual al importe total (F1DetalleImpTotal).
-                    fe.F1DetalleImpNeto = Convert.ToDouble(detalleImpNeto); // total bases imponibles
-                    fe.F1DetalleImpOpEx = 0; // preguntar Ariel
-                    fe.F1DetalleImpTrib = 0; // preguntar Ariel
-                    fe.F1DetalleImpIva = Convert.ToDouble(detalleImpIva); ;  // total ivas
-                    fe.F1DetalleFchServDesde = ""; // se debe poner fecha para servicios o para productos y servicios. Para productos solos puede ser vacío
-                    fe.F1DetalleFchServHasta = ""; // Idem anterior completar si F1DetalleConcepto > 1
-                    fe.F1DetalleFchVtoPago = ""; // Idem anterior completar si F1DetalleConcepto > 1
-                    fe.F1DetalleMonId = "PES";
-                    fe.F1DetalleMonCotiz = 1;
-
-                    fe.F1DetalleCbtesAsocItemCantidad = 0;
-                    fe.F1DetalleOpcionalItemCantidad = 0;
-
-                    fe.ArchivoXMLRecibido = @"c:\recibido.xml";
-                    fe.ArchivoXMLEnviado = @"c:\enviado.xml";
-                //    bResultado = fe.F1CAESolicitar();
-                    if (bResultado)
-                    {
-                        MessageBox.Show("resultado verdadero ");
-                    }
-                    else
-                    {
-                        MessageBox.Show("resultado falso ");
-                    }
-                    MessageBox.Show("resultado global AFIP: " + fe.F1RespuestaResultado);
-                    MessageBox.Show("es reproceso? " + fe.F1RespuestaReProceso);
-                    MessageBox.Show("registros procesados por AFIP: " + fe.F1RespuestaCantidadReg.ToString());
-                    MessageBox.Show("error genérico global:" + fe.f1ErrorMsg1);
-                    if (fe.F1RespuestaCantidadReg > 0)
-                    {
-                        fe.f1Indice = 0;
-                        MessageBox.Show("resultado detallado comprobante: " + fe.F1RespuestaDetalleResultado);
-                        MessageBox.Show("cae comprobante: " + fe.F1RespuestaDetalleCae);
-                        MessageBox.Show("número comprobante:" + fe.F1RespuestaDetalleCbteDesdeS);
-                        MessageBox.Show("error detallado comprobante: " + fe.F1RespuestaDetalleObservacionMsg1);
-                    }
-                    rptFactura informeFactura = new rptFactura(tblIVA, foundCliente);
-                    informeFactura.Show();
-                }
-                else
-                {
-                    MessageBox.Show("fallo acceso " + fe.UltimoMensajeError);
-                }
-            }
-            else
-            {
-                MessageBox.Show("error inicio " + fe.UltimoMensajeError);
-            }        
         }
 
     }

@@ -69,7 +69,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnArticulos = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -468,7 +467,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnImprimir);
             this.groupBox2.Controls.Add(this.btnArticulos);
             this.groupBox2.Controls.Add(this.btnBorrar);
             this.groupBox2.Controls.Add(this.button2);
@@ -479,17 +477,6 @@
             this.groupBox2.Size = new System.Drawing.Size(890, 50);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnImprimir.Location = new System.Drawing.Point(691, 14);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(114, 29);
-            this.btnImprimir.TabIndex = 14;
-            this.btnImprimir.Text = "Imprimir factura";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnArticulos
             // 
@@ -628,7 +615,6 @@
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnArticulos;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button button2;

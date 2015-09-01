@@ -441,7 +441,6 @@ C:\Trend\POS\trunk\StockVentas\bin\Debug\BL.dll
 C:\Trend\POS\trunk\StockVentas\bin\Debug\DAL.dll
 C:\Trend\POS\trunk\StockVentas\bin\Debug\BL.pdb
 C:\Trend\POS\trunk\StockVentas\bin\Debug\DAL.pdb
-C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.csprojResolveAssemblyReference.cache
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmArqueoCaja.resources
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmArticulos.resources
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmClientes.resources
@@ -460,11 +459,9 @@ C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmVentasPesosCons.reso
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmVentasPesosInter.resources
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.Properties.Resources.resources
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.reloj.resources
-C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.csproj.GenerateResource.Cache
-C:\Trend\POS\trunk\StockVentas\bin\Debug\WSAFIPFE.dll
-C:\Trend\POS\trunk\StockVentas\bin\Debug\Google.GData.Spreadsheets.dll
-C:\Trend\POS\trunk\StockVentas\bin\Debug\Google.GData.Client.dll
-C:\Trend\POS\trunk\StockVentas\bin\Debug\Google.GData.Extensions.dll
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.rptFactura.resources
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\RdlCompile.cache
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\RdlCompile.compiled
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\GenerateResource.write.1.tlog
