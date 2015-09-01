@@ -38,8 +38,6 @@ namespace StockVentas
             txtTotal.TextAlign = HorizontalAlignment.Left;
             string total = tblTotal.Rows[0][0].ToString();
             txtTotal.Text = "$ " + total;
-
-
         }
     }
 }

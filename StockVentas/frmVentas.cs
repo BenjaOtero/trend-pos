@@ -573,7 +573,6 @@ namespace StockVentas
                 cmbLocal.DropDownStyle = ComboBoxStyle.DropDownList;
                 cmbLocal.DataSource = viewLocal;
             }
-        
         }
 
         public void CargarComboClientes()
