@@ -43,6 +43,10 @@ namespace BL
             {
                 e.Handled = false;
             }
+            if (e.KeyChar == '-')
+            {
+                e.Handled = false;
+            }
             if (e.KeyChar == '.')
             {
                 // si se pulsa en el punto se convertirá en coma

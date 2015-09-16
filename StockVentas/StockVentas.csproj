@@ -179,6 +179,12 @@
     <Compile Include="frmVentasPesosCons.designer.cs">
       <DependentUpon>frmVentasPesosCons.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentasPesosDiarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentasPesosDiarias.designer.cs">
+      <DependentUpon>frmVentasPesosDiarias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVentasPesosInter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentasPesosCons.resx">
       <DependentUpon>frmVentasPesosCons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentasPesosDiarias.resx">
+      <DependentUpon>frmVentasPesosDiarias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentasPesosInter.resx">
       <DependentUpon>frmVentasPesosInter.cs</DependentUpon>

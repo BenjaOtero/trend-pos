@@ -81,6 +81,12 @@ namespace BL
             }            
         }
 
+        public static DataTable GetVentasPesosDiarias(string desde, string hasta, int local, string forma)
+        {
+            DataTable tbl = DAL.VentasDAL.GetVentasPesosDiarias(desde, hasta, local, forma);
+            return tbl;
+        }
+
         public static DataSet CrearDatasetVentas(int idVenta)
         {
             DataSet dt = DAL.VentasDAL.CrearDatasetVentas(idVenta);

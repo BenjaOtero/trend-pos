@@ -481,7 +481,7 @@
             // btnArticulos
             // 
             this.btnArticulos.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnArticulos.Location = new System.Drawing.Point(570, 14);
+            this.btnArticulos.Location = new System.Drawing.Point(630, 14);
             this.btnArticulos.Name = "btnArticulos";
             this.btnArticulos.Size = new System.Drawing.Size(114, 29);
             this.btnArticulos.TabIndex = 15;
@@ -491,7 +491,7 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(449, 14);
+            this.btnBorrar.Location = new System.Drawing.Point(509, 14);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(114, 29);
             this.btnBorrar.TabIndex = 13;
@@ -501,7 +501,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(86, 14);
+            this.button2.Location = new System.Drawing.Point(146, 14);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 29);
             this.button2.TabIndex = 10;
@@ -511,7 +511,7 @@
             // 
             // btnCancelEdit
             // 
-            this.btnCancelEdit.Location = new System.Drawing.Point(328, 14);
+            this.btnCancelEdit.Location = new System.Drawing.Point(388, 14);
             this.btnCancelEdit.Name = "btnCancelEdit";
             this.btnCancelEdit.Size = new System.Drawing.Size(114, 29);
             this.btnCancelEdit.TabIndex = 11;
@@ -521,7 +521,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(207, 14);
+            this.btnEditar.Location = new System.Drawing.Point(267, 14);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(114, 29);
             this.btnEditar.TabIndex = 12;
@@ -553,7 +553,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(30, 30);
             this.Name = "frmVentas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";
             this.Activated += new System.EventHandler(this.frmVentas_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmVentas_FormClosing);

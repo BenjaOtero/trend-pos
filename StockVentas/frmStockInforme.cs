@@ -19,7 +19,7 @@ namespace StockVentas
 
         private void frmStockInforme_Load(object sender, EventArgs e)
         {
-
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }

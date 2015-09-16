@@ -48,7 +48,7 @@ namespace DAL
                 MySqlDataAdapter da = AdaptadorABM(SqlConnection1);
                 da.Update(dt, "FondoCaja");
             }
-            catch (MySqlException ex)
+            catch (MySqlException)
             {
               //  MessageBox.Show(ex.ToString(), "Trend", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dt.RejectChanges();

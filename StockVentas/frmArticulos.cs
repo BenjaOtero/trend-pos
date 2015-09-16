@@ -34,6 +34,7 @@ namespace StockVentas
 
         private void frmArticulos_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             System.Drawing.Icon ico = Properties.Resources.icono_app;
             this.Icon = ico;
             tablaOrigen = BL.ArticulosBLL.CrearDataset();

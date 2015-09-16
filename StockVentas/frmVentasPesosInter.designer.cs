@@ -49,16 +49,17 @@
             // lstLocales
             // 
             this.lstLocales.FormattingEnabled = true;
-            this.lstLocales.Location = new System.Drawing.Point(9, 34);
+            this.lstLocales.Location = new System.Drawing.Point(9, 111);
             this.lstLocales.Name = "lstLocales";
             this.lstLocales.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lstLocales.Size = new System.Drawing.Size(345, 95);
+            this.lstLocales.Size = new System.Drawing.Size(315, 95);
             this.lstLocales.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 14);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(9, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 9;
@@ -66,22 +67,23 @@
             // 
             // dateTimeDesde
             // 
-            this.dateTimeDesde.Location = new System.Drawing.Point(130, 145);
+            this.dateTimeDesde.Location = new System.Drawing.Point(93, 222);
             this.dateTimeDesde.Name = "dateTimeDesde";
-            this.dateTimeDesde.Size = new System.Drawing.Size(224, 20);
+            this.dateTimeDesde.Size = new System.Drawing.Size(231, 20);
             this.dateTimeDesde.TabIndex = 10;
             // 
             // dateTimeHasta
             // 
-            this.dateTimeHasta.Location = new System.Drawing.Point(130, 174);
+            this.dateTimeHasta.Location = new System.Drawing.Point(93, 251);
             this.dateTimeHasta.Name = "dateTimeHasta";
-            this.dateTimeHasta.Size = new System.Drawing.Size(224, 20);
+            this.dateTimeHasta.Size = new System.Drawing.Size(231, 20);
             this.dateTimeHasta.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 145);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(6, 224);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 12;
@@ -90,7 +92,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 174);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(6, 253);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 13;
@@ -100,9 +103,10 @@
             // 
             this.groupBox2.Controls.Add(this.rdDiarios);
             this.groupBox2.Controls.Add(this.rdTotales);
-            this.groupBox2.Location = new System.Drawing.Point(9, 253);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(345, 67);
+            this.groupBox2.Size = new System.Drawing.Size(314, 67);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Seleccione una opción";
@@ -110,17 +114,20 @@
             // rdDiarios
             // 
             this.rdDiarios.AutoSize = true;
+            this.rdDiarios.ForeColor = System.Drawing.SystemColors.ControlText;
             this.rdDiarios.Location = new System.Drawing.Point(6, 43);
             this.rdDiarios.Name = "rdDiarios";
             this.rdDiarios.Size = new System.Drawing.Size(57, 17);
             this.rdDiarios.TabIndex = 1;
             this.rdDiarios.Text = "Diarios";
             this.rdDiarios.UseVisualStyleBackColor = true;
+            this.rdDiarios.Click += new System.EventHandler(this.rdDiarios_Click);
             // 
             // rdTotales
             // 
             this.rdTotales.AutoSize = true;
             this.rdTotales.Checked = true;
+            this.rdTotales.ForeColor = System.Drawing.SystemColors.ControlText;
             this.rdTotales.Location = new System.Drawing.Point(6, 20);
             this.rdTotales.Name = "rdTotales";
             this.rdTotales.Size = new System.Drawing.Size(60, 17);
@@ -128,23 +135,24 @@
             this.rdTotales.TabStop = true;
             this.rdTotales.Text = "Totales";
             this.rdTotales.UseVisualStyleBackColor = true;
+            this.rdTotales.Click += new System.EventHandler(this.rdTotales_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.btnAceptar);
-            this.groupBox1.Location = new System.Drawing.Point(8, 326);
+            this.groupBox1.Location = new System.Drawing.Point(9, 317);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(346, 72);
+            this.groupBox1.Size = new System.Drawing.Size(315, 62);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
             // btnSalir
             // 
             this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSalir.Location = new System.Drawing.Point(185, 19);
+            this.btnSalir.Location = new System.Drawing.Point(168, 19);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(143, 35);
+            this.btnSalir.Size = new System.Drawing.Size(135, 30);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -152,9 +160,9 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(18, 19);
+            this.btnAceptar.Location = new System.Drawing.Point(11, 19);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(143, 35);
+            this.btnAceptar.Size = new System.Drawing.Size(135, 30);
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -163,15 +171,16 @@
             // cmbForma
             // 
             this.cmbForma.FormattingEnabled = true;
-            this.cmbForma.Location = new System.Drawing.Point(130, 210);
+            this.cmbForma.Location = new System.Drawing.Point(93, 287);
             this.cmbForma.Name = "cmbForma";
-            this.cmbForma.Size = new System.Drawing.Size(224, 21);
+            this.cmbForma.Size = new System.Drawing.Size(231, 21);
             this.cmbForma.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 210);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(6, 289);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 13);
             this.label4.TabIndex = 13;
@@ -181,7 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 405);
+            this.ClientSize = new System.Drawing.Size(333, 386);
             this.Controls.Add(this.cmbForma);
             this.Controls.Add(this.lstLocales);
             this.Controls.Add(this.label1);

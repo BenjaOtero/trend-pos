@@ -76,6 +76,13 @@ namespace StockVentas
             newMDIChild.Show();
         }
 
+        private void enPesosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVentasPesosInter newMDIChild = new frmVentasPesosInter();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
         private void ventasEnPesos_Click(object sender, EventArgs e)
         {
             frmVentasPesosInter newMDIChild = new frmVentasPesosInter();

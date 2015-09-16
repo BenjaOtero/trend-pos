@@ -50,7 +50,7 @@ namespace DAL
 
         public static DataSet CrearDatasetVentasPesos(int forma, string desde, string hasta, string locales)
         {
-            MySqlConnection SqlConnection1 = DALBase.GetConnection();
+            MySqlConnection SqlConnection1 = DALBase.GetRemoteConnection();
             MySqlDataAdapter SqlDataAdapter1 = new MySqlDataAdapter();
             MySqlCommand SqlSelectCommand1 = new MySqlCommand("VentasPesosCons_Listar", SqlConnection1);
             SqlDataAdapter1.SelectCommand = SqlSelectCommand1;
@@ -63,6 +63,24 @@ namespace DAL
             SqlDataAdapter1.Fill(dt);
             SqlConnection1.Close();
             return dt;
+        }
+
+        public static DataTable GetVentasPesosDiarias(string desde, string hasta, int local, string forma)
+        {
+
+            MySqlConnection SqlConnection1 = DALBase.GetRemoteConnection();
+            MySqlDataAdapter SqlDataAdapter1 = new MySqlDataAdapter();
+            MySqlCommand SqlSelectCommand1 = new MySqlCommand("Ventas_Diarias", SqlConnection1);
+            SqlDataAdapter1.SelectCommand = SqlSelectCommand1;
+            SqlSelectCommand1.Parameters.AddWithValue("p_fecha_desde", desde);
+            SqlSelectCommand1.Parameters.AddWithValue("p_fecha_hasta", hasta);
+            SqlSelectCommand1.Parameters.AddWithValue("p_local", local);
+            SqlSelectCommand1.Parameters.AddWithValue("p_forma", forma);
+            SqlSelectCommand1.CommandType = CommandType.StoredProcedure;
+            DataTable tbl = new DataTable();
+            SqlDataAdapter1.Fill(tbl);
+            SqlConnection1.Close();
+            return tbl;
         }
 
         public static DataSet CrearDatasetVentas(int idVenta)

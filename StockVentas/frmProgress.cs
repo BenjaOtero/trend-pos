@@ -20,6 +20,7 @@ namespace StockVentas
         public static DataSet dsStockMov = null;
         public static DataSet dsArqueo = null;
         public static DataSet dsVentasPesosCons = null;
+        public static DataTable tblEstatica = null;
         private DataRowView rowView = null;
         private string origen = null;
         private string accion = null;
@@ -33,6 +34,7 @@ namespace StockVentas
         private string opcMov;
         private string tipo;
         private int forma;
+        private string formaPago;
         private string locales;
         private int proveedor;
         private string articulo = null;
@@ -122,6 +124,18 @@ namespace StockVentas
             this.accion = accion;
         }
 
+        // Constructor para frmVentasPesosDiarias
+        public frmProgress(string strFechaDesde, string strFechaHasta, int local, string forma, string origen, string accion)
+            : this()
+        {
+            this.strFechaDesde = strFechaDesde;
+            this.strFechaHasta = strFechaHasta;
+            this.idLocal = local;
+            this.formaPago = forma;
+            this.origen = origen;
+            this.accion = accion;
+        }
+
         // Constructor para frmArqueoCajaAdmin
         public frmProgress(string strFechaDesde, string strFechaHasta, int idPc, string origen, string accion)
             : this()
@@ -193,6 +207,9 @@ namespace StockVentas
                         break;
                     case "frmVentasPesosCons":
                         dsVentasPesosCons = BL.VentasBLL.CrearDatasetVentasPesos(forma, strFechaDesde, strFechaHasta, locales, ref codigoError);
+                        break;
+                    case "frmVentasPesosInter_diarias":
+                        tblEstatica = BL.VentasBLL.GetVentasPesosDiarias(strFechaDesde, strFechaHasta, idLocal, formaPago);
                         break;
                     case "ActualizarBD":
                         BL.Utilitarios.ActualizarBD();

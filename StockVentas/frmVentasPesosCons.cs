@@ -14,46 +14,31 @@ namespace StockVentas
         public string fechaDesde;
         public string fechaHasta;
         public int forma;
-        ListBox lstLocales;
-        public int formaPago;
-        string idLocal;
-        string strLocales;
-        string formularioOrigen = "frmVentasPesosCons";
-        string accionProgress = "cargar";
-        frmProgress progreso;
+        DataTable tblVentasPesos;
 
-        public frmVentasPesosCons(ListBox locales)
+        public frmVentasPesosCons(DataTable tblVentasPesos)
         {
             InitializeComponent();
-            this.lstLocales = locales;
+            this.tblVentasPesos = tblVentasPesos;
         }
 
         private void frmVentasPesosCons_Load(object sender, EventArgs e)
         {
-            foreach (DataRowView filaLocal in lstLocales.SelectedItems)
-            {
-                idLocal = filaLocal.Row[0].ToString();
-                strLocales += "IdLocalLOC LIKE '" + idLocal + "' OR ";
-                
-            }
-            strLocales = strLocales.Substring(0, strLocales.Length - 4);
-            progreso = new frmProgress(forma, fechaDesde, fechaHasta, strLocales, formularioOrigen, accionProgress);
-            progreso.ShowDialog();
-            try
-            {
-                dataGridView1.DataSource = frmProgress.dsVentasPesosCons.Tables[0];
-            }
-            catch(Exception)
-            {
-                Close();
-                return;
-            }
+            System.Drawing.Icon ico = Properties.Resources.icono_app;
+            this.Icon = ico;
+            this.ControlBox = true;
+            this.MaximizeBox = false;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            dataGridView1.DataSource = tblVentasPesos;
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.Columns["Venta"].DefaultCellStyle.Format = "C0";
             dataGridView1.Columns["Costo"].DefaultCellStyle.Format = "C0";
             dataGridView1.Columns["Utilidad bruta"].DefaultCellStyle.Format = "C0";
             dataGridView1.Columns["Valor agregado"].DefaultCellStyle.Format = "0\\%";
+
+
+            
         }
     }
 }

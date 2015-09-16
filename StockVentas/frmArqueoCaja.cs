@@ -65,6 +65,7 @@ namespace StockVentas
 
         private void frmArqueoCaja_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             System.Drawing.Icon ico = Properties.Resources.icono_app;
             this.Icon = ico;
             lblLocal.Text = "Jesus Maria";
