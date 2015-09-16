@@ -286,7 +286,7 @@ namespace StockVentas
             {
                 DataRow filaActual = foundRow[0];
                 txtDescripcion.Text = filaActual["DescripcionART"].ToString();
-                if (txtArticulo.Text == "000000004" || txtArticulo.Text == "000000006") // seña y nota de credito entra factura
+                if (txtArticulo.Text == "0000000004" || txtArticulo.Text == "0000000006") // seña y nota de credito entra factura
                 {
                     txtCantidad.Text = "-1";
                 }
@@ -307,7 +307,7 @@ namespace StockVentas
             {
                 e.Cancel = true;
             }
-            if (txtArticulo.Text == "000000004" || txtArticulo.Text == "000000006") // seña y nota de credito entra factura
+            if (txtArticulo.Text == "0000000004" || txtArticulo.Text == "0000000006") // seña y nota de credito entra factura
             {
                 txtCantidad.Text = "-1";
             }
