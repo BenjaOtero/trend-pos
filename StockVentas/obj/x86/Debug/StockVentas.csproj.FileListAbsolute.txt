@@ -462,6 +462,7 @@ C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.reloj.resources
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.rptFactura.resources
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\RdlCompile.cache
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\RdlCompile.compiled
-C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.csprojResolveAssemblyReference.cache
-C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.csproj.GenerateResource.Cache
 C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\StockVentas.frmVentasPesosDiarias.resources
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Trend\POS\trunk\StockVentas\obj\x86\Debug\GenerateResource.write.1.tlog

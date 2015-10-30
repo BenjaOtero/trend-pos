@@ -92,4 +92,4 @@ C:\Trend\POS\trunk\BL\bin\Debug\DAL.dll
 C:\Trend\POS\trunk\BL\bin\Debug\DAL.pdb
 C:\Trend\POS\trunk\BL\obj\Debug\BL.dll
 C:\Trend\POS\trunk\BL\obj\Debug\BL.pdb
-C:\Trend\POS\trunk\BL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Trend\POS\trunk\BL\obj\Debug\ResolveAssemblyReference.cache

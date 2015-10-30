@@ -159,7 +159,7 @@ namespace BL
                     rowAlicuota.SetAdded();
                 }
             }
-            if (ds.Tables.Count == 4)
+            if (ds.Tables.Count == 5)
             {
                 BL.DatosPosBLL.DeleteAll(existenClientes);
                 BL.ArticulosBLL.InsertarRemotos(ds);
