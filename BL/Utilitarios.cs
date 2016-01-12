@@ -102,7 +102,7 @@ namespace BL
             int timeout = 3000;
             try
             {
-                if (Pings.Send("dns26.cyberneticos.com", timeout).Status == IPStatus.Success)
+                if (Pings.Send("ns21a.cyberneticos.com", timeout).Status == IPStatus.Success)
                 {
                     conexion = true;
                 }

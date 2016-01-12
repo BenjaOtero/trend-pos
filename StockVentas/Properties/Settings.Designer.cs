@@ -26,7 +26,7 @@ namespace StockVentas.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=dns26.cyberneticos.com;User Id=ncsoftwa_re;password=8953#AFjn;Persist Secu" +
+        [global::System.Configuration.DefaultSettingValueAttribute("server=ns21a.cyberneticos.com;User Id=ncsoftwa_re;password=8953#AFjn;Persist Secu" +
             "rity Info=True;database=ncsoftwa_karminna")]
         public string ncsoftwa_karminnaConnectionString {
             get {
