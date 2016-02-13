@@ -20,7 +20,8 @@ namespace DAL
         {
             string connectionString;
             MySqlConnection objCon;
-            connectionString = ConfigurationManager.ConnectionStrings["DBMainLocal"].ConnectionString;
+       //     connectionString = ConfigurationManager.ConnectionStrings["DBMainLocal"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["DBMainCaro"].ConnectionString;
             objCon = new MySqlConnection(connectionString);
             return objCon;
         }
