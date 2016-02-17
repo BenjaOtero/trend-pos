@@ -69,6 +69,7 @@ namespace StockVentas
             gvwDatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gvwDatos.Columns["IdClienteCLI"].HeaderText = "Nº cliente";
             gvwDatos.Columns["RazonSocialCLI"].HeaderText = "Razon social";
+            gvwDatos.Columns["CorreoCLI"].HeaderText = "Correo";
             gvwDatos.Columns["CUIT"].Visible = false;
             gvwDatos.Columns["DireccionCLI"].Visible = false;
             gvwDatos.Columns["LocalidadCLI"].Visible = false;
@@ -77,8 +78,8 @@ namespace StockVentas
             gvwDatos.Columns["ContactoCLI"].Visible = false;
             gvwDatos.Columns["TelefonoCLI"].Visible = false;
             gvwDatos.Columns["MovilCLI"].Visible = false;
-            gvwDatos.Columns["CorreoCLI"].Visible = false;
             gvwDatos.Columns["FechaNacCLI"].Visible = false;
+            gvwDatos.Columns["CondicionIvaCLI"].Visible = false;
             bindingSource1.Sort = "RazonSocialCLI";
             int itemFound = bindingSource1.Find("RazonSocialCLI", "PUBLICO");
             bindingSource1.Position = itemFound;
@@ -310,6 +311,11 @@ namespace StockVentas
                 btnCancelar.Enabled = true;
                 btnSalir.Enabled = false;
             }
+        }
+
+        private void grpCampos_Enter(object sender, EventArgs e)
+        {
+
         }
 
     }
