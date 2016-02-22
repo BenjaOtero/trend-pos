@@ -20,8 +20,8 @@ namespace DAL
         {
             string connectionString;
             MySqlConnection objCon;
-            //connectionString = ConfigurationManager.ConnectionStrings["DBMainLocal"].ConnectionString;
-            connectionString = ConfigurationManager.ConnectionStrings["DBMainCaro"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["DBMainLocal"].ConnectionString;
+            //  connectionString = ConfigurationManager.ConnectionStrings["DBMainCaro"].ConnectionString;
             objCon = new MySqlConnection(connectionString);
             return objCon;
         }
@@ -30,9 +30,9 @@ namespace DAL
         {
             string connectionString;
             MySqlConnection objCon;
-            connectionString = ConfigurationManager.ConnectionStrings["DBMain"].ConnectionString;
+            //connectionString = ConfigurationManager.ConnectionStrings["DBMain"].ConnectionString;
             //connectionString = ConfigurationManager.ConnectionStrings["DBPruebas"].ConnectionString;
-            //connectionString = ConfigurationManager.ConnectionStrings["NcSoftwa_local"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["NcSoftwa_local"].ConnectionString;
             objCon = new MySqlConnection(connectionString);
             return objCon;
         }

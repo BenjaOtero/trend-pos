@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BL;
+using System.Text.RegularExpressions;
 
 namespace StockVentas
 {
@@ -57,6 +58,8 @@ namespace StockVentas
             bindingSource1.DataSource = viewClientes;
             bindingNavigator1.BindingSource = bindingSource1;
             BL.Utilitarios.DataBindingsAdd(bindingSource1, grpCampos);
+            grpBotones.CausesValidation = false;
+            btnCancelar.CausesValidation = false;
             Dictionary<Int32, String> condiciones = new Dictionary<int, string>();
             condiciones.Add(1, "Consumidor Final");
             condiciones.Add(2, "Responsable Inscripto");
@@ -225,6 +228,10 @@ namespace StockVentas
                 txtIdClienteCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
                 txtRazonSocialCLI.ReadOnly = true;
                 txtRazonSocialCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtNombreCLI.ReadOnly = true;
+                txtNombreCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtApellidoCLI.ReadOnly = true;
+                txtApellidoCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
                 txtCUIT.ReadOnly = true;
                 txtCUIT.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
                 txtDireccionCLI.ReadOnly = true;
@@ -257,6 +264,8 @@ namespace StockVentas
             {
                 gvwDatos.Enabled = false;
                 txtRazonSocialCLI.ReadOnly = false;
+                txtNombreCLI.ReadOnly = false;
+                txtApellidoCLI.ReadOnly = false;
                 txtCUIT.ReadOnly = false;
                 txtDireccionCLI.ReadOnly = false;
                 txtLocalidadCLI.ReadOnly = false;
@@ -292,6 +301,8 @@ namespace StockVentas
             {
                 gvwDatos.Enabled = false;
                 txtRazonSocialCLI.ReadOnly = false;
+                txtNombreCLI.ReadOnly = false;
+                txtApellidoCLI.ReadOnly = false;
                 txtCUIT.ReadOnly = false;
                 txtDireccionCLI.ReadOnly = false;
                 txtLocalidadCLI.ReadOnly = false;
@@ -316,6 +327,75 @@ namespace StockVentas
         private void grpCampos_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtCorreoCLI_Validating(object sender, CancelEventArgs e)
+        {
+            if (!IsValidEmail(txtCorreoCLI.Text))
+            {
+                e.Cancel = true;
+                this.errorProvider1.SetError(txtCorreoCLI, "Debe escribir una dirección de correo válida.");
+            }                
+                
+        }
+
+        private void txtCorreoCLI_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtCorreoCLI, "");
+        }
+
+        public static bool IsValidEmail(string email)
+        {
+            string expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, string.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void txtNombreCLI_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNombreCLI.Text))
+            {
+                e.Cancel = true;
+                this.errorProvider1.SetError(txtNombreCLI, "Debe escribir un nombre.");
+            }
+        }
+
+        private void txtNombreCLI_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtNombreCLI, "");
+        }
+
+        private void txtApellidoCLI_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtApellidoCLI.Text))
+            {
+                e.Cancel = true;
+                this.errorProvider1.SetError(txtApellidoCLI, "Debe escribir un apellido.");
+            }
+        }
+
+        private void txtApellidoCLI_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtApellidoCLI, "");
+        }
+
+        private void frmClientes_Validating(object sender, CancelEventArgs e)
+        {
+            MessageBox.Show("validating");
         }
 
     }

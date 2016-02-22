@@ -72,6 +72,8 @@ namespace DAL
             // IMPLEMENTACIÓN DE LA ORDEN UPDATE
             SqlUpdateCommand1.Parameters.Add("p_id", MySqlDbType.Int32, 11, "IdClienteCLI");
             SqlUpdateCommand1.Parameters.Add("p_razon", MySqlDbType.VarChar, 50, "RazonSocialCLI");
+            SqlUpdateCommand1.Parameters.Add("p_nombre", MySqlDbType.VarChar, 50, "NombreCLI");
+            SqlUpdateCommand1.Parameters.Add("p_apellido", MySqlDbType.VarChar, 50, "ApellidoCLI");
             SqlUpdateCommand1.Parameters.Add("p_cuit", MySqlDbType.VarChar, 50, "CUIT");
             SqlUpdateCommand1.Parameters.Add("p_condicion", MySqlDbType.VarChar, 50, "CondicionIvaCLI");
             SqlUpdateCommand1.Parameters.Add("p_direccion", MySqlDbType.VarChar, 50, "DireccionCLI");
@@ -88,6 +90,8 @@ namespace DAL
             // IMPLEMENTACIÓN DE LA ORDEN INSERT
             SqlInsertCommand1.Parameters.Add("p_id", MySqlDbType.Int32, 11, "IdClienteCLI");
             SqlInsertCommand1.Parameters.Add("p_razon", MySqlDbType.VarChar, 50, "RazonSocialCLI");
+            SqlInsertCommand1.Parameters.Add("p_nombre", MySqlDbType.VarChar, 50, "NombreCLI");
+            SqlInsertCommand1.Parameters.Add("p_apellido", MySqlDbType.VarChar, 50, "ApellidoCLI");
             SqlInsertCommand1.Parameters.Add("p_cuit", MySqlDbType.VarChar, 50, "CUIT");
             SqlInsertCommand1.Parameters.Add("p_condicion", MySqlDbType.VarChar, 50, "CondicionIvaCLI");
             SqlInsertCommand1.Parameters.Add("p_direccion", MySqlDbType.VarChar, 50, "DireccionCLI");
