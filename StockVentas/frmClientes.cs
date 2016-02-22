@@ -45,7 +45,7 @@ namespace StockVentas
             this.ControlBox = true;
             this.MaximizeBox = false;
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            dsClientes = BL.ClientesBLL.GetClientes();
+            dsClientes = BL.ClientesBLL.GetClientes(1);
             tblClientes = dsClientes.Tables[0];
             BL.Utilitarios.AddEventosABM(grpCampos, ref btnGrabar, ref tblClientes);
             tblFallidas = new DataTable();
@@ -60,6 +60,7 @@ namespace StockVentas
             BL.Utilitarios.DataBindingsAdd(bindingSource1, grpCampos);
             grpBotones.CausesValidation = false;
             btnCancelar.CausesValidation = false;
+            btnSalir.CausesValidation = false;
             Dictionary<Int32, String> condiciones = new Dictionary<int, string>();
             condiciones.Add(1, "Consumidor Final");
             condiciones.Add(2, "Responsable Inscripto");
@@ -71,8 +72,10 @@ namespace StockVentas
             gvwDatos.DataSource = bindingSource1;
             gvwDatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gvwDatos.Columns["IdClienteCLI"].HeaderText = "Nº cliente";
-            gvwDatos.Columns["RazonSocialCLI"].HeaderText = "Razon social";
+            gvwDatos.Columns["NombreCLI"].HeaderText = "Nombre";
+            gvwDatos.Columns["ApellidoCLI"].HeaderText = "Apellido";
             gvwDatos.Columns["CorreoCLI"].HeaderText = "Correo";
+            gvwDatos.Columns["RazonSocialCLI"].Visible = false;
             gvwDatos.Columns["CUIT"].Visible = false;
             gvwDatos.Columns["DireccionCLI"].Visible = false;
             gvwDatos.Columns["LocalidadCLI"].Visible = false;
@@ -83,10 +86,10 @@ namespace StockVentas
             gvwDatos.Columns["MovilCLI"].Visible = false;
             gvwDatos.Columns["FechaNacCLI"].Visible = false;
             gvwDatos.Columns["CondicionIvaCLI"].Visible = false;
+            gvwDatos.Columns["NombreCompletoCLI"].Visible = false;
             bindingSource1.Sort = "RazonSocialCLI";
             int itemFound = bindingSource1.Find("RazonSocialCLI", "PUBLICO");
             bindingSource1.Position = itemFound;
-       //     txtFecha.Mask = "00/00/0000";
             tblClientes.RowChanging += new DataRowChangeEventHandler(Row_Changing);
             tblClientes.RowDeleting += new DataRowChangeEventHandler(Row_Deleting);
             SetStateForm(FormState.inicial);  
@@ -140,17 +143,30 @@ namespace StockVentas
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            bindingSource1.EndEdit();
-            bindingSource1.Position = 0;
-            bindingSource1.Sort = "RazonSocialCLI";
-            SetStateForm(FormState.inicial);
-            bindingSource1.RemoveFilter();
+            try
+            {
+                if (ValidarFormulario())
+                {
+                    bindingSource1.EndEdit();
+                    bindingSource1.Position = 0;
+                    bindingSource1.Sort = "ApellidoCLI";
+                    SetStateForm(FormState.inicial);
+                    bindingSource1.RemoveFilter();
+                }
+            }
+            catch (ConstraintException)
+            {
+                string mensaje = "No se puede agregar el cliente '" + txtNombreCLI.Text.ToUpper() + "' porque ya existe un cliente con el mismo correo electrónico.";
+                MessageBox.Show(mensaje, "Trend", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCorreoCLI.Focus();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             bindingSource1.CancelEdit();
             SetStateForm(FormState.inicial);
+            errorProvider1.Clear();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -216,111 +232,6 @@ namespace StockVentas
                 row["Id"] = Convert.ToInt32(e.Row["IdClienteCLI"].ToString());
                 row["Accion"] = e.Action.ToString(); ;
                 tblFallidas.Rows.Add(row);
-            }
-        }
-
-        public void SetStateForm(FormState state)
-        {
-            if (state == FormState.inicial)
-            {
-                gvwDatos.Enabled = true;
-                txtIdClienteCLI.ReadOnly = true;
-                txtIdClienteCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtRazonSocialCLI.ReadOnly = true;
-                txtRazonSocialCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtNombreCLI.ReadOnly = true;
-                txtNombreCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtApellidoCLI.ReadOnly = true;
-                txtApellidoCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtCUIT.ReadOnly = true;
-                txtCUIT.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtDireccionCLI.ReadOnly = true;
-                txtDireccionCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtLocalidadCLI.ReadOnly = true;
-                txtLocalidadCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtProvinciaCLI.ReadOnly = true;
-                txtProvinciaCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtTransporteCLI.ReadOnly = true;
-                txtTransporteCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtContactoCLI.ReadOnly = true;
-                txtContactoCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtTelefonoCLI.ReadOnly = true;
-                txtTelefonoCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtMovilCLI.ReadOnly = true;
-                txtMovilCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtCorreoCLI.ReadOnly = true;
-                txtCorreoCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                txtFechaNacCLI.ReadOnly = true;
-                txtFechaNacCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-                btnBuscar.Enabled = true;
-                btnNuevo.Enabled = true;
-                btnEditar.Enabled = true;
-                btnBorrar.Enabled = true;
-                btnGrabar.Enabled = false;
-                btnCancelar.Enabled = false;
-                btnSalir.Enabled = true;
-            }
-            if (state == FormState.insercion)
-            {
-                gvwDatos.Enabled = false;
-                txtRazonSocialCLI.ReadOnly = false;
-                txtNombreCLI.ReadOnly = false;
-                txtApellidoCLI.ReadOnly = false;
-                txtCUIT.ReadOnly = false;
-                txtDireccionCLI.ReadOnly = false;
-                txtLocalidadCLI.ReadOnly = false;
-                txtProvinciaCLI.ReadOnly = false;
-                txtTransporteCLI.ReadOnly = false;
-                txtContactoCLI.ReadOnly = false;
-                txtTelefonoCLI.ReadOnly = false;
-                txtMovilCLI.ReadOnly = false;
-                txtCorreoCLI.ReadOnly = false;
-                txtFechaNacCLI.ReadOnly = false;
-                txtIdClienteCLI.Clear();
-                txtRazonSocialCLI.Clear();
-                txtCUIT.Clear();
-                txtDireccionCLI.Clear();
-                txtLocalidadCLI.Clear();
-                txtProvinciaCLI.Clear();
-                txtTransporteCLI.Clear();
-                txtContactoCLI.Clear();
-                txtTelefonoCLI.Clear();
-                txtMovilCLI.Clear();
-                txtCorreoCLI.Clear();
-                txtFechaNacCLI.Clear();
-                txtRazonSocialCLI.Focus();
-                btnBuscar.Enabled = false;
-                btnNuevo.Enabled = false;
-                btnEditar.Enabled = false;
-                btnBorrar.Enabled = false;
-                btnGrabar.Enabled = false;
-                btnCancelar.Enabled = true;
-                btnSalir.Enabled = false;
-            }
-            if (state == FormState.edicion)
-            {
-                gvwDatos.Enabled = false;
-                txtRazonSocialCLI.ReadOnly = false;
-                txtNombreCLI.ReadOnly = false;
-                txtApellidoCLI.ReadOnly = false;
-                txtCUIT.ReadOnly = false;
-                txtDireccionCLI.ReadOnly = false;
-                txtLocalidadCLI.ReadOnly = false;
-                txtProvinciaCLI.ReadOnly = false;
-                txtTransporteCLI.ReadOnly = false;
-                txtContactoCLI.ReadOnly = false;
-                txtTelefonoCLI.ReadOnly = false;
-                txtMovilCLI.ReadOnly = false;
-                txtCorreoCLI.ReadOnly = false;
-                txtFechaNacCLI.ReadOnly = false;
-                txtRazonSocialCLI.Focus();
-                btnBuscar.Enabled = false;
-                btnNuevo.Enabled = false;
-                btnEditar.Enabled = false;
-                btnBorrar.Enabled = false;
-                btnGrabar.Enabled = false;
-                btnCancelar.Enabled = true;
-                btnSalir.Enabled = false;
             }
         }
 
@@ -393,9 +304,132 @@ namespace StockVentas
             errorProvider1.SetError(txtApellidoCLI, "");
         }
 
-        private void frmClientes_Validating(object sender, CancelEventArgs e)
+        private bool ValidarFormulario()
         {
-            MessageBox.Show("validating");
+            if (string.IsNullOrEmpty(txtNombreCLI.Text))
+            {
+                this.errorProvider1.SetError(txtNombreCLI, "Debe escribir un nombre.");
+                txtNombreCLI.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtApellidoCLI.Text))
+            {
+                this.errorProvider1.SetError(txtApellidoCLI, "Debe escribir un apellido.");
+                txtApellidoCLI.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtCorreoCLI.Text))
+            {
+                this.errorProvider1.SetError(txtCorreoCLI, "Debe escribir un correo electrónico.");
+                txtCorreoCLI.Focus();
+                return false;
+            } 
+            return true;
+        }
+
+        public void SetStateForm(FormState state)
+        {
+            if (state == FormState.inicial)
+            {
+                gvwDatos.Enabled = true;
+                txtIdClienteCLI.ReadOnly = true;
+                txtIdClienteCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtRazonSocialCLI.ReadOnly = true;
+                txtRazonSocialCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtNombreCLI.ReadOnly = true;
+                txtNombreCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtApellidoCLI.ReadOnly = true;
+                txtApellidoCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtCUIT.ReadOnly = true;
+                txtCUIT.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtDireccionCLI.ReadOnly = true;
+                txtDireccionCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtLocalidadCLI.ReadOnly = true;
+                txtLocalidadCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtProvinciaCLI.ReadOnly = true;
+                txtProvinciaCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtTransporteCLI.ReadOnly = true;
+                txtTransporteCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtContactoCLI.ReadOnly = true;
+                txtContactoCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtTelefonoCLI.ReadOnly = true;
+                txtTelefonoCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtMovilCLI.ReadOnly = true;
+                txtMovilCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtCorreoCLI.ReadOnly = true;
+                txtCorreoCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                txtFechaNacCLI.ReadOnly = true;
+                txtFechaNacCLI.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+                btnBuscar.Enabled = true;
+                btnNuevo.Enabled = true;
+                btnEditar.Enabled = true;
+                btnBorrar.Enabled = true;
+                btnGrabar.Enabled = false;
+                btnCancelar.Enabled = false;
+                btnSalir.Enabled = true;
+            }
+            if (state == FormState.insercion)
+            {
+                gvwDatos.Enabled = false;
+                txtRazonSocialCLI.ReadOnly = false;
+                txtNombreCLI.ReadOnly = false;
+                txtApellidoCLI.ReadOnly = false;
+                txtCUIT.ReadOnly = false;
+                txtDireccionCLI.ReadOnly = false;
+                txtLocalidadCLI.ReadOnly = false;
+                txtProvinciaCLI.ReadOnly = false;
+                txtTransporteCLI.ReadOnly = false;
+                txtContactoCLI.ReadOnly = false;
+                txtTelefonoCLI.ReadOnly = false;
+                txtMovilCLI.ReadOnly = false;
+                txtCorreoCLI.ReadOnly = false;
+                txtFechaNacCLI.ReadOnly = false;
+                txtIdClienteCLI.Clear();
+                txtRazonSocialCLI.Clear();
+                txtCUIT.Clear();
+                txtDireccionCLI.Clear();
+                txtLocalidadCLI.Clear();
+                txtProvinciaCLI.Clear();
+                txtTransporteCLI.Clear();
+                txtContactoCLI.Clear();
+                txtTelefonoCLI.Clear();
+                txtMovilCLI.Clear();
+                txtCorreoCLI.Clear();
+                txtFechaNacCLI.Clear();
+                txtNombreCLI.Focus();
+                btnBuscar.Enabled = false;
+                btnNuevo.Enabled = false;
+                btnEditar.Enabled = false;
+                btnBorrar.Enabled = false;
+                btnGrabar.Enabled = false;
+                btnCancelar.Enabled = true;
+                btnSalir.Enabled = false;
+            }
+            if (state == FormState.edicion)
+            {
+                gvwDatos.Enabled = false;
+                txtRazonSocialCLI.ReadOnly = false;
+                txtNombreCLI.ReadOnly = false;
+                txtApellidoCLI.ReadOnly = false;
+                txtCUIT.ReadOnly = false;
+                txtDireccionCLI.ReadOnly = false;
+                txtLocalidadCLI.ReadOnly = false;
+                txtProvinciaCLI.ReadOnly = false;
+                txtTransporteCLI.ReadOnly = false;
+                txtContactoCLI.ReadOnly = false;
+                txtTelefonoCLI.ReadOnly = false;
+                txtMovilCLI.ReadOnly = false;
+                txtCorreoCLI.ReadOnly = false;
+                txtFechaNacCLI.ReadOnly = false;
+                txtRazonSocialCLI.Focus();
+                btnBuscar.Enabled = false;
+                btnNuevo.Enabled = false;
+                btnEditar.Enabled = false;
+                btnBorrar.Enabled = false;
+                btnGrabar.Enabled = false;
+                btnCancelar.Enabled = true;
+                btnSalir.Enabled = false;
+            }
         }
 
     }

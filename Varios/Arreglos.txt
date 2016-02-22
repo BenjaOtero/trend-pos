@@ -6,6 +6,116 @@
 -borrar ventas desde frmArqueo borra cualquier venta
 
 
+Cambios para pos Makro
+
+pos_lili
+tabla clientes
+stored procedures:
+	clientes_actualizar
+	clientes_insertar
+	clientes_listar
+
+pos .net
+	ClientesBLL.cs
+        public static DataSet GetClientes(sbyte frm)
+        {
+            DataSet dt = DAL.ClientesDAL.GetClientes(frm);            
+            return dt;
+        }
+
+	ClientesDAL.cs
+
+        public static DataSet GetClientes(sbyte frm)
+        {
+            MySqlConnection SqlConnection1 = DALBase.GetConnection();
+            MySqlDataAdapter SqlDataAdapter1 = new MySqlDataAdapter();
+            MySqlCommand SqlSelectCommand1 = new MySqlCommand("Clientes_Listar", SqlConnection1);
+            SqlSelectCommand1.Parameters.AddWithValue("p_frm", frm);
+            SqlDataAdapter1.SelectCommand = SqlSelectCommand1;
+            SqlSelectCommand1.CommandType = CommandType.StoredProcedure;
+            DataSet dt = new DataSet();
+            SqlDataAdapter1.Fill(dt, "Clientes");
+            if (!dt.Tables[0].Constraints.Contains("correoConstraint"))
+            {
+                UniqueConstraint uniqueConstraint = new UniqueConstraint("correoConstraint", dt.Tables[0].Columns["CorreoCLI"]);
+             //   dt.Tables[0].Constraints.Add(uniqueConstraint);
+            }
+            SqlConnection1.Close();
+            return dt;
+        }
+
+
+        private static MySqlDataAdapter AdaptadorInsert(MySqlConnection SqlConnection1, MySqlTransaction tr)
+        {
+            MySqlDataAdapter SqlDataAdapter1 = new MySqlDataAdapter();
+            MySqlCommand SqlInsertCommand1 = new MySqlCommand("Clientes_Insertar", SqlConnection1);
+            SqlInsertCommand1.Transaction = tr;
+            SqlDataAdapter1.InsertCommand = SqlInsertCommand1;
+
+            // IMPLEMENTACIÓN DE LA ORDEN INSERT
+            SqlInsertCommand1.Parameters.Add("p_id", MySqlDbType.Int32, 11, "IdClienteCLI");
+            SqlInsertCommand1.Parameters.Add("p_razon", MySqlDbType.VarChar, 50, "RazonSocialCLI");
+            SqlInsertCommand1.Parameters.Add("p_nombre", MySqlDbType.VarChar, 50, "NombreCLI");
+            SqlInsertCommand1.Parameters.Add("p_apellido", MySqlDbType.VarChar, 50, "ApellidoCLI");
+            SqlInsertCommand1.Parameters.Add("p_cuit", MySqlDbType.VarChar, 50, "CUIT");
+            SqlInsertCommand1.Parameters.Add("p_condicion", MySqlDbType.VarChar, 50, "CondicionIvaCLI");
+            SqlInsertCommand1.Parameters.Add("p_direccion", MySqlDbType.VarChar, 50, "DireccionCLI");
+            SqlInsertCommand1.Parameters.Add("p_localidad", MySqlDbType.VarChar, 50, "LocalidadCLI");
+            SqlInsertCommand1.Parameters.Add("p_provincia", MySqlDbType.VarChar, 50, "ProvinciaCLI");
+            SqlInsertCommand1.Parameters.Add("p_transporte", MySqlDbType.VarChar, 50, "TransporteCLI");
+            SqlInsertCommand1.Parameters.Add("p_contacto", MySqlDbType.VarChar, 50, "ContactoCLI");
+            SqlInsertCommand1.Parameters.Add("p_telefono", MySqlDbType.VarChar, 50, "TelefonoCLI");
+            SqlInsertCommand1.Parameters.Add("p_movil", MySqlDbType.VarChar, 50, "MovilCLI");
+            SqlInsertCommand1.Parameters.Add("p_correo", MySqlDbType.VarChar, 50, "CorreoCLI");
+            SqlInsertCommand1.Parameters.Add("p_fecha", MySqlDbType.VarChar, 50, "FechaNacCLI");
+            SqlInsertCommand1.CommandType = CommandType.StoredProcedure;
+            return SqlDataAdapter1;
+        }
+
+	fallidas.cs
+	// agregar Clientes
+	ds = BL.ClientesBLL.GetClientes(0); cambiar por ds = BL.ClientesBLL.GetClientes();
+	// editar Clientes
+	ds = BL.ClientesBLL.GetClientes(0); cambiar por ds = BL.ClientesBLL.GetClientes();
+
+	frmClientes.cs
+	frmClientes.designer.cs
+
+	frmPrincipal.cs
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmClientes newMDIChild = new frmClientes();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+	frmVentas.cs
+
+        public void CargarComboClientes()
+        {
+            dsClientes = BL.ClientesBLL.GetClientes(0);
+            tblClientes = dsClientes.Tables[0];
+            tblClientes.DefaultView.Sort = "NombreCompletoCLI";
+            cmbCliente.ValueMember = "IdClienteCLI";
+            cmbCliente.DisplayMember = "NombreCompletoCLI";
+            cmbCliente.DropDownStyle = ComboBoxStyle.DropDown;
+            cmbCliente.DataSource = tblClientes;
+            if (idCliente == null) cmbCliente.SelectedValue = 1;
+            else cmbCliente.SelectedValue = idCliente;
+
+            AutoCompleteStringCollection clientesColection = new AutoCompleteStringCollection();
+            foreach (DataRow row in tblClientes.Rows)
+            {
+                clientesColection.Add(Convert.ToString(row["RazonSocialCLI"]));
+            }
+            cmbCliente.AutoCompleteCustomSource = clientesColection;
+            cmbCliente.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbCliente.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
+
+
+
 
 
 

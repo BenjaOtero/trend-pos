@@ -578,11 +578,11 @@ namespace StockVentas
 
         public void CargarComboClientes()
         {
-            dsClientes = BL.ClientesBLL.GetClientes();
-            tblClientes = dsClientes.Tables[0];            
-            tblClientes.DefaultView.Sort = "RazonSocialCLI";
+            dsClientes = BL.ClientesBLL.GetClientes(0);
+            tblClientes = dsClientes.Tables[0];
+            tblClientes.DefaultView.Sort = "NombreCompletoCLI";
             cmbCliente.ValueMember = "IdClienteCLI";
-            cmbCliente.DisplayMember = "RazonSocialCLI";
+            cmbCliente.DisplayMember = "NombreCompletoCLI";
             cmbCliente.DropDownStyle = ComboBoxStyle.DropDown;
             cmbCliente.DataSource = tblClientes;
             if (idCliente == null) cmbCliente.SelectedValue = 1;

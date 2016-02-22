@@ -17,9 +17,9 @@ namespace BL
     {
         private static object _sync = new object();
 
-        public static DataSet GetClientes()
+        public static DataSet GetClientes(sbyte frm)
         {
-            DataSet dt = DAL.ClientesDAL.GetClientes();            
+            DataSet dt = DAL.ClientesDAL.GetClientes(frm);            
             return dt;
         }
 

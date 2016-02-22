@@ -139,5 +139,12 @@ namespace StockVentas
             newMDIChild.Show();
         }
 
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmClientes newMDIChild = new frmClientes();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
     }
 }

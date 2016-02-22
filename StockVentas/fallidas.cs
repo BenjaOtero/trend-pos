@@ -343,7 +343,7 @@ namespace StockVentas
                 tbl = BL.ClientesBLL.ClienteGetByAccion("Add");// OJO !!! que las otras tablas locales fallidas guardan 'Modified', 'Deleted', 'Added'
                 if (tbl.Rows.Count > 0)
                 {
-                    ds = BL.ClientesBLL.GetClientes();
+                    ds = BL.ClientesBLL.GetClientes(0);
                     DataSet dsCliente = ds.Clone(); // obtengo la estructura de la tabla Clientes
                     DataTable tblCliente = dsCliente.Tables[0];
                     tblCliente.TableName = "Clientes";
@@ -375,7 +375,7 @@ namespace StockVentas
                 tbl = BL.ClientesBLL.ClienteGetByAccion("Change");// OJO !!! que las otras tablas locales fallidas guardan 'Modified', 'Deleted', 'Added'
                 if (tbl.Rows.Count > 0)
                 {
-                    ds = BL.ClientesBLL.GetClientes();
+                    ds = BL.ClientesBLL.GetClientes(0);
                     DataSet dsCliente = ds.Clone(); // obtengo la estructura de la tabla Clientes
                     DataTable tblCliente = dsCliente.Tables[0];
                     tblCliente.TableName = "Clientes";

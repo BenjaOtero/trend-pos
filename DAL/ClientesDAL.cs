@@ -12,15 +12,21 @@ namespace DAL
     public class ClientesDAL
     {
 
-        public static DataSet GetClientes()
+        public static DataSet GetClientes(sbyte frm)
         {
             MySqlConnection SqlConnection1 = DALBase.GetConnection();
             MySqlDataAdapter SqlDataAdapter1 = new MySqlDataAdapter();
             MySqlCommand SqlSelectCommand1 = new MySqlCommand("Clientes_Listar", SqlConnection1);
+            SqlSelectCommand1.Parameters.AddWithValue("p_frm", frm);
             SqlDataAdapter1.SelectCommand = SqlSelectCommand1;
             SqlSelectCommand1.CommandType = CommandType.StoredProcedure;
             DataSet dt = new DataSet();
             SqlDataAdapter1.Fill(dt, "Clientes");
+            if (!dt.Tables[0].Constraints.Contains("correoConstraint"))
+            {
+                UniqueConstraint uniqueConstraint = new UniqueConstraint("correoConstraint", dt.Tables[0].Columns["CorreoCLI"]);
+             //   dt.Tables[0].Constraints.Add(uniqueConstraint);
+            }
             SqlConnection1.Close();
             return dt;
         }
@@ -216,6 +222,8 @@ namespace DAL
             // IMPLEMENTACIÓN DE LA ORDEN INSERT
             SqlInsertCommand1.Parameters.Add("p_id", MySqlDbType.Int32, 11, "IdClienteCLI");
             SqlInsertCommand1.Parameters.Add("p_razon", MySqlDbType.VarChar, 50, "RazonSocialCLI");
+            SqlInsertCommand1.Parameters.Add("p_nombre", MySqlDbType.VarChar, 50, "NombreCLI");
+            SqlInsertCommand1.Parameters.Add("p_apellido", MySqlDbType.VarChar, 50, "ApellidoCLI");
             SqlInsertCommand1.Parameters.Add("p_cuit", MySqlDbType.VarChar, 50, "CUIT");
             SqlInsertCommand1.Parameters.Add("p_condicion", MySqlDbType.VarChar, 50, "CondicionIvaCLI");
             SqlInsertCommand1.Parameters.Add("p_direccion", MySqlDbType.VarChar, 50, "DireccionCLI");

@@ -369,10 +369,11 @@
             // txtRazonSocialCLI
             // 
             this.txtRazonSocialCLI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRazonSocialCLI.Location = new System.Drawing.Point(427, 616);
+            this.txtRazonSocialCLI.Location = new System.Drawing.Point(407, 614);
             this.txtRazonSocialCLI.Name = "txtRazonSocialCLI";
             this.txtRazonSocialCLI.Size = new System.Drawing.Size(200, 20);
             this.txtRazonSocialCLI.TabIndex = 1;
+            this.txtRazonSocialCLI.Visible = false;
             // 
             // cmbCondicion
             // 
@@ -548,7 +549,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 647);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 621);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -634,7 +635,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 672);
+            this.ClientSize = new System.Drawing.Size(639, 646);
             this.ControlBox = false;
             this.Controls.Add(this.cmbCondicion);
             this.Controls.Add(this.label13);
@@ -654,7 +655,6 @@
             this.Text = "Clientes";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmClientes_FormClosing);
             this.Load += new System.EventHandler(this.frmClientes_Load);
-            this.Validating += new System.ComponentModel.CancelEventHandler(this.frmClientes_Validating);
             this.grpCampos.ResumeLayout(false);
             this.grpCampos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvwDatos)).EndInit();
