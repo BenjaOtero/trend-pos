@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using BL;
 using System.Diagnostics;
 using System.Threading;
+using System.Net;
+using System.IO;
 
 namespace StockVentas
 {
@@ -151,6 +153,35 @@ namespace StockVentas
             frmClientes newMDIChild = new frmClientes();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
+        }
+
+        private void DownloadFileFTP()
+        {
+            string inputfilepath = @"C:\Windows\Temp\datos.sql";
+            string ftphost = "trendsistemas.com";
+            string ftpfilepath = "/datos/1990638975_datos.sql";
+
+            string ftpfullpath = "ftp://" + ftphost + ftpfilepath;
+
+            using (WebClient request = new WebClient())
+            {
+                request.Credentials = new NetworkCredential("benja@trendsistemas.com", "8953#AFjn");
+                byte[] fileData = request.DownloadData(ftpfullpath);
+
+                using (FileStream file = File.Create(inputfilepath))
+                {
+                    file.Write(fileData, 0, fileData.Length);
+                    file.Close();
+                }
+                MessageBox.Show("Download Complete");
+            }
+        }
+
+        private void actualizarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            DownloadFileFTP();
+            Cursor.Current = Cursors.Arrow;
         }
 
     }
