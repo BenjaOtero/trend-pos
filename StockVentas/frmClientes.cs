@@ -98,7 +98,7 @@ namespace StockVentas
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string parametros = txtParametros.Text;
-            bindingSource1.Filter = "RazonSocialCLI LIKE '" + parametros + "*'";
+            bindingSource1.Filter = "NombreCLI LIKE '" + parametros + "*' OR ApellidoCLI LIKE '" + parametros + "*'";
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -176,14 +176,18 @@ namespace StockVentas
 
         private void frmClientes_FormClosing(object sender, FormClosingEventArgs e)
         {
-            tblClientes.RowChanging -= new DataRowChangeEventHandler(Row_Changing);
-            bindingSource1.EndEdit();
-            if (tblClientes.GetChanges() != null)
+            if (ValidarFormulario())
             {
-                BL.ClientesBLL.GrabarDB(dsClientes, tblFallidas, ref codigoError, false);
+                tblClientes.RowChanging -= new DataRowChangeEventHandler(Row_Changing);
+                bindingSource1.EndEdit();
+                if (tblClientes.GetChanges() != null)
+                {
+                    BL.ClientesBLL.GrabarDB(dsClientes, tblFallidas, ref codigoError, false);
+                }
+                bindingSource1.RemoveFilter();
+                if (instanciaVentas != null) instanciaVentas.idCliente = Convert.ToInt32(txtIdClienteCLI.Text);
             }
-            bindingSource1.RemoveFilter();
-            if (instanciaVentas != null) instanciaVentas.idCliente = Convert.ToInt32(txtIdClienteCLI.Text);
+            else e.Cancel = true;
         }
 
         private void Row_Deleting(object sender, DataRowChangeEventArgs e)
@@ -240,19 +244,84 @@ namespace StockVentas
 
         }
 
-        private void txtCorreoCLI_Validating(object sender, CancelEventArgs e)
+        private bool ValidarFormulario()
         {
+            if (string.IsNullOrEmpty(txtNombreCLI.Text))
+            {
+                this.errorProvider1.SetError(txtNombreCLI, "Debe escribir un nombre.");
+                txtNombreCLI.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtApellidoCLI.Text))
+            {
+                this.errorProvider1.SetError(txtApellidoCLI, "Debe escribir un apellido.");
+                txtApellidoCLI.Focus();
+                return false;
+            }
             if (!IsValidEmail(txtCorreoCLI.Text))
             {
-                e.Cancel = true;
-                this.errorProvider1.SetError(txtCorreoCLI, "Debe escribir una dirección de correo válida.");
-            }                
-                
+                this.errorProvider1.SetError(txtCorreoCLI, "Verifique la dirección de correo electrónico.");
+                return false;
+            }
+            return true;
         }
 
-        private void txtCorreoCLI_Validated(object sender, EventArgs e)
+        private void ValidarCampos(object sender, CancelEventArgs e)
         {
-            errorProvider1.SetError(txtCorreoCLI, "");
+            if ((sender == (object)txtNombreCLI))
+            {
+                if (string.IsNullOrEmpty(txtNombreCLI.Text))
+                {
+                    this.errorProvider1.SetError(txtNombreCLI, "Debe escribir un nombre.");
+                    e.Cancel = true;
+                }
+            }
+            if ((sender == (object)txtApellidoCLI))
+            {
+                if (string.IsNullOrEmpty(txtApellidoCLI.Text))
+                {
+                    this.errorProvider1.SetError(txtApellidoCLI, "Debe escribir un apellido.");
+                    e.Cancel = true;
+                }
+            }
+            if ((sender == (object)txtCorreoCLI))
+            {
+                if (!IsValidEmail(txtCorreoCLI.Text))
+                {
+                    this.errorProvider1.SetError(txtCorreoCLI, "Verifique la dirección de correo electrónico.");
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void CamposValidado(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void AddEventosValidacion()
+        {
+            foreach (Control ctl in grpCampos.Controls)
+            {
+                if (ctl is TextBox || ctl is MaskedTextBox || ctl is ComboBox)
+                {
+                    ctl.Validating += new System.ComponentModel.CancelEventHandler(this.ValidarCampos);
+                    ctl.Validated += new System.EventHandler(this.CamposValidado);
+                }
+            }
+        }
+
+        private void DelEventosValidacion()
+        {
+            foreach (Control ctl in grpCampos.Controls)
+            {
+                if (ctl is TextBox || ctl is MaskedTextBox || ctl is ComboBox)
+                {
+                    ctl.Validating -= new System.ComponentModel.CancelEventHandler(this.ValidarCampos);
+                    ctl.Validated -= new System.EventHandler(this.CamposValidado);
+                }
+            }
+            this.errorProvider1.Clear();
         }
 
         public static bool IsValidEmail(string email)
@@ -274,57 +343,6 @@ namespace StockVentas
             {
                 return false;
             }
-        }
-
-        private void txtNombreCLI_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtNombreCLI.Text))
-            {
-                e.Cancel = true;
-                this.errorProvider1.SetError(txtNombreCLI, "Debe escribir un nombre.");
-            }
-        }
-
-        private void txtNombreCLI_Validated(object sender, EventArgs e)
-        {
-            errorProvider1.SetError(txtNombreCLI, "");
-        }
-
-        private void txtApellidoCLI_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtApellidoCLI.Text))
-            {
-                e.Cancel = true;
-                this.errorProvider1.SetError(txtApellidoCLI, "Debe escribir un apellido.");
-            }
-        }
-
-        private void txtApellidoCLI_Validated(object sender, EventArgs e)
-        {
-            errorProvider1.SetError(txtApellidoCLI, "");
-        }
-
-        private bool ValidarFormulario()
-        {
-            if (string.IsNullOrEmpty(txtNombreCLI.Text))
-            {
-                this.errorProvider1.SetError(txtNombreCLI, "Debe escribir un nombre.");
-                txtNombreCLI.Focus();
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtApellidoCLI.Text))
-            {
-                this.errorProvider1.SetError(txtApellidoCLI, "Debe escribir un apellido.");
-                txtApellidoCLI.Focus();
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtCorreoCLI.Text))
-            {
-                this.errorProvider1.SetError(txtCorreoCLI, "Debe escribir un correo electrónico.");
-                txtCorreoCLI.Focus();
-                return false;
-            } 
-            return true;
         }
 
         public void SetStateForm(FormState state)
@@ -367,6 +385,7 @@ namespace StockVentas
                 btnGrabar.Enabled = false;
                 btnCancelar.Enabled = false;
                 btnSalir.Enabled = true;
+                DelEventosValidacion();
             }
             if (state == FormState.insercion)
             {
@@ -396,7 +415,6 @@ namespace StockVentas
                 txtMovilCLI.Clear();
                 txtCorreoCLI.Clear();
                 txtFechaNacCLI.Clear();
-                txtNombreCLI.Focus();
                 btnBuscar.Enabled = false;
                 btnNuevo.Enabled = false;
                 btnEditar.Enabled = false;
@@ -404,6 +422,8 @@ namespace StockVentas
                 btnGrabar.Enabled = false;
                 btnCancelar.Enabled = true;
                 btnSalir.Enabled = false;
+                txtNombreCLI.Focus();
+                AddEventosValidacion();
             }
             if (state == FormState.edicion)
             {
@@ -421,7 +441,6 @@ namespace StockVentas
                 txtMovilCLI.ReadOnly = false;
                 txtCorreoCLI.ReadOnly = false;
                 txtFechaNacCLI.ReadOnly = false;
-                txtNombreCLI.Focus();
                 btnBuscar.Enabled = false;
                 btnNuevo.Enabled = false;
                 btnEditar.Enabled = false;
@@ -429,6 +448,8 @@ namespace StockVentas
                 btnGrabar.Enabled = false;
                 btnCancelar.Enabled = true;
                 btnSalir.Enabled = false;
+                txtNombreCLI.Focus();
+                AddEventosValidacion();
             }
         }
 
