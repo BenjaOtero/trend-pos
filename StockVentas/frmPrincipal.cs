@@ -105,6 +105,13 @@ namespace StockVentas
             newMDIChild.Show();
         }
 
+        private void actualizarDatos_Click999(object sender, EventArgs e)
+        {
+            frmProgress newMDIChild = new frmProgress("ActualizarBD", "cargar");
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
         private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Close();

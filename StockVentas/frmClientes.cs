@@ -421,7 +421,7 @@ namespace StockVentas
                 txtMovilCLI.ReadOnly = false;
                 txtCorreoCLI.ReadOnly = false;
                 txtFechaNacCLI.ReadOnly = false;
-                txtRazonSocialCLI.Focus();
+                txtNombreCLI.Focus();
                 btnBuscar.Enabled = false;
                 btnNuevo.Enabled = false;
                 btnEditar.Enabled = false;

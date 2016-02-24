@@ -241,7 +241,13 @@ namespace StockVentas
             cmbForma.Validating += new System.ComponentModel.CancelEventHandler(BL.Utilitarios.ValidarComboBox);
             chkDev.KeyDown += new System.Windows.Forms.KeyEventHandler(Utilitarios.EnterTab);
         //    tblVentasDetalle.ColumnChanged += new DataColumnChangeEventHandler(HabilitarGrabar);
-            SetStateForm(FormState.insercion);            
+            SetStateForm(FormState.insercion);
+            DialogResult respuesta = MessageBox.Show("SOLICITAR DATOS CLIENTE", "Trend Gestión", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.OK)
+            {
+                frmClientes newMDIChild = new frmClientes();
+                newMDIChild.ShowDialog();
+            }
         }
 
         private void frmVentas_Activated(object sender, EventArgs e)
