@@ -157,9 +157,9 @@ namespace StockVentas
 
         private void DownloadFileFTP()
         {
-            string inputfilepath = @"C:\Windows\Temp\datos.sql";
+            string inputfilepath = @"C:\Windows\Temp\datos.sql.gz";
             string ftphost = "trendsistemas.com";
-            string ftpfilepath = "/datos/1990638975_datos.sql";
+            string ftpfilepath = "/datos/2147483647_datos.sql.gz";
 
             string ftpfullpath = "ftp://" + ftphost + ftpfilepath;
 

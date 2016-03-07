@@ -66,8 +66,9 @@
             this.toolStripMenuItem20 = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.crearPcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ocoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -340,7 +341,8 @@
             // 
             this.mantenimientoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearPcToolStripMenuItem,
-            this.actualizarDatosToolStripMenuItem});
+            this.actualizarDatosToolStripMenuItem,
+            this.ocoteToolStripMenuItem});
             this.mantenimientoToolStripMenuItem1.Name = "mantenimientoToolStripMenuItem1";
             this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(89, 20);
             this.mantenimientoToolStripMenuItem1.Text = "Mantenimiento";
@@ -352,6 +354,13 @@
             this.crearPcToolStripMenuItem.Text = "Actualizar datos";
             this.crearPcToolStripMenuItem.Click += new System.EventHandler(this.actualizarDatos_Click);
             // 
+            // actualizarDatosToolStripMenuItem
+            // 
+            this.actualizarDatosToolStripMenuItem.Name = "actualizarDatosToolStripMenuItem";
+            this.actualizarDatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.actualizarDatosToolStripMenuItem.Text = "Actualizar datos";
+            this.actualizarDatosToolStripMenuItem.Click += new System.EventHandler(this.actualizarDatosToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem1
             // 
             this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
@@ -359,12 +368,11 @@
             this.salirToolStripMenuItem1.Text = "Salir";
             this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click);
             // 
-            // actualizarDatosToolStripMenuItem
+            // ocoteToolStripMenuItem
             // 
-            this.actualizarDatosToolStripMenuItem.Name = "actualizarDatosToolStripMenuItem";
-            this.actualizarDatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.actualizarDatosToolStripMenuItem.Text = "Actualizar datos";
-            this.actualizarDatosToolStripMenuItem.Click += new System.EventHandler(this.actualizarDatosToolStripMenuItem_Click);
+            this.ocoteToolStripMenuItem.Name = "ocoteToolStripMenuItem";
+            this.ocoteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ocoteToolStripMenuItem.Text = "Ocote";
             // 
             // frmPrincipal
             // 
@@ -431,6 +439,7 @@
         private System.Windows.Forms.ToolStripMenuItem arqueoDeCajaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem actualizarDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ocoteToolStripMenuItem;
     }
 }
 
