@@ -516,10 +516,6 @@ namespace StockVentas
                         break;
                 }
             }
-
-
-
-            }
             Cursor.Current = Cursors.Arrow;
         }
 
