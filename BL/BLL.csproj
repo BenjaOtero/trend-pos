@@ -49,6 +49,7 @@
     <Compile Include="AlicuotasIvaBLL.cs" />
     <Compile Include="ArticulosBLL.cs" />
     <Compile Include="ClientesBLL.cs" />
+    <Compile Include="CuponesBLL.cs" />
     <Compile Include="DatosPosBLL.cs" />
     <Compile Include="FallidasBLL.cs" />
     <Compile Include="FondoCajaBLL.cs" />

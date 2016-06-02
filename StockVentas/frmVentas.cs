@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using BL;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace StockVentas
 {
@@ -40,6 +42,8 @@ namespace StockVentas
         public string idArticulo;
         public int? idCliente = null;
         string articuloOld = string.Empty;
+        double porcentaje;
+        double totalCupon;
 
         public enum FormState
         {
@@ -83,8 +87,10 @@ namespace StockVentas
             dateTimePicker1.Visible = false;
             lblFecha.Text = DateTime.Today.ToLongDateString();
             lblTotal.ForeColor = System.Drawing.Color.DarkRed;
-            ToolTip tooltip = new ToolTip();
-            tooltip.SetToolTip(btnClientes, "Agregar nuevo cliente");
+            ToolTip tooltipClientes = new ToolTip();
+            tooltipClientes.SetToolTip(btnClientes, "Agregar nuevo cliente");
+            ToolTip tooltipCupones = new ToolTip();
+            tooltipCupones.SetToolTip(btnCupon, "Ingresar cupón de descuento");
             dsForaneos = BL.VentasBLL.CrearDatasetForaneos();
             tblLocales = dsForaneos.Tables[3];
             tblPcs = dsForaneos.Tables[4];
@@ -121,9 +127,6 @@ namespace StockVentas
             cmbForma.AutoCompleteCustomSource = formasColection;
             cmbForma.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbForma.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
-
-            lblCosto.Visible = false;
             txtCosto.Visible = false;
             btnEditar.CausesValidation = false;
             btnBorrar.CausesValidation = false;
@@ -476,34 +479,46 @@ namespace StockVentas
             Cursor.Current = Cursors.WaitCursor;
             if (tblVentasDetalle.GetChanges() != null)
             {
-                DataTable tblActual = new DataTable();
-                tblActual.Columns.Add("Id", typeof(int));
-                tblActual.Columns.Add("Accion", typeof(string));
+                DialogResult respuesta = MessageBox.Show("¿Actualizar base de datos?", "Trend Sistemas", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                switch (respuesta)
+                {
+                    case DialogResult.Yes:
+                        DataTable tblActual = new DataTable();
+                        tblActual.Columns.Add("Id", typeof(int));
+                        tblActual.Columns.Add("Accion", typeof(string));
 
-                //agrego el RowState de las filas por si falla la insercion / modificacion / borrado en el servidor remoto poder
-                //guardar dicha informacion en la tabla local 'VentasDetalleFallidas'
-                foreach (DataRowView row in viewDetalle)
-                {
-                    DataRow rowActual = tblActual.NewRow();
-                    rowActual["Id"] = row["IdDVEN"];
-                    rowActual["Accion"] = row.Row.RowState.ToString();
-                    tblActual.Rows.Add(rowActual);
-                }
-                rowView.EndEdit();
-                bool grabarFallidas = false;
-                if (PK == "") //registro nuevo
-                {
-                    BL.TransaccionesBLL.GrabarVentas(dsVentas, ref codigoError, grabarFallidas);
-                }
-                else
-                {
-                    BL.TransaccionesBLL.GrabarVentas(dsVentas, ref codigoError, viewDetalleOriginal, tblActual, grabarFallidas);
-                    this.DialogResult = DialogResult.OK;
+                        //agrego el RowState de las filas por si falla la insercion / modificacion / borrado en el servidor remoto poder
+                        //guardar dicha informacion en la tabla local 'VentasDetalleFallidas'
+                        foreach (DataRowView row in viewDetalle)
+                        {
+                            DataRow rowActual = tblActual.NewRow();
+                            rowActual["Id"] = row["IdDVEN"];
+                            rowActual["Accion"] = row.Row.RowState.ToString();
+                            tblActual.Rows.Add(rowActual);
+                        }
+                        rowView.EndEdit();
+                        bool grabarFallidas = false;
+                        if (PK == "") //registro nuevo
+                        {
+                            BL.TransaccionesBLL.GrabarVentas(dsVentas, ref codigoError, grabarFallidas);
+                        }
+                        else
+                        {
+                            BL.TransaccionesBLL.GrabarVentas(dsVentas, ref codigoError, viewDetalleOriginal, tblActual, grabarFallidas);
+                            this.DialogResult = DialogResult.OK;
+                        }
+                        break;
+                    case DialogResult.No:
+                        tblVentas.RejectChanges();
+                        break;
+                    case DialogResult.Cancel:
+                        e.Cancel = true;
+                        break;
                 }
             }
-            else
-            {
-                tblVentas.RejectChanges();
+
+
+
             }
             Cursor.Current = Cursors.Arrow;
         }
@@ -681,6 +696,89 @@ namespace StockVentas
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCupon_Click(object sender, EventArgs e)
+        {
+            if (dgvDatos.RowCount == 0)
+            {
+                MessageBox.Show("No existen ventas cargadas para aplicar el cupón de descuento.", "Trend Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Introduzca el número de cupón.", "Cupones de descuento", "", -1, -1);
+            Cursor.Current = Cursors.WaitCursor;
+            DataTable tblCupon = new DataTable();
+            try 
+            {
+                tblCupon = BL.CuponesBLL.GetByPk(input);
+            }
+            catch(MySqlException)
+            {
+                MessageBox.Show("Debe introducir un valor númerico.", "Trend Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (tblCupon.Rows.Count > 0)
+            {
+                DateTime fechaVencimiento = DateTime.Parse(tblCupon.Rows[0]["FechaVencimiento"].ToString());
+                DateTime fechaActual = DateTime.Today;
+                if (fechaVencimiento >= fechaActual && tblCupon.Rows[0]["Utilizado"].ToString() == "False")
+                {
+                    txtCupon.Text = tblCupon.Rows[0]["Nro_cupon"].ToString();
+                    porcentaje = 1 - (Convert.ToDouble(tblCupon.Rows[0]["Porcentaje"].ToString()) / 100);
+                    bool modificarForma = false;
+                    foreach (DataGridViewRow rowDatos in dgvDatos.Rows)
+                    {
+                        int formaPago = Convert.ToInt32(rowDatos.Cells["FormaPago"].Value.ToString());
+                        if (formaPago != 1 && modificarForma == false)
+                        {
+                            string mensaje = "Los cupones de descuento solo son aplicables a ventas contado efectivo.";
+                            mensaje += "Para cambiar la forma de pago a 'EFECTIVO' haga click en aceptar.";
+                            mensaje += "Para anular la venta haga click en cancelar.";
+                            DialogResult prompt = MessageBox.Show(mensaje, "Trend Sistemas", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                            if (prompt == DialogResult.OK) modificarForma = true;
+                            else
+                            {
+                                tblVentas.RejectChanges();
+                                tblVentasDetalle.RejectChanges();
+                                this.Close();
+                                return;
+                            }
+                                
+                        }
+                        int idDVEN = Convert.ToInt32(rowDatos.Cells["IdDVEN"].Value.ToString());                        
+                        double precio = Convert.ToDouble(rowDatos.Cells["PrecioPublicoDVEN"].Value);
+                        precio = precio * porcentaje;
+                        DataRow foundRow = tblVentasDetalle.Rows.Find(idDVEN);
+                        foundRow.BeginEdit();
+                        foundRow["PrecioPublicoDVEN"] = precio;
+                        foundRow["IdFormaPagoDVEN"] = 1;
+                        foundRow.EndEdit();
+                    }
+                    totalCupon = CalcularTotal();
+                    lblTotalDesc2.Text = "$" + totalCupon.ToString();
+                    lblTotalDesc1.Visible = true;
+                    lblTotalDesc2.Visible = true;
+                    Cursor.Current = Cursors.Arrow;
+                }
+                else if (tblCupon.Rows[0]["Utilizado"].ToString() == "True")
+                {
+                    Cursor.Current = Cursors.Arrow;
+                    string mensaje = "El número de cupón " + tblCupon.Rows[0]["Nro_cupon"].ToString();
+                    mensaje += " ya fué utilizado.";
+                    MessageBox.Show(mensaje, "Trend Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (fechaVencimiento < fechaActual)
+                {
+                    Cursor.Current = Cursors.Arrow;
+                    string mensaje = "El número de cupón " + tblCupon.Rows[0]["Nro_cupon"].ToString();
+                    mensaje += " venció el " + fechaVencimiento.ToString("d/MM/yyyy");
+                    MessageBox.Show(mensaje, "Trend Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            { 
+                //cupon inexistente
+            }
         }
 
     }

@@ -52,6 +52,7 @@
     <Compile Include="AlicuotasIvaDAL.cs" />
     <Compile Include="ArticulosDAL.cs" />
     <Compile Include="ClientesDAL.cs" />
+    <Compile Include="CuponesDAL.cs" />
     <Compile Include="DatosPosDAL.cs" />
     <Compile Include="FallidasDAL.cs" />
     <Compile Include="FormasPagoDAL.cs" />
