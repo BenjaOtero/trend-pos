@@ -14,8 +14,15 @@ namespace DAL
     public class VentasDAL
     {
         public static DataTable GetTabla()
-        {
-            DataTable tbl = DAL.VentasDAL.GetTabla();
+        {            
+            DataTable tbl = new DataTable();
+            tbl.TableName = "Ventas";
+            tbl.Columns.Add("IdVentaVEN", typeof(int));
+            tbl.Columns.Add("IdPCVEN", typeof(int));
+            tbl.Columns.Add("FechaVEN", typeof(DateTime));
+            tbl.Columns.Add("IdClienteVEN", typeof(int));
+            tbl.Columns.Add("NroCuponVEN", typeof(string));
+            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdVentaVEN"] };
             return tbl;
         }
 
@@ -120,12 +127,14 @@ namespace DAL
             SqlInsertCommand1.Parameters.Add("p_id_pc", MySqlDbType.Int32, 11, "IdPCVEN");
             SqlInsertCommand1.Parameters.Add("p_fecha", MySqlDbType.DateTime, 20, "FechaVEN");
             SqlInsertCommand1.Parameters.Add("p_cliente", MySqlDbType.Int32, 11, "IdClienteVEN");
+            SqlInsertCommand1.Parameters.Add("p_cupon", MySqlDbType.String, 10, "NroCuponVEN");
             SqlInsertCommand1.CommandType = CommandType.StoredProcedure;
 
             SqlUpdateCommand1.Parameters.Add("p_id", MySqlDbType.Int32, 11, "IdVentaVEN");
             SqlUpdateCommand1.Parameters.Add("p_id_pc", MySqlDbType.Int32, 11, "IdPCVEN");
             SqlUpdateCommand1.Parameters.Add("p_fecha", MySqlDbType.DateTime, 20, "FechaVEN");
             SqlUpdateCommand1.Parameters.Add("p_cliente", MySqlDbType.Int32, 11, "IdClienteVEN");
+            SqlUpdateCommand1.Parameters.Add("p_cupon", MySqlDbType.String, 10, "NroCuponVEN");
             SqlUpdateCommand1.CommandType = CommandType.StoredProcedure;
 
             SqlDeleteCommand1.Parameters.Add("p_id", MySqlDbType.Int32, 11, "IdVentaVEN");

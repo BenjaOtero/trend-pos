@@ -17,13 +17,7 @@ namespace BL
     {
         public static DataTable GetTabla()
         {
-            DataTable tbl = new DataTable();
-            tbl.TableName = "Ventas";
-            tbl.Columns.Add("IdVentaVEN", typeof(int));
-            tbl.Columns.Add("IdPCVEN", typeof(int));
-            tbl.Columns.Add("FechaVEN", typeof(DateTime));
-            tbl.Columns.Add("IdClienteVEN", typeof(int));
-            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdVentaVEN"] };
+            DataTable tbl = DAL.VentasDAL.GetTabla();
             return tbl;
         }
 

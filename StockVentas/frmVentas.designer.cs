@@ -34,7 +34,9 @@
             this.txtCupon = new System.Windows.Forms.TextBox();
             this.btnCupon = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
+            this.lblTotalDesc2 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTotalDesc1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblNro = new System.Windows.Forms.Label();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
@@ -76,9 +78,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnCancelEdit = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.lblTotalDesc1 = new System.Windows.Forms.Label();
-            this.lblTotalDesc2 = new System.Windows.Forms.Label();
             this.dgvDatos = new StockVentas.customDgvw();
+            this.btnRecalcular = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpABM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -91,6 +92,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtCupon);
+            this.groupBox1.Controls.Add(this.btnRecalcular);
             this.groupBox1.Controls.Add(this.btnCupon);
             this.groupBox1.Controls.Add(this.btnClientes);
             this.groupBox1.Controls.Add(this.lblTotalDesc2);
@@ -123,6 +125,7 @@
             // 
             // btnCupon
             // 
+            this.btnCupon.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCupon.Location = new System.Drawing.Point(294, 100);
             this.btnCupon.Name = "btnCupon";
             this.btnCupon.Size = new System.Drawing.Size(24, 21);
@@ -133,6 +136,7 @@
             // 
             // btnClientes
             // 
+            this.btnClientes.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClientes.Location = new System.Drawing.Point(294, 73);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(24, 21);
@@ -140,6 +144,18 @@
             this.btnClientes.Text = "...";
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // lblTotalDesc2
+            // 
+            this.lblTotalDesc2.AutoSize = true;
+            this.lblTotalDesc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDesc2.Location = new System.Drawing.Point(757, 100);
+            this.lblTotalDesc2.Name = "lblTotalDesc2";
+            this.lblTotalDesc2.Size = new System.Drawing.Size(36, 18);
+            this.lblTotalDesc2.TabIndex = 19;
+            this.lblTotalDesc2.Text = "total";
+            this.lblTotalDesc2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTotalDesc2.Visible = false;
             // 
             // lblTotal
             // 
@@ -151,6 +167,18 @@
             this.lblTotal.TabIndex = 19;
             this.lblTotal.Text = "total";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTotalDesc1
+            // 
+            this.lblTotalDesc1.AutoSize = true;
+            this.lblTotalDesc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDesc1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblTotalDesc1.Location = new System.Drawing.Point(641, 100);
+            this.lblTotalDesc1.Name = "lblTotalDesc1";
+            this.lblTotalDesc1.Size = new System.Drawing.Size(123, 15);
+            this.lblTotalDesc1.TabIndex = 19;
+            this.lblTotalDesc1.Text = "Total con descuento: ";
+            this.lblTotalDesc1.Visible = false;
             // 
             // label5
             // 
@@ -519,6 +547,7 @@
             // 
             // btnBorrar
             // 
+            this.btnBorrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBorrar.Location = new System.Drawing.Point(509, 14);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(114, 29);
@@ -539,6 +568,7 @@
             // 
             // btnCancelEdit
             // 
+            this.btnCancelEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelEdit.Location = new System.Drawing.Point(388, 14);
             this.btnCancelEdit.Name = "btnCancelEdit";
             this.btnCancelEdit.Size = new System.Drawing.Size(114, 29);
@@ -549,6 +579,7 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnEditar.Location = new System.Drawing.Point(267, 14);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(114, 29);
@@ -556,30 +587,6 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // lblTotalDesc1
-            // 
-            this.lblTotalDesc1.AutoSize = true;
-            this.lblTotalDesc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDesc1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTotalDesc1.Location = new System.Drawing.Point(641, 100);
-            this.lblTotalDesc1.Name = "lblTotalDesc1";
-            this.lblTotalDesc1.Size = new System.Drawing.Size(123, 15);
-            this.lblTotalDesc1.TabIndex = 19;
-            this.lblTotalDesc1.Text = "Total con descuento: ";
-            this.lblTotalDesc1.Visible = false;
-            // 
-            // lblTotalDesc2
-            // 
-            this.lblTotalDesc2.AutoSize = true;
-            this.lblTotalDesc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDesc2.Location = new System.Drawing.Point(757, 100);
-            this.lblTotalDesc2.Name = "lblTotalDesc2";
-            this.lblTotalDesc2.Size = new System.Drawing.Size(36, 18);
-            this.lblTotalDesc2.TabIndex = 19;
-            this.lblTotalDesc2.Text = "total";
-            this.lblTotalDesc2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTotalDesc2.Visible = false;
             // 
             // dgvDatos
             // 
@@ -589,6 +596,16 @@
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.Size = new System.Drawing.Size(890, 317);
             this.dgvDatos.TabIndex = 4;
+            // 
+            // btnRecalcular
+            // 
+            this.btnRecalcular.Location = new System.Drawing.Point(324, 100);
+            this.btnRecalcular.Name = "btnRecalcular";
+            this.btnRecalcular.Size = new System.Drawing.Size(139, 21);
+            this.btnRecalcular.TabIndex = 23;
+            this.btnRecalcular.Text = "Recalcular descuento";
+            this.btnRecalcular.UseVisualStyleBackColor = true;
+            this.btnRecalcular.Click += new System.EventHandler(this.btnRecalcular_Click);
             // 
             // frmVentas
             // 
@@ -676,5 +693,6 @@
         private System.Windows.Forms.TextBox txtCupon;
         private System.Windows.Forms.Label lblTotalDesc2;
         private System.Windows.Forms.Label lblTotalDesc1;
+        private System.Windows.Forms.Button btnRecalcular;
     }
 }

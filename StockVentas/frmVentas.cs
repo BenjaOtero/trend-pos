@@ -212,6 +212,7 @@ namespace StockVentas
                 rowView["IdVentaVEN"] = clave.ToString();
                 rowView["FechaVEN"] = DateTime.Now;
                 rowView["IdPCVEN"] = 1;
+                rowView["NroCuponVEN"] = "00000000000";
                 rowView.EndEdit();
             }
             else // editar registros
@@ -229,6 +230,7 @@ namespace StockVentas
             dateTimePicker1.DataBindings.Add("Text", rowView, "FechaVEN", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbLocal.DataBindings.Add("SelectedValue", rowView, "IdPCVEN", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbCliente.DataBindings.Add("SelectedValue", rowView, "IdClienteVEN", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtCupon.DataBindings.Add("Text", rowView, "NroCuponVEN", false, DataSourceUpdateMode.OnPropertyChanged);            
             rowView.CancelEdit();
             lblTotal.Text = "$" + CalcularTotal().ToString();
             cmbCliente.Validating += new System.ComponentModel.CancelEventHandler(BL.Utilitarios.ValidarComboBox);
@@ -297,7 +299,13 @@ namespace StockVentas
                 {
                     txtCantidad.Text = "1";
                 }
-                txtPrecio.Text = filaActual["PrecioMayorART"].ToString();
+                if (txtCupon.Text == "00000000000") txtPrecio.Text = filaActual["PrecioMayorART"].ToString();
+                else
+                {
+                    double precio = Convert.ToDouble(filaActual["PrecioMayorART"].ToString());
+                    precio = precio * porcentaje;
+                    txtPrecio.Text = precio.ToString();
+                }
                 cmbForma.SelectedValue = "1";
                 txtCosto.Text = filaActual["PrecioCostoART"].ToString();
                 articuloOld = txtArticulo.Text;
@@ -501,6 +509,7 @@ namespace StockVentas
                         if (PK == "") //registro nuevo
                         {
                             BL.TransaccionesBLL.GrabarVentas(dsVentas, ref codigoError, grabarFallidas);
+                            if (totalCupon > 0) BL.CuponesBLL.Update(txtCupon.Text, totalCupon);
                         }
                         else
                         {
@@ -772,9 +781,14 @@ namespace StockVentas
                 }
             }
             else
-            { 
-                //cupon inexistente
+            {
+                MessageBox.Show("El número de cupón es inexistente", "Trend Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnRecalcular_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

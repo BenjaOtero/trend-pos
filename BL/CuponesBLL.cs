@@ -21,5 +21,9 @@ namespace BL
             return tbl;
         }
 
+        public static void Update(string cupon, double importe)
+        {
+            DAL.CuponesDAL.Update(cupon, importe);
+        }
     }
 }
