@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtCupon = new System.Windows.Forms.TextBox();
+            this.btnRecalcular = new System.Windows.Forms.Button();
             this.btnCupon = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.lblTotalDesc2 = new System.Windows.Forms.Label();
@@ -79,7 +80,6 @@
             this.btnCancelEdit = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dgvDatos = new StockVentas.customDgvw();
-            this.btnRecalcular = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpABM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -121,7 +121,17 @@
             this.txtCupon.Name = "txtCupon";
             this.txtCupon.Size = new System.Drawing.Size(201, 20);
             this.txtCupon.TabIndex = 24;
-            this.txtCupon.Text = "0000000000";
+            this.txtCupon.Text = "00000000000";
+            // 
+            // btnRecalcular
+            // 
+            this.btnRecalcular.Location = new System.Drawing.Point(324, 100);
+            this.btnRecalcular.Name = "btnRecalcular";
+            this.btnRecalcular.Size = new System.Drawing.Size(139, 21);
+            this.btnRecalcular.TabIndex = 23;
+            this.btnRecalcular.Text = "Recalcular descuento";
+            this.btnRecalcular.UseVisualStyleBackColor = true;
+            this.btnRecalcular.Click += new System.EventHandler(this.btnRecalcular_Click);
             // 
             // btnCupon
             // 
@@ -596,16 +606,6 @@
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.Size = new System.Drawing.Size(890, 317);
             this.dgvDatos.TabIndex = 4;
-            // 
-            // btnRecalcular
-            // 
-            this.btnRecalcular.Location = new System.Drawing.Point(324, 100);
-            this.btnRecalcular.Name = "btnRecalcular";
-            this.btnRecalcular.Size = new System.Drawing.Size(139, 21);
-            this.btnRecalcular.TabIndex = 23;
-            this.btnRecalcular.Text = "Recalcular descuento";
-            this.btnRecalcular.UseVisualStyleBackColor = true;
-            this.btnRecalcular.Click += new System.EventHandler(this.btnRecalcular_Click);
             // 
             // frmVentas
             // 

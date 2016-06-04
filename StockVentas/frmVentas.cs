@@ -705,9 +705,9 @@ namespace StockVentas
 
         private void btnCupon_Click(object sender, EventArgs e)
         {
-            if (dgvDatos.RowCount == 0)
+            if (txtCupon.Text != "00000000000")
             {
-                MessageBox.Show("No existen ventas cargadas para aplicar el cupón de descuento.", "Trend Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ya existe un cupón cargado.", "Trend Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             string input = Microsoft.VisualBasic.Interaction.InputBox("Introduzca el número de cupón.", "Cupones de descuento", "", -1, -1);
