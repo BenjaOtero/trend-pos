@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtCupon = new System.Windows.Forms.TextBox();
-            this.btnRecalcular = new System.Windows.Forms.Button();
             this.btnCupon = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.lblTotalDesc2 = new System.Windows.Forms.Label();
@@ -73,7 +72,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpBotonera = new System.Windows.Forms.GroupBox();
             this.btnArticulos = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -85,14 +84,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpBotonera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtCupon);
-            this.groupBox1.Controls.Add(this.btnRecalcular);
             this.groupBox1.Controls.Add(this.btnCupon);
             this.groupBox1.Controls.Add(this.btnClientes);
             this.groupBox1.Controls.Add(this.lblTotalDesc2);
@@ -122,16 +120,6 @@
             this.txtCupon.Size = new System.Drawing.Size(201, 20);
             this.txtCupon.TabIndex = 24;
             this.txtCupon.Text = "00000000000";
-            // 
-            // btnRecalcular
-            // 
-            this.btnRecalcular.Location = new System.Drawing.Point(324, 100);
-            this.btnRecalcular.Name = "btnRecalcular";
-            this.btnRecalcular.Size = new System.Drawing.Size(139, 21);
-            this.btnRecalcular.TabIndex = 23;
-            this.btnRecalcular.Text = "Recalcular descuento";
-            this.btnRecalcular.UseVisualStyleBackColor = true;
-            this.btnRecalcular.Click += new System.EventHandler(this.btnRecalcular_Click);
             // 
             // btnCupon
             // 
@@ -530,19 +518,19 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // groupBox2
+            // grpBotonera
             // 
-            this.groupBox2.Controls.Add(this.btnArticulos);
-            this.groupBox2.Controls.Add(this.btnBorrar);
-            this.groupBox2.Controls.Add(this.btnSalir);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.btnCancelEdit);
-            this.groupBox2.Controls.Add(this.btnEditar);
-            this.groupBox2.Location = new System.Drawing.Point(12, 206);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(890, 50);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
+            this.grpBotonera.Controls.Add(this.btnArticulos);
+            this.grpBotonera.Controls.Add(this.btnBorrar);
+            this.grpBotonera.Controls.Add(this.btnSalir);
+            this.grpBotonera.Controls.Add(this.button2);
+            this.grpBotonera.Controls.Add(this.btnCancelEdit);
+            this.grpBotonera.Controls.Add(this.btnEditar);
+            this.grpBotonera.Location = new System.Drawing.Point(12, 206);
+            this.grpBotonera.Name = "grpBotonera";
+            this.grpBotonera.Size = new System.Drawing.Size(890, 50);
+            this.grpBotonera.TabIndex = 8;
+            this.grpBotonera.TabStop = false;
             // 
             // btnArticulos
             // 
@@ -614,7 +602,7 @@
             this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(914, 619);
             this.ControlBox = false;
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.grpBotonera);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.grpABM);
             this.Controls.Add(this.dgvDatos);
@@ -635,7 +623,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.grpBotonera.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -682,7 +670,7 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpBotonera;
         private System.Windows.Forms.Button btnArticulos;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button button2;
@@ -693,6 +681,5 @@
         private System.Windows.Forms.TextBox txtCupon;
         private System.Windows.Forms.Label lblTotalDesc2;
         private System.Windows.Forms.Label lblTotalDesc1;
-        private System.Windows.Forms.Button btnRecalcular;
     }
 }

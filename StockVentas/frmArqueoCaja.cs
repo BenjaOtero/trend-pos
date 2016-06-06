@@ -253,6 +253,7 @@ namespace StockVentas
             dgvVentas.Columns["IdArticuloDVEN"].HeaderText = "Artículo";
             dgvVentas.Columns["CantidadDVEN"].HeaderText = "Cantidad";
             dgvVentas.Columns["PrecioPublicoDVEN"].HeaderText = "Precio";
+            dgvVentas.Columns["NroCuponVEN"].HeaderText = "Cupón";
             dgvTesoreria.DataSource = tblTesoreria;
             dgvTesoreria.AllowUserToOrderColumns = false;
             dgvTesoreria.Columns["FechaTESM"].Visible = false;

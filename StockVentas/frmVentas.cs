@@ -160,6 +160,7 @@ namespace StockVentas
             dgvDatos.Columns["IdEmpleadoDVEN"].Visible = false;
             dgvDatos.Columns["LiquidadoDVEN"].Visible = false;
             dgvDatos.Columns["EsperaDVEN"].Visible = false;
+            dgvDatos.Columns["NroCuponVEN"].Visible = false;
             dgvDatos.Columns["DescripcionDVEN"].HeaderText = "Descripción";
             dgvDatos.Columns["CantidadDVEN"].Width = 55;
             dgvDatos.Columns["CantidadDVEN"].HeaderText = "Cantidad";
@@ -299,13 +300,7 @@ namespace StockVentas
                 {
                     txtCantidad.Text = "1";
                 }
-                if (txtCupon.Text == "00000000000") txtPrecio.Text = filaActual["PrecioMayorART"].ToString();
-                else
-                {
-                    double precio = Convert.ToDouble(filaActual["PrecioMayorART"].ToString());
-                    precio = precio * porcentaje;
-                    txtPrecio.Text = precio.ToString();
-                }
+                txtPrecio.Text = filaActual["PrecioMayorART"].ToString();
                 cmbForma.SelectedValue = "1";
                 txtCosto.Text = filaActual["PrecioCostoART"].ToString();
                 articuloOld = txtArticulo.Text;
@@ -383,7 +378,12 @@ namespace StockVentas
                 row["IdArticuloDVEN"] = txtArticulo.Text;
                 row["DescripcionDVEN"] = txtDescripcion.Text;
                 row["CantidadDVEN"] = txtCantidad.Text;
-                row["PrecioPublicoDVEN"] = txtPrecio.Text;
+                if (txtCupon.Text != "00000000000")
+                {
+                    double precio = Convert.ToDouble(txtPrecio.Text) * porcentaje;
+                    row["PrecioPublicoDVEN"] = precio;
+                }
+                else row["PrecioPublicoDVEN"] = txtPrecio.Text;                
                 row["PrecioCostoDVEN"] = txtCosto.Text;
                 row["PrecioMayorDVEN"] = 0;
                 row["IdFormaPagoDVEN"] = cmbForma.SelectedValue;
@@ -400,6 +400,12 @@ namespace StockVentas
                 chkDev.Checked = false;
                 txtArticulo.Focus();
                 lblTotal.Text = "$" + CalcularTotal().ToString();
+                if (txtCupon.Text != "00000000000")
+                {
+                    totalCupon = CalcularTotalConDesc(porcentaje);
+                    lblTotalDesc2.Text = "$" + totalCupon.ToString();
+                }
+
             }
             else
             {
@@ -620,13 +626,36 @@ namespace StockVentas
 
         private double CalcularTotal()
         {
+            string articulo;
             int cantidad;
             double precio;
             double total = 0;
+            DataRow[] rowArticulo;
             foreach (DataRowView fila in viewDetalle)
             {
+                articulo = fila["IdArticuloDVEN"].ToString();
+                rowArticulo = tblArticulos.Select("IdArticuloART = '" + articulo + "'");
+                precio = Convert.ToDouble(rowArticulo[0]["PrecioMayorART"].ToString());
                 cantidad = Convert.ToInt32(fila["CantidadDVEN"].ToString());
-                precio = Convert.ToDouble(fila["PrecioPublicoDVEN"].ToString());
+                total = total + (cantidad * precio);
+            }
+            return total;
+        }
+
+        private double CalcularTotalConDesc(double porcentaje)
+        {
+            string articulo;
+            int cantidad;
+            double precio;
+            double total = 0;
+            DataRow[] rowArticulo;
+            foreach (DataRowView fila in viewDetalle)
+            {
+                articulo = fila["IdArticuloDVEN"].ToString();
+                rowArticulo = tblArticulos.Select("IdArticuloART = '" + articulo + "'");
+                precio = Convert.ToDouble(rowArticulo[0]["PrecioMayorART"].ToString());
+                precio = precio * porcentaje;
+                cantidad = Convert.ToInt32(fila["CantidadDVEN"].ToString());
                 total = total + (cantidad * precio);
             }
             return total;
@@ -759,11 +788,12 @@ namespace StockVentas
                         foundRow["IdFormaPagoDVEN"] = 1;
                         foundRow.EndEdit();
                     }
-                    totalCupon = CalcularTotal();
+                    totalCupon = CalcularTotalConDesc(porcentaje);
                     lblTotalDesc2.Text = "$" + totalCupon.ToString();
                     lblTotalDesc1.Visible = true;
                     lblTotalDesc2.Visible = true;
                     Cursor.Current = Cursors.Arrow;
+                    txtArticulo.Focus();
                 }
                 else if (tblCupon.Rows[0]["Utilizado"].ToString() == "True")
                 {
@@ -784,11 +814,6 @@ namespace StockVentas
             {
                 MessageBox.Show("El número de cupón es inexistente", "Trend Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnRecalcular_Click(object sender, EventArgs e)
-        {
-
         }
 
     }
