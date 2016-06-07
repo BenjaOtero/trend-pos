@@ -69,6 +69,7 @@ namespace StockVentas
             tblVentas.TableName = "Ventas";
             this.tblVentasDetalle = tblVentasDetalle;
             tblVentasDetalle.TableName = "VentasDetalle";
+            tblVentasDetalle.Columns.Remove("NroCuponVEN");
         }
 
         private void frmVentas_Load(object sender, EventArgs e)
@@ -128,9 +129,15 @@ namespace StockVentas
             cmbForma.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbForma.AutoCompleteSource = AutoCompleteSource.CustomSource;
             txtCosto.Visible = false;
+            grpInicial.CausesValidation = false;
+            grpBotonera.CausesValidation = false;
+            btnClientes.CausesValidation = false;
+            btnCupon.CausesValidation = false;
             btnEditar.CausesValidation = false;
             btnBorrar.CausesValidation = false;
             btnArticulos.CausesValidation = false; 
+
+
             lblNro.ForeColor = System.Drawing.Color.DarkRed;
             dsVentas = new DataSet();
             dsVentas.DataSetName = "dsVentas";
@@ -160,7 +167,6 @@ namespace StockVentas
             dgvDatos.Columns["IdEmpleadoDVEN"].Visible = false;
             dgvDatos.Columns["LiquidadoDVEN"].Visible = false;
             dgvDatos.Columns["EsperaDVEN"].Visible = false;
-            dgvDatos.Columns["NroCuponVEN"].Visible = false;
             dgvDatos.Columns["DescripcionDVEN"].HeaderText = "Descripción";
             dgvDatos.Columns["CantidadDVEN"].Width = 55;
             dgvDatos.Columns["CantidadDVEN"].HeaderText = "Cantidad";
@@ -281,7 +287,7 @@ namespace StockVentas
 
         private void txtArticulo_Validating(object sender, CancelEventArgs e)
         {
-           if (string.IsNullOrEmpty(txtArticulo.Text)) return;
+            if (string.IsNullOrEmpty(txtArticulo.Text)) e.Cancel = true;
             if (articuloOld == txtArticulo.Text) return;
             DataRow[] foundRow = tblArticulos.Select("IdArticuloART = '" + txtArticulo.Text + "'");
             if (foundRow.Length == 0)
@@ -366,6 +372,16 @@ namespace StockVentas
             if(!ValidadRegistro()) return;
             if (!editar)
             {
+                if (txtCupon.Text != "00000000000")
+                {
+                    if (cmbForma.SelectedValue.ToString() != "1")
+                    {
+                        string mensaje = "Los cupones de descuento solo son aplicables a ventas contado efectivo.";
+                        MessageBox.Show(mensaje, "Trend Sistemas",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        cmbForma.Focus();
+                        return;
+                    }
+                }
                 DataRow row = tblVentasDetalle.NewRow();
                 Random rand = new Random();
                 int clave = rand.Next(1, 2000000000);
@@ -471,6 +487,7 @@ namespace StockVentas
                 DataRow foundRow = tblVentasDetalle.Rows.Find(idDVEN);
                 foundRow.Delete();
                 lblTotal.Text = "$" + CalcularTotal().ToString();
+                lblTotalDesc2.Text = "$" + CalcularTotalConDesc(porcentaje);
             }
             catch (NullReferenceException)
             {
@@ -704,6 +721,7 @@ namespace StockVentas
                 btnEditar.Enabled = false;
                 btnCancelEdit.Enabled = true;
                 btnBorrar.Enabled = false;
+                txtArticulo.Focus();
                 editar = true;
             }
         }

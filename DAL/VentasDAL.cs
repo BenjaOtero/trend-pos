@@ -127,14 +127,14 @@ namespace DAL
             SqlInsertCommand1.Parameters.Add("p_id_pc", MySqlDbType.Int32, 11, "IdPCVEN");
             SqlInsertCommand1.Parameters.Add("p_fecha", MySqlDbType.DateTime, 20, "FechaVEN");
             SqlInsertCommand1.Parameters.Add("p_cliente", MySqlDbType.Int32, 11, "IdClienteVEN");
-            SqlInsertCommand1.Parameters.Add("p_cupon", MySqlDbType.String, 10, "NroCuponVEN");
+            SqlInsertCommand1.Parameters.Add("p_cupon", MySqlDbType.String, 12, "NroCuponVEN");
             SqlInsertCommand1.CommandType = CommandType.StoredProcedure;
 
             SqlUpdateCommand1.Parameters.Add("p_id", MySqlDbType.Int32, 11, "IdVentaVEN");
             SqlUpdateCommand1.Parameters.Add("p_id_pc", MySqlDbType.Int32, 11, "IdPCVEN");
             SqlUpdateCommand1.Parameters.Add("p_fecha", MySqlDbType.DateTime, 20, "FechaVEN");
             SqlUpdateCommand1.Parameters.Add("p_cliente", MySqlDbType.Int32, 11, "IdClienteVEN");
-            SqlUpdateCommand1.Parameters.Add("p_cupon", MySqlDbType.String, 10, "NroCuponVEN");
+            SqlUpdateCommand1.Parameters.Add("p_cupon", MySqlDbType.String, 12, "NroCuponVEN");
             SqlUpdateCommand1.CommandType = CommandType.StoredProcedure;
 
             SqlDeleteCommand1.Parameters.Add("p_id", MySqlDbType.Int32, 11, "IdVentaVEN");

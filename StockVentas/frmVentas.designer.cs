@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpInicial = new System.Windows.Forms.GroupBox();
             this.txtCupon = new System.Windows.Forms.TextBox();
             this.btnCupon = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@
             this.btnCancelEdit = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dgvDatos = new StockVentas.customDgvw();
-            this.groupBox1.SuspendLayout();
+            this.grpInicial.SuspendLayout();
             this.grpABM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -88,29 +88,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpInicial
             // 
-            this.groupBox1.Controls.Add(this.txtCupon);
-            this.groupBox1.Controls.Add(this.btnCupon);
-            this.groupBox1.Controls.Add(this.btnClientes);
-            this.groupBox1.Controls.Add(this.lblTotalDesc2);
-            this.groupBox1.Controls.Add(this.lblTotal);
-            this.groupBox1.Controls.Add(this.lblTotalDesc1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.lblNro);
-            this.groupBox1.Controls.Add(this.cmbCliente);
-            this.groupBox1.Controls.Add(this.cmbLocal);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.lblFecha);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(890, 132);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
+            this.grpInicial.Controls.Add(this.txtCupon);
+            this.grpInicial.Controls.Add(this.btnCupon);
+            this.grpInicial.Controls.Add(this.btnClientes);
+            this.grpInicial.Controls.Add(this.lblTotalDesc2);
+            this.grpInicial.Controls.Add(this.lblTotal);
+            this.grpInicial.Controls.Add(this.lblTotalDesc1);
+            this.grpInicial.Controls.Add(this.label5);
+            this.grpInicial.Controls.Add(this.lblNro);
+            this.grpInicial.Controls.Add(this.cmbCliente);
+            this.grpInicial.Controls.Add(this.cmbLocal);
+            this.grpInicial.Controls.Add(this.dateTimePicker1);
+            this.grpInicial.Controls.Add(this.label4);
+            this.grpInicial.Controls.Add(this.label2);
+            this.grpInicial.Controls.Add(this.label3);
+            this.grpInicial.Controls.Add(this.lblFecha);
+            this.grpInicial.Controls.Add(this.label1);
+            this.grpInicial.Location = new System.Drawing.Point(12, 4);
+            this.grpInicial.Name = "grpInicial";
+            this.grpInicial.Size = new System.Drawing.Size(890, 132);
+            this.grpInicial.TabIndex = 3;
+            this.grpInicial.TabStop = false;
             // 
             // txtCupon
             // 
@@ -606,7 +606,7 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.grpABM);
             this.Controls.Add(this.dgvDatos);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpInicial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(30, 30);
             this.Name = "frmVentas";
@@ -615,8 +615,8 @@
             this.Activated += new System.EventHandler(this.frmVentas_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmVentas_FormClosing);
             this.Load += new System.EventHandler(this.frmVentas_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpInicial.ResumeLayout(false);
+            this.grpInicial.PerformLayout();
             this.grpABM.ResumeLayout(false);
             this.grpABM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
@@ -633,7 +633,7 @@
         #endregion
 
         private customDgvw dgvDatos;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpInicial;
         private System.Windows.Forms.GroupBox grpABM;
         private System.Windows.Forms.CheckBox chkDev;
         private System.Windows.Forms.ComboBox cmbForma;

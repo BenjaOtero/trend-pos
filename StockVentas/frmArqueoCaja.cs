@@ -83,12 +83,13 @@ namespace StockVentas
         }
 
         private void dgvVentas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {            
             int PK = Convert.ToInt32(dgvVentas.CurrentRow.Cells["IdVentaVEN"].Value.ToString());
             if (dtPicker.Value.Date != DateTime.Today) return;
             if (e.RowIndex < 0) return;
             if (e.ColumnIndex == dgvVentas.Columns["Editar"].Index)
             {
+                if (dgvVentas.CurrentRow.Cells["NroCuponVEN"].Value.ToString() != "00000000000") return;
                 string idVenta = dgvVentas.CurrentRow.Cells["IdVentaVEN"].Value.ToString();
                 frmVentas ventas = new frmVentas(idVenta, idPc, tblVentas, tblVentasDetalle);
                 ventas.FormClosed += editVentas_FormClosed;
