@@ -254,8 +254,8 @@ namespace StockVentas
             chkDev.KeyDown += new System.Windows.Forms.KeyEventHandler(Utilitarios.EnterTab);
         //    tblVentasDetalle.ColumnChanged += new DataColumnChangeEventHandler(HabilitarGrabar);
             SetStateForm(FormState.insercion);
-            tblVentas.AcceptChanges();
-            tblVentasDetalle.AcceptChanges();
+          //  tblVentas.AcceptChanges();
+            //tblVentasDetalle.AcceptChanges();
         }
 
         private void frmVentas_Activated(object sender, EventArgs e)

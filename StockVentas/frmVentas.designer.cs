@@ -123,7 +123,6 @@
             // 
             // btnCupon
             // 
-            this.btnCupon.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCupon.Location = new System.Drawing.Point(294, 100);
             this.btnCupon.Name = "btnCupon";
             this.btnCupon.Size = new System.Drawing.Size(24, 21);
