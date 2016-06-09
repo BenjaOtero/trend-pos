@@ -133,7 +133,7 @@ namespace StockVentas
             grpBotonera.CausesValidation = false;
             btnClientes.CausesValidation = false;
             btnCupon.CausesValidation = false;
-            btnEditar.CausesValidation = false;
+       //     btnEditar.CausesValidation = false;
             btnBorrar.CausesValidation = false;
             btnArticulos.CausesValidation = false; 
 
@@ -233,13 +233,13 @@ namespace StockVentas
                 // viewDetalleOriginal  se usa para registrar en tabla fallidas errores de guardado remoto por falta de internet
                 viewDetalleOriginal = new DataView(tblDetalleOriginal);
                 viewDetalleOriginal.RowFilter = "IdVentaDVEN = '" + PK + "'";
+                lblTotal.Text = "$" + CalcularTotalOk().ToString();
             }
             dateTimePicker1.DataBindings.Add("Text", rowView, "FechaVEN", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbLocal.DataBindings.Add("SelectedValue", rowView, "IdPCVEN", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbCliente.DataBindings.Add("SelectedValue", rowView, "IdClienteVEN", false, DataSourceUpdateMode.OnPropertyChanged);
             txtCupon.DataBindings.Add("Text", rowView, "NroCuponVEN", false, DataSourceUpdateMode.OnPropertyChanged);            
             rowView.CancelEdit();
-            lblTotal.Text = "$" + CalcularTotal().ToString();
             cmbCliente.Validating += new System.ComponentModel.CancelEventHandler(BL.Utilitarios.ValidarComboBox);
             txtPrecio.KeyPress += new KeyPressEventHandler(BL.Utilitarios.SoloNumerosConComa);
             txtCantidad.KeyPress += new KeyPressEventHandler(BL.Utilitarios.SoloNumeros);
@@ -254,6 +254,8 @@ namespace StockVentas
             chkDev.KeyDown += new System.Windows.Forms.KeyEventHandler(Utilitarios.EnterTab);
         //    tblVentasDetalle.ColumnChanged += new DataColumnChangeEventHandler(HabilitarGrabar);
             SetStateForm(FormState.insercion);
+            tblVentas.AcceptChanges();
+            tblVentasDetalle.AcceptChanges();
         }
 
         private void frmVentas_Activated(object sender, EventArgs e)
@@ -287,7 +289,7 @@ namespace StockVentas
 
         private void txtArticulo_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtArticulo.Text)) e.Cancel = true;
+          //  if (string.IsNullOrEmpty(txtArticulo.Text)) e.Cancel = true;
             if (articuloOld == txtArticulo.Text) return;
             DataRow[] foundRow = tblArticulos.Select("IdArticuloART = '" + txtArticulo.Text + "'");
             if (foundRow.Length == 0)
@@ -415,12 +417,13 @@ namespace StockVentas
                 cmbForma.SelectedValue = -1;
                 chkDev.Checked = false;
                 txtArticulo.Focus();
-                lblTotal.Text = "$" + CalcularTotal().ToString();
                 if (txtCupon.Text != "00000000000")
                 {
+                    lblTotal.Text = "$" + CalcularTotalConCupon().ToString();
                     totalCupon = CalcularTotalConDesc(porcentaje);
                     lblTotalDesc2.Text = "$" + totalCupon.ToString();
                 }
+                else lblTotal.Text = "$" + CalcularTotalOk().ToString();
 
             }
             else
@@ -447,7 +450,7 @@ namespace StockVentas
                 cmbForma.SelectedValue = -1;
                 chkDev.Checked = false;
                 txtArticulo.Focus();
-                lblTotal.Text = "$" + CalcularTotal().ToString();
+                lblTotal.Text = "$" + CalcularTotalOk().ToString();
               //  SetStateForm(FormState.insercion);
             }
             dgvDatos.CellEnter -= new DataGridViewCellEventHandler(dgvDatos_CellEnter);
@@ -486,8 +489,13 @@ namespace StockVentas
                 int idDVEN = Convert.ToInt32(dgvDatos.CurrentRow.Cells["IdDVEN"].Value.ToString());
                 DataRow foundRow = tblVentasDetalle.Rows.Find(idDVEN);
                 foundRow.Delete();
-                lblTotal.Text = "$" + CalcularTotal().ToString();
-                lblTotalDesc2.Text = "$" + CalcularTotalConDesc(porcentaje);
+                if (txtCupon.Text != "00000000000")
+                {
+                    lblTotal.Text = "$" + CalcularTotalConCupon().ToString();
+                    totalCupon = CalcularTotalConDesc(porcentaje);
+                    lblTotalDesc2.Text = "$" + totalCupon.ToString();
+                }
+                else lblTotal.Text = "$" + CalcularTotalOk().ToString();
             }
             catch (NullReferenceException)
             {
@@ -659,6 +667,38 @@ namespace StockVentas
             return total;
         }
 
+        private double CalcularTotalOk()
+        {
+            int cantidad;
+            double precio;
+            double total = 0;
+            foreach (DataRowView fila in viewDetalle)
+            {
+                cantidad = Convert.ToInt32(fila["CantidadDVEN"].ToString());
+                precio = Convert.ToDouble(fila["PrecioPublicoDVEN"].ToString());
+                total = total + (cantidad * precio);
+            }
+            return total;
+        }
+
+        private double CalcularTotalConCupon()
+        {
+            string articulo;
+            int cantidad;
+            double precio;
+            double total = 0;
+            DataRow[] rowArticulo;
+            foreach (DataRowView fila in viewDetalle)
+            {
+                articulo = fila["IdArticuloDVEN"].ToString();
+                rowArticulo = tblArticulos.Select("IdArticuloART = '" + articulo + "'");
+                precio = Convert.ToDouble(rowArticulo[0]["PrecioMayorART"].ToString());
+                cantidad = Convert.ToInt32(fila["CantidadDVEN"].ToString());
+                total = total + (cantidad * precio);
+            }
+            return total;
+        }
+
         private double CalcularTotalConDesc(double porcentaje)
         {
             string articulo;
@@ -710,7 +750,7 @@ namespace StockVentas
                 txtPrecio.Clear();
                 cmbForma.SelectedValue = -1;
                 chkDev.Checked = false;
-                btnEditar.Enabled = true;
+            //    btnEditar.Enabled = true;
                 btnCancelEdit.Enabled = false;
                 btnBorrar.Enabled = true;
                 editar = false;
@@ -718,7 +758,7 @@ namespace StockVentas
             }
             if (state == FormState.edicion)
             {
-                btnEditar.Enabled = false;
+            //    btnEditar.Enabled = false;
                 btnCancelEdit.Enabled = true;
                 btnBorrar.Enabled = false;
                 txtArticulo.Focus();

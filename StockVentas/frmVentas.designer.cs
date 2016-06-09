@@ -75,9 +75,9 @@
             this.grpBotonera = new System.Windows.Forms.GroupBox();
             this.btnArticulos = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnCancelEdit = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.dgvDatos = new StockVentas.customDgvw();
             this.grpInicial.SuspendLayout();
             this.grpABM.SuspendLayout();
@@ -109,7 +109,7 @@
             this.grpInicial.Location = new System.Drawing.Point(12, 4);
             this.grpInicial.Name = "grpInicial";
             this.grpInicial.Size = new System.Drawing.Size(890, 132);
-            this.grpInicial.TabIndex = 3;
+            this.grpInicial.TabIndex = 0;
             this.grpInicial.TabStop = false;
             // 
             // txtCupon
@@ -118,7 +118,7 @@
             this.txtCupon.Location = new System.Drawing.Point(87, 101);
             this.txtCupon.Name = "txtCupon";
             this.txtCupon.Size = new System.Drawing.Size(201, 20);
-            this.txtCupon.TabIndex = 24;
+            this.txtCupon.TabIndex = 2;
             this.txtCupon.Text = "00000000000";
             // 
             // btnCupon
@@ -205,7 +205,7 @@
             this.cmbCliente.Location = new System.Drawing.Point(87, 72);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(201, 21);
-            this.cmbCliente.TabIndex = 3;
+            this.cmbCliente.TabIndex = 1;
             // 
             // cmbLocal
             // 
@@ -213,7 +213,7 @@
             this.cmbLocal.Location = new System.Drawing.Point(87, 40);
             this.cmbLocal.Name = "cmbLocal";
             this.cmbLocal.Size = new System.Drawing.Size(201, 21);
-            this.cmbLocal.TabIndex = 2;
+            this.cmbLocal.TabIndex = 0;
             // 
             // dateTimePicker1
             // 
@@ -283,7 +283,7 @@
             this.btnSalir.Location = new System.Drawing.Point(750, 14);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(133, 29);
-            this.btnSalir.TabIndex = 6;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -312,7 +312,7 @@
             this.grpABM.Location = new System.Drawing.Point(12, 142);
             this.grpABM.Name = "grpABM";
             this.grpABM.Size = new System.Drawing.Size(890, 63);
-            this.grpABM.TabIndex = 6;
+            this.grpABM.TabIndex = 1;
             this.grpABM.TabStop = false;
             // 
             // chkDev
@@ -520,71 +520,67 @@
             // 
             // grpBotonera
             // 
+            this.grpBotonera.Controls.Add(this.btnSalir);
             this.grpBotonera.Controls.Add(this.btnArticulos);
             this.grpBotonera.Controls.Add(this.btnBorrar);
-            this.grpBotonera.Controls.Add(this.btnSalir);
-            this.grpBotonera.Controls.Add(this.button2);
             this.grpBotonera.Controls.Add(this.btnCancelEdit);
             this.grpBotonera.Controls.Add(this.btnEditar);
+            this.grpBotonera.Controls.Add(this.button2);
             this.grpBotonera.Location = new System.Drawing.Point(12, 206);
             this.grpBotonera.Name = "grpBotonera";
             this.grpBotonera.Size = new System.Drawing.Size(890, 50);
-            this.grpBotonera.TabIndex = 8;
+            this.grpBotonera.TabIndex = 2;
             this.grpBotonera.TabStop = false;
             // 
             // btnArticulos
             // 
-            this.btnArticulos.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnArticulos.Location = new System.Drawing.Point(630, 14);
+            this.btnArticulos.Location = new System.Drawing.Point(626, 14);
             this.btnArticulos.Name = "btnArticulos";
             this.btnArticulos.Size = new System.Drawing.Size(114, 29);
-            this.btnArticulos.TabIndex = 15;
-            this.btnArticulos.Text = "Articulos";
+            this.btnArticulos.TabIndex = 4;
+            this.btnArticulos.Text = "Artículos";
             this.btnArticulos.UseVisualStyleBackColor = true;
             this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnBorrar.Location = new System.Drawing.Point(509, 14);
+            this.btnBorrar.Location = new System.Drawing.Point(506, 14);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(114, 29);
-            this.btnBorrar.TabIndex = 13;
+            this.btnBorrar.TabIndex = 3;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(146, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 29);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Grabar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnGrabar_Click);
-            // 
             // btnCancelEdit
             // 
-            this.btnCancelEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelEdit.Location = new System.Drawing.Point(388, 14);
+            this.btnCancelEdit.Location = new System.Drawing.Point(386, 14);
             this.btnCancelEdit.Name = "btnCancelEdit";
             this.btnCancelEdit.Size = new System.Drawing.Size(114, 29);
-            this.btnCancelEdit.TabIndex = 11;
+            this.btnCancelEdit.TabIndex = 2;
             this.btnCancelEdit.Text = "Cancelar edición";
             this.btnCancelEdit.UseVisualStyleBackColor = true;
             this.btnCancelEdit.Click += new System.EventHandler(this.btnCancelEdit_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnEditar.Location = new System.Drawing.Point(267, 14);
+            this.btnEditar.Location = new System.Drawing.Point(266, 14);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(114, 29);
-            this.btnEditar.TabIndex = 12;
+            this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(146, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 29);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Grabar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // dgvDatos
             // 
@@ -671,15 +667,15 @@
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.GroupBox grpBotonera;
-        private System.Windows.Forms.Button btnArticulos;
-        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnCancelEdit;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCupon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCupon;
         private System.Windows.Forms.Label lblTotalDesc2;
         private System.Windows.Forms.Label lblTotalDesc1;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCancelEdit;
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Button btnArticulos;
     }
 }
