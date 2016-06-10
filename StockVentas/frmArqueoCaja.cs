@@ -89,7 +89,8 @@ namespace StockVentas
             if (e.RowIndex < 0) return;
             if (e.ColumnIndex == dgvVentas.Columns["Editar"].Index)
             {
-                if (dgvVentas.CurrentRow.Cells["NroCuponVEN"].Value.ToString() != "00000000000") return;
+                if (dgvVentas.CurrentRow.Cells["NroCuponVEN"].Value.ToString() != "00000000000" ||
+                    dgvVentas.CurrentRow.Cells["NroCuponVEN"].Value.ToString() != "0") return;
                 string idVenta = dgvVentas.CurrentRow.Cells["IdVentaVEN"].Value.ToString();
                 frmVentas ventas = new frmVentas(idVenta, idPc, tblVentas, tblVentasDetalle);
                 ventas.FormClosed += editVentas_FormClosed;
@@ -189,26 +190,8 @@ namespace StockVentas
             tblArqueo.Columns.Remove("LiquidadoDVEN");
             tblArqueo.Columns.Remove("EsperaDVEN");
             tblArqueo.Columns.Remove("DevolucionDVEN");
-            tblVentas = dt.Tables[0].Copy();
+            tblVentas = dt.Tables[7].Copy();
             tblVentas.TableName = "Ventas";
-            tblVentas.Columns.Remove("IdDVEN");
-            tblVentas.Columns.Remove("IdVentaDVEN");
-            tblVentas.Columns.Remove("IdLocalDVEN");
-            tblVentas.Columns.Remove("IdArticuloDVEN");
-            tblVentas.Columns.Remove("Descripcion");
-            tblVentas.Columns.Remove("CantidadDVEN");
-            tblVentas.Columns.Remove("PrecioPublicoDVEN");
-            tblVentas.Columns.Remove("PrecioCostoDVEN");
-            tblVentas.Columns.Remove("PrecioMayorDVEN");
-            tblVentas.Columns.Remove("IdFormaPagoDVEN");
-            tblVentas.Columns.Remove("NroCuponDVEN");
-            tblVentas.Columns.Remove("IdEmpleadoDVEN");
-            tblVentas.Columns.Remove("NroFacturaDVEN");
-            tblVentas.Columns.Remove("LiquidadoDVEN");
-            tblVentas.Columns.Remove("EsperaDVEN");
-            tblVentas.Columns.Remove("DevolucionDVEN");
-            tblVentas.Columns.Remove("Forma pago");
-            tblVentas.Columns.Remove("Subtotal");
             tblVentas.AcceptChanges();
             tblVentasDetalle = dt.Tables[0].Copy();
             tblVentasDetalle.TableName = "VentasDetalle";

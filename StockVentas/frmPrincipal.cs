@@ -126,6 +126,7 @@ namespace StockVentas
 
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
+            e.Cancel = false;
             instanciaInicio.cerrando = true;
             instanciaInicio.Visible = true;
         }

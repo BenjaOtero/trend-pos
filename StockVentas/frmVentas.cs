@@ -70,6 +70,7 @@ namespace StockVentas
             this.tblVentasDetalle = tblVentasDetalle;
             tblVentasDetalle.TableName = "VentasDetalle";
             tblVentasDetalle.Columns.Remove("NroCuponVEN");
+
         }
 
         private void frmVentas_Load(object sender, EventArgs e)
@@ -192,7 +193,7 @@ namespace StockVentas
             chkDevolucion.DataPropertyName = "DevolucionDVEN";
             chkDevolucion.TrueValue = 1;
             chkDevolucion.FalseValue = 0;
-            dgvDatos.Columns.Insert(12, chkDevolucion);
+            dgvDatos.Columns.Insert(12, chkDevolucion);   
             if (PK == "") //registro nuevo
             {
                 tblVentas.PrimaryKey = new DataColumn[] { tblVentas.Columns["IdVentaVEN"] };
@@ -234,11 +235,13 @@ namespace StockVentas
                 viewDetalleOriginal = new DataView(tblDetalleOriginal);
                 viewDetalleOriginal.RowFilter = "IdVentaDVEN = '" + PK + "'";
                 lblTotal.Text = "$" + CalcularTotalOk().ToString();
+                tblVentas.AcceptChanges();
+                tblVentasDetalle.AcceptChanges();
             }
             dateTimePicker1.DataBindings.Add("Text", rowView, "FechaVEN", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbLocal.DataBindings.Add("SelectedValue", rowView, "IdPCVEN", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbCliente.DataBindings.Add("SelectedValue", rowView, "IdClienteVEN", false, DataSourceUpdateMode.OnPropertyChanged);
-            txtCupon.DataBindings.Add("Text", rowView, "NroCuponVEN", false, DataSourceUpdateMode.OnPropertyChanged);            
+            txtCupon.DataBindings.Add("Text", rowView, "NroCuponVEN", false, DataSourceUpdateMode.OnPropertyChanged);
             rowView.CancelEdit();
             cmbCliente.Validating += new System.ComponentModel.CancelEventHandler(BL.Utilitarios.ValidarComboBox);
             txtPrecio.KeyPress += new KeyPressEventHandler(BL.Utilitarios.SoloNumerosConComa);
@@ -254,8 +257,6 @@ namespace StockVentas
             chkDev.KeyDown += new System.Windows.Forms.KeyEventHandler(Utilitarios.EnterTab);
         //    tblVentasDetalle.ColumnChanged += new DataColumnChangeEventHandler(HabilitarGrabar);
             SetStateForm(FormState.insercion);
-          //  tblVentas.AcceptChanges();
-            //tblVentasDetalle.AcceptChanges();
         }
 
         private void frmVentas_Activated(object sender, EventArgs e)
@@ -289,7 +290,7 @@ namespace StockVentas
 
         private void txtArticulo_Validating(object sender, CancelEventArgs e)
         {
-          //  if (string.IsNullOrEmpty(txtArticulo.Text)) e.Cancel = true;
+            if (string.IsNullOrEmpty(txtArticulo.Text)) e.Cancel = true;
             if (articuloOld == txtArticulo.Text) return;
             DataRow[] foundRow = tblArticulos.Select("IdArticuloART = '" + txtArticulo.Text + "'");
             if (foundRow.Length == 0)
@@ -545,6 +546,7 @@ namespace StockVentas
                         else
                         {
                             BL.TransaccionesBLL.GrabarVentas(dsVentas, ref codigoError, viewDetalleOriginal, tblActual, grabarFallidas);
+                            if (totalCupon > 0) BL.CuponesBLL.Update(txtCupon.Text, totalCupon);
                             this.DialogResult = DialogResult.OK;
                         }
                         break;
@@ -798,6 +800,7 @@ namespace StockVentas
                 return;
             }
             string input = Microsoft.VisualBasic.Interaction.InputBox("Introduzca el número de cupón.", "Cupones de descuento", "", -1, -1);
+            if (string.IsNullOrEmpty(input)) return;
             Cursor.Current = Cursors.WaitCursor;
             DataTable tblCupon = new DataTable();
             try 
