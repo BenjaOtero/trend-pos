@@ -50,9 +50,9 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(41, 13);
+            this.btnAceptar.Location = new System.Drawing.Point(35, 17);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(112, 26);
+            this.btnAceptar.Size = new System.Drawing.Size(112, 38);
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Grabar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -130,15 +130,16 @@
             this.groupBox1.Controls.Add(this.btnAceptar);
             this.groupBox1.Location = new System.Drawing.Point(12, 317);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 48);
+            this.groupBox1.Size = new System.Drawing.Size(313, 65);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(171, 13);
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSalir.Location = new System.Drawing.Point(165, 17);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(112, 26);
+            this.btnSalir.Size = new System.Drawing.Size(112, 38);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -218,7 +219,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 373);
+            this.CancelButton = this.btnSalir;
+            this.ClientSize = new System.Drawing.Size(338, 397);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

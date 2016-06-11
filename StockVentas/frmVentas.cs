@@ -134,7 +134,7 @@ namespace StockVentas
             grpBotonera.CausesValidation = false;
             btnClientes.CausesValidation = false;
             btnCupon.CausesValidation = false;
-       //     btnEditar.CausesValidation = false;
+            btnEditar.CausesValidation = false;
             btnBorrar.CausesValidation = false;
             btnArticulos.CausesValidation = false; 
 
@@ -235,8 +235,6 @@ namespace StockVentas
                 viewDetalleOriginal = new DataView(tblDetalleOriginal);
                 viewDetalleOriginal.RowFilter = "IdVentaDVEN = '" + PK + "'";
                 lblTotal.Text = "$" + CalcularTotalOk().ToString();
-                tblVentas.AcceptChanges();
-                tblVentasDetalle.AcceptChanges();
             }
             dateTimePicker1.DataBindings.Add("Text", rowView, "FechaVEN", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbLocal.DataBindings.Add("SelectedValue", rowView, "IdPCVEN", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -255,7 +253,11 @@ namespace StockVentas
             cmbForma.KeyDown += new System.Windows.Forms.KeyEventHandler(Utilitarios.EnterTab);
             cmbForma.Validating += new System.ComponentModel.CancelEventHandler(BL.Utilitarios.ValidarComboBox);
             chkDev.KeyDown += new System.Windows.Forms.KeyEventHandler(Utilitarios.EnterTab);
-        //    tblVentasDetalle.ColumnChanged += new DataColumnChangeEventHandler(HabilitarGrabar);
+            if (!string.IsNullOrEmpty(PK)) //registro nuevo
+            {
+                tblVentas.AcceptChanges();
+                tblVentasDetalle.AcceptChanges();
+            }
             SetStateForm(FormState.insercion);
         }
 

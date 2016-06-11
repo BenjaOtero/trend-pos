@@ -89,8 +89,12 @@ namespace StockVentas
             if (e.RowIndex < 0) return;
             if (e.ColumnIndex == dgvVentas.Columns["Editar"].Index)
             {
-                if (dgvVentas.CurrentRow.Cells["NroCuponVEN"].Value.ToString() != "00000000000" ||
-                    dgvVentas.CurrentRow.Cells["NroCuponVEN"].Value.ToString() != "0") return;
+                if (dgvVentas.CurrentRow.Cells["NroCuponVEN"].Value.ToString() != "00000000000")
+                {
+                    MessageBox.Show("Las ventas con cupón de descuento no se pueden modificar.", "Trend Sistemas",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                } 
                 string idVenta = dgvVentas.CurrentRow.Cells["IdVentaVEN"].Value.ToString();
                 frmVentas ventas = new frmVentas(idVenta, idPc, tblVentas, tblVentasDetalle);
                 ventas.FormClosed += editVentas_FormClosed;

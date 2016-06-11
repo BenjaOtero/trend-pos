@@ -525,7 +525,7 @@
             this.grpBotonera.Controls.Add(this.btnCancelEdit);
             this.grpBotonera.Controls.Add(this.btnEditar);
             this.grpBotonera.Controls.Add(this.button2);
-            this.grpBotonera.Location = new System.Drawing.Point(12, 206);
+            this.grpBotonera.Location = new System.Drawing.Point(12, 211);
             this.grpBotonera.Name = "grpBotonera";
             this.grpBotonera.Size = new System.Drawing.Size(890, 50);
             this.grpBotonera.TabIndex = 2;
