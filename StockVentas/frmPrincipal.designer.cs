@@ -68,7 +68,6 @@
             this.crearPcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ocoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -341,8 +340,7 @@
             // 
             this.mantenimientoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearPcToolStripMenuItem,
-            this.actualizarDatosToolStripMenuItem,
-            this.ocoteToolStripMenuItem});
+            this.actualizarDatosToolStripMenuItem});
             this.mantenimientoToolStripMenuItem1.Name = "mantenimientoToolStripMenuItem1";
             this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(89, 20);
             this.mantenimientoToolStripMenuItem1.Text = "Mantenimiento";
@@ -367,12 +365,6 @@
             this.salirToolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
             this.salirToolStripMenuItem1.Text = "Salir";
             this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click);
-            // 
-            // ocoteToolStripMenuItem
-            // 
-            this.ocoteToolStripMenuItem.Name = "ocoteToolStripMenuItem";
-            this.ocoteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.ocoteToolStripMenuItem.Text = "Ocote";
             // 
             // frmPrincipal
             // 
@@ -439,7 +431,6 @@
         private System.Windows.Forms.ToolStripMenuItem arqueoDeCajaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem actualizarDatosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ocoteToolStripMenuItem;
     }
 }
 

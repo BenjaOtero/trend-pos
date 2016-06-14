@@ -39,6 +39,7 @@ namespace StockVentas
         {
             System.Drawing.Icon ico = Properties.Resources.icono_app;
             this.Icon = ico;
+            actualizarDatosToolStripMenuItem.Visible = false;
         }
 
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
